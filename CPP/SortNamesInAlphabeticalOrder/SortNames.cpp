@@ -45,11 +45,13 @@ int main() {
 		names.push_back(name); 
 	}
 	
-	//function to sort names alphabetically
-	names=alphabeticallySort(names)
-	
 	printf("\nbefore sorting\n");
 	print(names);
+	//function to sort names alphabetically
+	names=alphabeticallySort(names);
 	
+	printf("after alphabetical sorting\n");
+	print(names);
+		
 	return 0;
 }

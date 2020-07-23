@@ -30,15 +30,15 @@ int stringToInt(char input[], int last) {
 }
 
 // Recursive Function
-int stringToInt(char input[], int last) {
-	int length = length(input);
-	return stringToInt(input, len-1);
+int stringToInt(char input[]) { // With redefinition we need to have a change in the amount of arguments
+	int length = stringLength(input);
+	return stringToInt(input, length-1);
 }
 
 int main() {
 	char input[50];
 
-	cout<<"Enter an input"<<cin;
+	cout<<"Enter an input "<<endl;
 	cin >> input; // Save the input
 	
 	cout << "The output/number is ";

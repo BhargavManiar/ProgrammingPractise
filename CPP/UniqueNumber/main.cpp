@@ -46,3 +46,23 @@ int unique(int *arr, int n )
 	return result; 
 
 }
+
+int main()
+{
+	int arr[50];
+	int n;
+
+	cout << "Enter length of the array: ";
+	cin >> n; 
+	
+	cout << "Enter array elements..."<<endl;
+	
+	for(int c=0; c<n; c++)
+	{
+		cin>>arr[c];
+	}
+	
+	cout<<unique(arr,n)<<" is the unique number in array."
+	
+	return 0;
+}

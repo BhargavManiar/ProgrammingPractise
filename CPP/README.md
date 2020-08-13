@@ -11,7 +11,7 @@ https://www.includehelp.com/cpp-programming-examples-solved-cpp-programs.aspx
 C++ Pattern/Series Programs
 	1. C++ Program to print Lucas series upto N terms. 
 
-C++ string Programs
+C++ String Programs
 	1. Program to Sort Names in Alphabetical Order
 	2. Pair Case program to enter "*" betwwen two identical characters in a string
 	3. Program to cnvert a string of number to integer
@@ -19,7 +19,7 @@ C++ string Programs
 
 C++ Bit Magic Programs
 	1. Program to find Unique Number using Bit Masking
-	2. Program to swao adjacent bits
+	2. Program to swap adjacent bits
 	3. Program to toggle Kth bit of a number
 	4. Program to find two unique numbers in an array
 	5. Program to clear Lth bit of a number

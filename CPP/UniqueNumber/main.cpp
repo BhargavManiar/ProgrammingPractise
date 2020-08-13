@@ -4,7 +4,7 @@ using namespace std;
 int unique(int *arr, int n )
 {
 	// array of size 64 for max 64 bit size
-	int count[64]={0}
+	int count[64]={0};
 	
 	// count array stores bit of every number
 	
@@ -17,8 +17,8 @@ int unique(int *arr, int n )
 	 	{
 	 		// extract bit
 	 		count[i] += (num&1);
-	 		i++
-	 		// right shift to get net leftmost bit
+	 		i++;
+	 		// right shift to get next leftmost bit
 	 		num = num >> 1; 
 	 	}
 	} // End for loop 
@@ -29,7 +29,7 @@ int unique(int *arr, int n )
 	int power = 1; 
 	int result = 0; 
 	
-	for(int j = 0; i < 64; j++)
+	for(int j = 0; j < 64; j++)
 	{
 		// take modulus of count array by 3
 		
@@ -62,7 +62,7 @@ int main()
 		cin>>arr[c];
 	}
 	
-	cout<<unique(arr,n)<<" is the unique number in array."
+	cout<<unique(arr,n)<<" is the unique number in array.";
 	
 	return 0;
 }

@@ -1,5 +1,5 @@
 #include <iostream>
-including namespace std; 
+using namespace std; 
 
 unsigned int swap_odd_even(int num) {
 	int mask = 0xAAAAAAAA;
@@ -18,6 +18,19 @@ unsigned int swap_odd_even(int num) {
 
 int main() 
 {
-	
+	int T; 
+	cout << "Enter total number of elements (test cases): ";
+	cin >> T; 
+
+	// variable to store the number
+	unsigned int N;
+
+	for(int i = 0; i < T; i ++)
+	{
+		cout << "Enter number: ";
+		cin >> N;
+		cout << "Original number is : " << N << endl;
+		cout << "Converted number is : " << swap_odd_even(N) << endl;
+	}
 	return 0;
 }

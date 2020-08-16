@@ -26,4 +26,7 @@ C++ Bit Magic Programs
 	6. Program to isolate rightmost bit of a number
 	7. Program to isolate rightmost one bit of a number
 	8. Program to check if number is power of 2 using Bitwise operator
-	
+    
+    
+Miscellanious
+	1. Bitwise Operators

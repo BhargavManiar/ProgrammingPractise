@@ -7,6 +7,15 @@ using namespace std;
 
 int ToggleKthBit(int n, int K)
 {
+	cout <<"\n" << endl;
+	int output = (K-1);
+	cout << "The value of K is subtracted by one, " << K << "-1 to get: " << output << endl;
+	
+	output = (1 << (K-1));
+	cout << "After the shift of 1 to the left the value is: " << output << endl;
+	
+	output = n ^ output;
+	cout << "The XOR value is: " << output << endl;  
 	return n ^ (1 << (K-1)); // n xor (left shift of K), this is the toggled number
 }
 

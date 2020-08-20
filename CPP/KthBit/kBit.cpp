@@ -7,9 +7,9 @@ using namespace std;
 
 int ToggleKthBit(int n, int K)
 {
-	cout <<"\n" << endl;
+	cout << "" << endl;
 	int output = (K-1);
-	cout << "The value of K is subtracted by one, " << K << "-1 to get: " << output << endl;
+	cout << "The value of K is subtracted by one, " << K << "-1, to get: " << output << endl;
 	
 	output = (1 << (K-1));
 	cout << "After the shift of 1 to the left the value is: " << output << endl;
@@ -31,10 +31,10 @@ int main()
 	cout << "Enter bit to toggle (value of k): ";
 	cin >> k; 
 
-	cout << "Original number before toggl" << num << endl;
 
 	int new_number = ToggleKthBit(num, k); 
-
+	cout << "" << endl;
+	cout << "Original number before toggle: " << num << endl;
 	cout << "New number after toggling: " << new_number << endl;
 
 	return 0;

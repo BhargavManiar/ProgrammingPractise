@@ -7,7 +7,7 @@ int isolateRightMostOneBit(int n)
 	int mask = -n;
 
 	cout << "The original number: " << n << endl;
-	cout << "The mask created: " << mask << end; 
+	cout << "The mask created: " << mask << endl; 
 	cout << "And operation of the orignal and the mask: " << (n&mask) << endl;
 	
 	// new number after isolating rightmost 1 bit 

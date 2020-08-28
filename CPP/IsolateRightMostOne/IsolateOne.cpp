@@ -9,3 +9,18 @@ int isolateRightMostOneBit(int n)
 	
 	return (n&mask);
 }
+
+int main()
+{
+	int num; 
+	
+	cout << "Enter number: ";
+	cin >> num; 
+	cout << "original number before isolating rightmost 1 bit: " << num << endl; 
+	
+	int newNumber = isolateRightMostOneBit(num);
+	
+	cout << "new number after isolating rightmost 1 bit: " << newNumber << endl;
+	
+	return 0;
+}

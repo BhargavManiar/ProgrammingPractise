@@ -30,3 +30,13 @@ C++ Bit Magic Programs
     
 Miscellanious
 	1. Bitwise Operators
+
+C++ Recursion Programs
+	1. Stair Case: C++ program to solve teh staircase problem
+
+C++ Arrays
+	1. C++ program to print all the Repeated Numbers with Frequency in an Array
+	2. C++ program to print all the Non-repeated Numbers in an Array
+	3. C++ program to print the left Rotation of the array
+
+

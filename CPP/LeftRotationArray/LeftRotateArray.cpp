@@ -24,3 +24,9 @@ int main()
 
 	return 0;
 }
+
+// To explain the use of the modulo above 
+// a[n] = 1,2,3,4,5,6,7;
+// r = 3
+// when iterating at i = 6, we will be performing i+r
+// 6+3 = 9; then we will perform 9%7 which is 2 to give us the third number in the array.

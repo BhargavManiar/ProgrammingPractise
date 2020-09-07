@@ -1,26 +1,26 @@
 #include <iostream>
-using namespace std;
+using namespace std; 
 
-int main() 
+int main()
 {
-	int n; // Number of arrays
-	int d; // Number of times to rotate
+	int n, r; // Variables for amount of values and teh rotation amount respectively
+	cout << "Enter the amount of numbers and the rotation value: " << endl;
+	cin >> n >> r; 
 
-	cout << "Enter the values for n and d" << endl;
-	cin >> n >> d; // Get the information from the user
+	// Get the numbers from the user and store them in an array 
+	int a[n]; // Create an array of size n
 
-	// Add the elements to the array, based on the length of the array. 
-	int a[n]; // Define an array of length 'n'
+	cout << "Enter the numbers: ";
 	for(int i = 0; i < n; i++)
 	{
 		cin >> a[i];
 	}
 
-	cout << "Array of elements after rotation : ";
+	cout << "Array of elements after rotation: ";
 	for(int i = 0; i < n; i++)
 	{
-		cout << a[(i+d)%n] << " ";
+		cout << a[(i+r)%n] << " ";
 	}
 
-	return 0; 
+	return 0;
 }

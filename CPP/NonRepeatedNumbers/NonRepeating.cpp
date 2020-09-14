@@ -3,7 +3,7 @@
 using namespace std; 
 
 void findNonRepeat(int * a, int n) {
-	unorderedMap<int,int> hash;
+	unordered_map<int,int> hash;
 	
 	int i;
 
@@ -24,7 +24,7 @@ int main() {
 	int n; 
 	cout << "enter array length\n";
 	cin >> n;
-	int* a=(int*) (malloc(sizeof(int)*));
+	int* a=(int*) (malloc(sizeof(int)*n));
 
 	cout<<"input array elements...\n";
 

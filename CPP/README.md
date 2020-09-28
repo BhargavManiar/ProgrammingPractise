@@ -7,17 +7,17 @@ I am using https://www.includehelp.com/cpp-programs/ for practising.
 I am working on the set specificed here [12/07/2020]
 https://www.includehelp.com/cpp-programming-examples-solved-cpp-programs.aspx
 
-# Tags
-C++ Pattern/Series Programs
+
+##C++ Pattern/Series Programs
 	1. C++ Program to print Lucas series upto N terms. 
 
-C++ String Programs
+##C++ String Programs
 	1. Program to Sort Names in Alphabetical Order
 	2. Pair Case program to enter "*" betwwen two identical characters in a string
 	3. Program to cnvert a string of number to integer
 	4. Program to determnine the colour of chess square
 
-C++ Bit Magic Programs
+##C++ Bit Magic Programs
 	1. Program to find Unique Number using Bit Masking
 	2. Program to swap adjacent bits
 	3. Program to toggle Kth bit of a number
@@ -28,13 +28,13 @@ C++ Bit Magic Programs
 	8. Program to check if number is power of 2 using Bitwise operator
     
     
-Miscellanious
+##Miscellaneous
 	1. Bitwise Operators
 
-C++ Recursion Programs
+##C++ Recursion Programs
 	1. Stair Case: C++ program to solve teh staircase problem
 
-C++ Arrays
+##C++ Arrays
 	1. C++ program to print all the Repeated Numbers with Frequency in an Array
 	2. C++ program to print all the Non-repeated Numbers in an Array
 	3. C++ program to print the left Rotation of the array

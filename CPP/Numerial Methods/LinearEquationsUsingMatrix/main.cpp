@@ -10,9 +10,9 @@ int main()
 	char var = 'x';
 	int a[n][n], b[n][1]; // Declared 2D and 1D array
 	
-	for(int i = 0; i < n; i++)
+	for(int i = 0; i < n; i++) // Iterate for n before going to the next line
 	{
-		for(int j = 0; j < n; j++)
+		for(int j = 0; j < n; j++) // Iterate for n before taking the constant value
 		{
 			cin >> a[i][j]; // Get the Matrix values, user input.
 		}

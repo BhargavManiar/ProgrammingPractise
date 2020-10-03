@@ -1,0 +1,9 @@
+% Graphs in MatLab
+
+x=0:0.1:2*pi;
+y=sin(x);
+
+plot(x,y,'-b');
+plot(x,y,'--r');
+title("Sine Wave Plot");
+xlabel('0 to 

@@ -32,5 +32,11 @@ int listPrime(int n) {
 
 
 int main() {
+	int n;
 
+	cin >> n;
+
+	listPrime(n);
+	
+	return 0;
 }

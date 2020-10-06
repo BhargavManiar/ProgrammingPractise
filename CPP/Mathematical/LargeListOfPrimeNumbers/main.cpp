@@ -1,4 +1,4 @@
-#include <bits/c++.h>
+#include <iostream>
 using namespace std;
 
 int listPrime(int n) {

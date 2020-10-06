@@ -33,7 +33,7 @@ void listPrime(int n) {
 
 int main() {
 	int n;
-
+	cout << "Enter the number: " << endl;
 	cin >> n;
 
 	listPrime(n);

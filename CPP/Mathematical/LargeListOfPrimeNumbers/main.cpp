@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int listPrime(int n) {
+void listPrime(int n) {
 
 	int i; 
 

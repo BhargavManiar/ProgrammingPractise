@@ -7,6 +7,11 @@ int main() {
 	wchar_t rs2 = 'e';
 	wchar_t rs3 = 'l';
 	wchar_t rs4 = 'P';
+
+	wchar_t rs5 = '.';
+	wchar_t rs6 = 'c';
+	wchar_t rs7 = '?';
+	wchar_t rs8 = 'm';
 	
 	// Function to check if the character is lower case or not. 
 	
@@ -39,6 +44,39 @@ int main() {
 		wcout << rs4 << " is a lowercase ";
 	} else {
 		wcout << rs4 << "is not lowercase";
+	}
+	
+	wcout << endl;
+	
+	
+	if(iswlower(rs5)) {
+		wcout << rs5 << " is a lowercase ";
+	} else {
+		wcout << rs5 << " is not lowercase";
+	}
+	
+	wcout << endl;
+	
+	if(iswlower(rs6)) {
+		wcout << rs6 << " is a lowercase ";
+	} else {
+		wcout << rs6 << " is not lowercase";
+	}
+	
+	wcout << endl;
+	
+	if(iswlower(rs7)) {
+		wcout << rs7 << " is a lowercase ";
+	} else {
+		wcout << rs7 << " is not lowercase";
+	}
+	
+	wcout << endl;
+	
+	if(iswlower(rs8)) {
+		wcout << rs8 << " is a lowercase ";
+	} else {
+		wcout << rs8 << "is not lowercase";
 	}
 	
 	wcout << endl;

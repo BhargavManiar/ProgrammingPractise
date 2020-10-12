@@ -16,7 +16,7 @@ int main() {
 	// Function to check if the character is uppercase or not
 	
 	if(iswupper(rs1)) {
-		wcout << rs1 << " is uppercase";
+		wcout << rs1 << " is uppercase"; // the W will convert the numerial value of rs1 to a character 
 	} else { 
 		wcout << rs1 << " is not uppercase";
 	}

@@ -2,6 +2,6 @@
 
 ##Content
 
-Good Source: https://www.tutorialspoint.com/cprogramming/index.htms
+Good Source: https://www.tutorialspoint.com/cprogramming/index.htm
 
 1. Pointers

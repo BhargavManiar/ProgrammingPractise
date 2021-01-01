@@ -1,0 +1,6 @@
+
+The value of the median is 2.000000
+The value of the median is 2.500000
+The value of the median is 0.000000
+The value of the median is 1.000000
+The value of the median is 2.000000

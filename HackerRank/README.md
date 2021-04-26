@@ -1,4 +1,4 @@
-#HackerRank
+# HackerRank
 
 This website is that is focused on competitive programming. I have also participated in a programming competition hosted by my university.
 

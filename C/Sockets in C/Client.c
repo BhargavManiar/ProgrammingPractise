@@ -6,6 +6,7 @@
 #define MAX 80 
 #define PORT 8080 
 #define SA struct sockaddr 
+
 void func(int sockfd) 
 { 
 	char buff[MAX]; 
@@ -32,7 +33,7 @@ int main()
 	int sockfd, connfd; 
 	struct sockaddr_in servaddr, cli; 
 
-	// socket create and varification 
+	// create socket and verify
 	sockfd = socket(AF_INET, SOCK_STREAM, 0); 
 	if (sockfd == -1) { 
 		printf("socket creation failed...\n"); 

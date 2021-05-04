@@ -1,7 +1,7 @@
 .DS_Store
 xcuserstate
-xcuserdata
+/xcuserdata
 xcsettings
 xcworkspace
 contents.xcplayground
-playground.xcworkspace
+/playground.xcworkspace

@@ -16,6 +16,7 @@
 		4C16B1E82641C72900D7E3E4 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C16B1E42641C72900D7E3E4 /* Menu.swift */; };
 		4C16B1E92641C72900D7E3E4 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C16B1E52641C72900D7E3E4 /* Helper.swift */; };
 		4C16B1EF2641DB0E00D7E3E4 /* ItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C16B1EE2641DB0E00D7E3E4 /* ItemRow.swift */; };
+		4C8E82272641E99A000A527D /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8E82262641E99A000A527D /* ItemDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		4C16B1E42641C72900D7E3E4 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		4C16B1E52641C72900D7E3E4 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		4C16B1EE2641DB0E00D7E3E4 /* ItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRow.swift; sourceTree = "<group>"; };
+		4C8E82262641E99A000A527D /* ItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			children = (
 				4C16B1D32641C70F00D7E3E4 /* iDineApp.swift */,
 				4C16B1D52641C70F00D7E3E4 /* ContentView.swift */,
+				4C8E82262641E99A000A527D /* ItemDetail.swift */,
 				4C16B1EE2641DB0E00D7E3E4 /* ItemRow.swift */,
 				4C16B1E52641C72900D7E3E4 /* Helper.swift */,
 				4C16B1E22641C72900D7E3E4 /* menu.json */,
@@ -154,6 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C8E82272641E99A000A527D /* ItemDetail.swift in Sources */,
 				4C16B1E72641C72900D7E3E4 /* Order.swift in Sources */,
 				4C16B1D62641C70F00D7E3E4 /* ContentView.swift in Sources */,
 				4C16B1E92641C72900D7E3E4 /* Helper.swift in Sources */,

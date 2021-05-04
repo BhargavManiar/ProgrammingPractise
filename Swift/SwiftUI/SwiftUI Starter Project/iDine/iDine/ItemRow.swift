@@ -17,6 +17,6 @@ struct ItemRow: View {
 
 struct ItemRow_Previews: PreviewProvider {
     static var previews: some View {
-        ItemRow()
+        ItemRow(item: MenuItem.example)
     }
 }

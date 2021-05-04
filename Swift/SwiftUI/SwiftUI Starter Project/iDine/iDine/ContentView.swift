@@ -13,9 +13,7 @@ struct ContentView: View {
         NavigationView {
             List{
                 ForEach(menu) { section in
-                    Text("Hello, world!")
-                    Text("Hello, world!")
-                    Text("Hello, world!")
+                    Text(section.name)
                 }
             }
             .navigationTitle("Menu")

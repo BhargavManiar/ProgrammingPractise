@@ -1,7 +1,5 @@
 .DS_Store
-xcuserstate
-/xcuserdata
-xcsettings
-xcworkspace
-contents.xcplayground
-/playground.xcworkspace
+
+## Playgrounds
+timeline.xctimeline
+playground.xcworkspace

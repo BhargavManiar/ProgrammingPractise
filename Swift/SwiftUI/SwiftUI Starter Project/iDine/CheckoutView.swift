@@ -23,6 +23,8 @@ struct CheckoutView: View {
                         Text($0)
                     }
                 }
+                
+                Toggle("Add iDine loyalty card", isOn: $addLoyaltyDetails)
             }
         }
         .navigationTitle("Payment")

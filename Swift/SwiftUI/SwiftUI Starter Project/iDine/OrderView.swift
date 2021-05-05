@@ -35,6 +35,10 @@ struct OrderView: View {
         }
     
     }
+    
+    func deleteItems(at offsets: IndexSet) {
+        order.items.remove(atOffsets: offsets)
+    }
 }
 
 struct OrderView_Previews: PreviewProvider {

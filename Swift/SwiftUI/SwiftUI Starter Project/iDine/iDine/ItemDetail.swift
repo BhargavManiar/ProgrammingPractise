@@ -30,6 +30,12 @@ struct ItemDetail: View {
             
             Text(item.description)
                 .padding()
+            
+            Button("Order This") {
+                order.add(item: item)
+            }
+            .font(.headline)
+            
             Spacer()
         }
         .navigationTitle(item.name)

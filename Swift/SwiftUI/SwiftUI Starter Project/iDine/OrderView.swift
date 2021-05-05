@@ -33,7 +33,9 @@ struct OrderView: View {
             }
             .navigationTitle("Order")
             .listStyle(InsetGroupedListStyle())
-            
+            .toolbar {
+                EditButton()
+            }
         }
     
     }

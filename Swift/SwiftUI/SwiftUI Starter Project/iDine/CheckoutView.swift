@@ -10,6 +10,8 @@ import SwiftUI
 struct CheckoutView: View {
     @EnvironmentObject var order: Order
     @State private var paymentType = "Cash" // Default value
+    @State private var addLoyaltyDetails = false
+    @State private var loyaltyNumber = ""
     
     let paymentTypes = ["Cash", "Credit Cards", "iDine Points"]
     

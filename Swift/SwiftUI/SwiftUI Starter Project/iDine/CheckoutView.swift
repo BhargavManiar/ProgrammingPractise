@@ -48,7 +48,7 @@ struct CheckoutView: View {
             Section(header: Text("Add a tip?")) {
                 Picker("Percentage:", selection: $tipAmount) {
                     ForEach(tipAmounts, id: \.self) {
-                        Text("\($0)")
+                        Text("\($0)%")
                     }
                 }
                 .pickerStyle(SegmentedPickerStyle())

@@ -12,8 +12,10 @@ struct CheckoutView: View {
     @State private var paymentType = "Cash" // Default value
     @State private var addLoyaltyDetails = false
     @State private var loyaltyNumber = ""
+    @State private var tipAmount = 15
     
     let paymentTypes = ["Cash", "Credit Cards", "iDine Points"]
+    let tipAmounts = [10, 15, 20, 25, 0]
     
     var body: some View {
         Form {
@@ -30,6 +32,21 @@ struct CheckoutView: View {
                     TextField("Enter you iDine ID", text: $loyaltyNumber)
                 }
                 
+            }
+            
+            Section(header: Text("Add a tip?")) {
+                Picker("Percentage:", selection: $tipAmount) {
+                    ForEach(tipAmounts, id: \.self) {
+                        Text("\($0)")
+                    }
+                }
+                .pickerStyle(SegmentedPickerStyle())
+            }
+            
+            Section(header: Text("Total: $100")) {
+                Button("Confirm order") {
+                    // Place order
+                }
             }
         }
         .navigationTitle("Payment")

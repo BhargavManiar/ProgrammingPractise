@@ -25,7 +25,11 @@ struct CheckoutView: View {
                 }
                 
                 Toggle("Add iDine loyalty card", isOn: $addLoyaltyDetails)
-                TextField("Enter you iDine ID", text: $loyaltyNumber)
+                
+                if addLoyaltyDetails {
+                    TextField("Enter you iDine ID", text: $loyaltyNumber)
+                }
+                
             }
         }
         .navigationTitle("Payment")

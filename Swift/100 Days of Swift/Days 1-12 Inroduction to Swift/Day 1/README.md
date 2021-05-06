@@ -1,4 +1,4 @@
-# Day 1
+# Day 1 - First steps in Swift
 
 ## Contents
 1. Variables

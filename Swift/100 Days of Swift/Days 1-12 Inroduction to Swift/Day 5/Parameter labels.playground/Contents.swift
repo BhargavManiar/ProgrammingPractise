@@ -14,4 +14,4 @@ func SayHello(to name: String) {
     print("Hello, \(name)!")
 }
 
-SayHello(to: "Taylor")
+SayHello(to: "Taylor") // Notive the label 'to'

@@ -11,6 +11,3 @@
 4. Advanced closures
 5. Returning closures from functions
 6. Capturing values
-
-
-

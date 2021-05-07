@@ -6,7 +6,7 @@
 3. Returning variables
 4. Parameter labels
 5. Omitting paramater labels
-6. Default parametesr
+6. Default parameters
 7.  Variadic functions
 8.  Writing throwing functions
 9.  Running throwing functions

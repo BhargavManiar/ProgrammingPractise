@@ -1,5 +1,7 @@
 # Days 1-12: Introduction to Swift
 
+Most of the work for days 1-12 is in the learn section of Unwarp, the iOS app. I have these examples in the Unwrap directory.
+
 ## Contents
 
 Day 1 – variables, simple data types, and string interpolation

@@ -3,7 +3,7 @@ import UIKit
 struct Progress {
     var task: String
     var amount: Int {
-        didSet {
+        didSet { // The property observer
             print("\(task) is now \(amount)% complete")
         }
     }

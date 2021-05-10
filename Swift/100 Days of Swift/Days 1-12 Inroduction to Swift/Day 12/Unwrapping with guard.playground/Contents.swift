@@ -7,3 +7,9 @@ func greet(_ name: String?) {
     }
     print("Hello, \(unwrapped)!")
 }
+
+var name: String?
+greet(name)
+
+name = "Bhargav"
+greet(name)

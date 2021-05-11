@@ -24,3 +24,9 @@
 - Days 92-98: The Final Countdown
 - Day 99: Consolidation XI
 - Day 100: Wrap up
+
+## Resources
+
+Link for Git Hub page - https://github.com/twostraws/HackingWithSwift
+Hacking with Swift Website - https://www.hackingwithswift.com 
+100 Days of Swift - https://www.hackingwithswift.com/100

@@ -13,3 +13,4 @@
 3. Final tweakes: hidBarsOnTap, safe area margins
 
 ### Day 18
+1. Wrap up

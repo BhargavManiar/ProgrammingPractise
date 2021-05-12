@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -45,6 +46,35 @@
             </objects>
             <point key="canvasLocation" x="1043.4782608695652" y="75"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="RNX-Ev-1KI">
+            <objects>
+                <viewController storyboardIdentifier="Detail" id="In7-am-8JR" customClass="DetailViewController" customModule="Project1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fKO-On-NFC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="25d-fM-tji">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dGY-bD-5gx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="25d-fM-tji" firstAttribute="centerY" secondItem="fKO-On-NFC" secondAttribute="centerY" id="CrH-DV-4rU"/>
+                            <constraint firstItem="25d-fM-tji" firstAttribute="centerX" secondItem="fKO-On-NFC" secondAttribute="centerX" id="IwK-ox-DVK"/>
+                            <constraint firstItem="25d-fM-tji" firstAttribute="top" secondItem="fKO-On-NFC" secondAttribute="topMargin" constant="-44" id="SN6-6o-fLd"/>
+                            <constraint firstItem="25d-fM-tji" firstAttribute="leading" secondItem="dGY-bD-5gx" secondAttribute="leading" id="bml-UF-ZVH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="25d-fM-tji" id="gjz-zw-ZoQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qYI-JR-UYZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1892.753623188406" y="75"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="2CS-sj-cNa">
             <objects>
@@ -61,7 +91,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GvQ-l2-Nwj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133.33333333333334" y="75"/>
+            <point key="canvasLocation" x="126" y="75"/>
         </scene>
     </scenes>
     <resources>

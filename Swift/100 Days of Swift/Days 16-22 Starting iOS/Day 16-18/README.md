@@ -1,18 +1,18 @@
-# Project 1, part one
+# Project 1
 
 ## Contents
 
-### Day 16
+### Day 16 - Part One
 1. Setting up 
 2. Listing images with FileManager
 3. Designing our interface
 
-### Day 17 
+### Day 17 - Part Two
 1. Building a detail screen
 2. Loading images with UIImage
 3. Final tweakes: hidBarsOnTap, safe area margins
 
-### Day 18
+### Day 18 - Part Three
 1. Wrap up
 
 ### Project 1 Challenge 

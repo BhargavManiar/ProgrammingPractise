@@ -15,6 +15,7 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         
         title = selectedImage
+        navigationItem.largeTitleDisplayMode = .never
         
         if let imageToLoad = selectedImage {
             imageView.image = UIImage(named: imageToLoad)

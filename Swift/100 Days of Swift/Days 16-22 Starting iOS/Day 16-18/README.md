@@ -21,4 +21,4 @@
 
 2. In your main table view, show the image names in sorted order so ‘nssl0033.jpg’ comes before ‘nssl0034.jpg’
 
-3. ather than show image names in the details title bar show ‘Picture x of y’, where y is the total number of images and x is the picture’s position in the array. 
+3. Rather than show image names in the details title bar show ‘Picture x of y’, where y is the total number of images and x is the picture’s position in the array. 

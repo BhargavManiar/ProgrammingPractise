@@ -7,6 +7,16 @@
 
 import UIKit
 
+extension String {
+    func capitalisingFirstLetter() -> String{
+        return prefix(1).capitalized + dropFirst()
+    }
+    
+    mutating func capitaliseFirstLetter() {
+        self = self.capitalisingFirstLetter()
+    }
+}
+
 class ViewController: UIViewController {
     @IBOutlet var button1: UIButton!
     @IBOutlet var button2: UIButton!
@@ -45,12 +55,15 @@ class ViewController: UIViewController {
     
     @IBAction func buttonTapped(_ sender: UIButton) {
         var title: String
+        var correctionMessage: String
         
         if sender.tag == correctAnswer {
             title = "Correct"
+            correctionMessage = ""
             score += 1
         } else {
             title = "Wrong"
+            correctionMessage = "That's the flag of " + countries[sender.tag].capitalisingFirstLetter() + ".\n"
             score -= 1
         }
         
@@ -65,7 +78,7 @@ class ViewController: UIViewController {
             correctAnswer = 0
             questionsAnswered = 0
         } else {
-            let ac = UIAlertController(title: title, message: "Your score is \(score)", preferredStyle: .alert)
+            let ac = UIAlertController(title: title, message: correctionMessage + "Your score is \(score)", preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
             present(ac, animated: true)
         }

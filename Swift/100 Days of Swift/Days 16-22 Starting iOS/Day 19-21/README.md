@@ -16,7 +16,7 @@
 
 ### Project 2 Challenge
 
-1. Try shoing the player's score in the navigation bar, alongside the flag to guess.
+1. Try showing the player's score in the navigation bar, alongside the flag to guess.
 
 2. Keep track of how many questions have been asked, and show on final alert controller after they have answered 10. This should show their final score. 
 

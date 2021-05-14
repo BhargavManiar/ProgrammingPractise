@@ -41,6 +41,9 @@ class ViewController: UIViewController {
         
         title = countries[correctAnswer].uppercased()
     }
-
+    
+    @IBAction func buttonTapped(_ sender: UIButton) {
+    }
+    
 }
 

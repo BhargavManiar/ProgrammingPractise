@@ -20,4 +20,4 @@
 
 2. Keep track of how many questions have been asked, and show on final alert controller after they have answered 10. This should show their final score. 
 
-3. When someone chooses the wrong flag, tell them their mistake in your alert message - something like "Wring! That's the flag of France", for example.
+3. When someone chooses the wrong flag, tell them their mistake in your alert message - something like "Wrong! That's the flag of France", for example.

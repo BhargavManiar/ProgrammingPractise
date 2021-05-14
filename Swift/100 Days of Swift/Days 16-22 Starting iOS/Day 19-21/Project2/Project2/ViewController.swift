@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     var countries = [String]()
     var score = 0
     var correctAnswer = 0
+    var questionsAnswered = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,9 +54,21 @@ class ViewController: UIViewController {
             score -= 1
         }
         
-        let ac = UIAlertController(title: title, message: "Your score is \(score)", preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
-        present(ac, animated: true)
+        questionsAnswered += 1
+        
+        if questionsAnswered == 10 {
+            title = "End of Game"
+            let finalac = UIAlertController(title: title, message: "Final Score: \(score)", preferredStyle: .alert)
+            finalac.addAction(UIAlertAction(title: "Play Again", style: .default, handler: askQuestion))
+            present(finalac, animated: true)
+            score = 0
+            correctAnswer = 0
+            questionsAnswered = 0
+        } else {
+            let ac = UIAlertController(title: title, message: "Your score is \(score)", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
+            present(ac, animated: true)
+        }
     }
     
 }

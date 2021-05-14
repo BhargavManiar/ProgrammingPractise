@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     var countries = [String]()
     var score = 0
     var correctAnswer = 0
-    var questionsAnswered = 0
+    var currentQuestion = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,9 +51,9 @@ class ViewController: UIViewController {
         button3.setImage(UIImage(named: countries[2]), for: .normal)
         
         if(countries[correctAnswer].count > 2) {
-            title = countries[correctAnswer].capitalisingFirstLetter() + " Score: \(score)"
+            title = "Q\(currentQuestion) " + countries[correctAnswer].capitalisingFirstLetter() + " - Score: \(score)"
         } else {
-            title = countries[correctAnswer].uppercased() + " Score: \(score)"
+            title = "Q\(currentQuestion) " + countries[correctAnswer].uppercased() + " - Score: \(score)"
         }
         
     }
@@ -72,16 +72,16 @@ class ViewController: UIViewController {
             score -= 1
         }
         
-        questionsAnswered += 1
+        currentQuestion += 1
         
-        if questionsAnswered == 10 {
+        if currentQuestion == 11 {
             title = "End of Game"
             let finalac = UIAlertController(title: title, message: "Final Score: \(score)", preferredStyle: .alert)
             finalac.addAction(UIAlertAction(title: "Play Again", style: .default, handler: askQuestion))
             present(finalac, animated: true)
             score = 0
             correctAnswer = 0
-            questionsAnswered = 0
+            currentQuestion = 1
         } else {
             let ac = UIAlertController(title: title, message: correctionMessage + "Your score is \(score)", preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))

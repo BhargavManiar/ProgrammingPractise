@@ -62,7 +62,7 @@
 		4CC00A11264B1585005EA3B0 = {
 			isa = PBXGroup;
 			children = (
-				4CC00A1C264B1585005EA3B0 /* Project1 */,
+				4CC00A1C264B1585005EA3B0 /* Project3 */,
 				4CC00A1B264B1585005EA3B0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,7 +75,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4CC00A1C264B1585005EA3B0 /* Project1 */ = {
+		4CC00A1C264B1585005EA3B0 /* Project3 */ = {
 			isa = PBXGroup;
 			children = (
 				4CC00A1D264B1585005EA3B0 /* AppDelegate.swift */,
@@ -88,7 +88,7 @@
 				4CC00A2B264B1588005EA3B0 /* Info.plist */,
 				4CC00A31264B1601005EA3B0 /* Content */,
 			);
-			path = Project1;
+			path = Project3;
 			sourceTree = "<group>";
 		};
 		4CC00A31264B1601005EA3B0 /* Content */ = {
@@ -142,7 +142,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4CC00A15264B1585005EA3B0 /* Build configuration list for PBXProject "Project1" */;
+			buildConfigurationList = 4CC00A15264B1585005EA3B0 /* Build configuration list for PBXProject "Project3" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -340,12 +340,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XD436Y578P;
-				INFOPLIST_FILE = Project1/Info.plist;
+				INFOPLIST_FILE = Project3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Bhargav.Project1;
+				PRODUCT_BUNDLE_IDENTIFIER = Bhargav.Project3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -359,12 +359,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XD436Y578P;
-				INFOPLIST_FILE = Project1/Info.plist;
+				INFOPLIST_FILE = Project3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Bhargav.Project1;
+				PRODUCT_BUNDLE_IDENTIFIER = Bhargav.Project3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -374,7 +374,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4CC00A15264B1585005EA3B0 /* Build configuration list for PBXProject "Project1" */ = {
+		4CC00A15264B1585005EA3B0 /* Build configuration list for PBXProject "Project3" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4CC00A2C264B1588005EA3B0 /* Debug */,

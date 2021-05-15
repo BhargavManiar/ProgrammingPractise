@@ -20,6 +20,8 @@ class DetailViewController: UIViewController {
         
         navigationItem.largeTitleDisplayMode = .never
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareTapped))
+        
         if let imageToLoad = selectedImage {
             imageView.image = UIImage(named: imageToLoad)
         }
@@ -33,5 +35,12 @@ class DetailViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.hidesBarsOnTap = false
+    }
+    
+    @objc func shareTapped() { // The attribute @abjc makes our code visible to objective c based UIKit code
+        // Dummy URL used as this app is not on the app store.
+        let vc = UIActivityViewController(activityItems: ["https://www.hackingwithswift.com/read/3/3/wrap-up"], applicationActivities: [])
+        vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        present(vc, animated: true)
     }
 }

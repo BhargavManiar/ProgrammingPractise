@@ -21,7 +21,6 @@ class ViewController: UIViewController {
     @IBOutlet var button1: UIButton!
     @IBOutlet var button2: UIButton!
     @IBOutlet var button3: UIButton!
-    @IBOutlet var scoreButton: UIBarButtonItem!
     
     var countries = [String]()
     var score = 0
@@ -30,6 +29,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Score", style: UIBarButtonItem.Style.done, target: self, action: #selector(scoreTapped))
     
         countries += ["estonia", "france", "germany", "ireland", "italy", "monaco", "nigeria", "poland", "russia", "spain", "uk", "us"]
         
@@ -91,7 +92,7 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func showScore(_ sender: Any) {
+    @objc func scoreTapped() { // The attribute @abjc makes our code visible to objective c based UIKit code
         let scoreac = UIAlertController(title: "Current Score:", message: "\(score)", preferredStyle: .alert)
         scoreac.addAction(UIAlertAction(title: "Okay", style: .default, handler: askQuestion))
         present(scoreac, animated: true)

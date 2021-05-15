@@ -57,18 +57,11 @@
                             <constraint firstItem="gCj-po-shZ" firstAttribute="leading" secondItem="efi-iS-lcF" secondAttribute="leading" id="rFW-FS-qgI"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="pc4-WJ-Ubp">
-                        <barButtonItem key="rightBarButtonItem" title="Score" id="o5x-gC-dGb">
-                            <connections>
-                                <action selector="showScore:" destination="BYZ-38-t0r" id="pqb-mS-CMM"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="pc4-WJ-Ubp"/>
                     <connections>
                         <outlet property="button1" destination="gCj-po-shZ" id="aJU-SE-Frs"/>
                         <outlet property="button2" destination="efi-iS-lcF" id="J4h-pH-llg"/>
                         <outlet property="button3" destination="1xf-4O-stD" id="WNx-3o-XSJ"/>
-                        <outlet property="scoreButton" destination="o5x-gC-dGb" id="Hdg-N5-Yov"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

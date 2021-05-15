@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     @IBOutlet var button1: UIButton!
     @IBOutlet var button2: UIButton!
     @IBOutlet var button3: UIButton!
+    @IBOutlet var scoreButton: UIBarButtonItem!
     
     var countries = [String]()
     var score = 0
@@ -29,6 +30,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
         countries += ["estonia", "france", "germany", "ireland", "italy", "monaco", "nigeria", "poland", "russia", "spain", "uk", "us"]
         
         button1.layer.borderWidth = 1
@@ -89,5 +91,10 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func showScore(_ sender: Any) {
+        let scoreac = UIAlertController(title: "Current Score:", message: "\(score)", preferredStyle: .alert)
+        scoreac.addAction(UIAlertAction(title: "Okay", style: .default, handler: askQuestion))
+        present(scoreac, animated: true)
+    }
 }
 

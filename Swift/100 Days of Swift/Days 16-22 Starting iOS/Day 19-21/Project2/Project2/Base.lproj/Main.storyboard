@@ -45,23 +45,30 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="1xf-4O-stD" firstAttribute="top" secondItem="efi-iS-lcF" secondAttribute="bottom" constant="30" id="4uW-Ln-dtk"/>
-                            <constraint firstItem="FdP-d6-fHH" firstAttribute="leading" secondItem="efi-iS-lcF" secondAttribute="leading" id="8lZ-2p-vAJ"/>
-                            <constraint firstItem="FdP-d6-fHH" firstAttribute="trailing" secondItem="gCj-po-shZ" secondAttribute="trailing" id="C3h-Tz-aZO"/>
-                            <constraint firstItem="FdP-d6-fHH" firstAttribute="bottom" secondItem="gCj-po-shZ" secondAttribute="bottom" id="Mwu-BT-frc"/>
-                            <constraint firstItem="efi-iS-lcF" firstAttribute="leading" secondItem="1xf-4O-stD" secondAttribute="leading" id="TRk-NP-xZ2"/>
-                            <constraint firstItem="gCj-po-shZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z0h-jx-wly"/>
-                            <constraint firstItem="gCj-po-shZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="lKn-ze-ZzB"/>
-                            <constraint firstItem="FdP-d6-fHH" firstAttribute="top" secondItem="gCj-po-shZ" secondAttribute="top" id="q9b-GE-oTg"/>
-                            <constraint firstItem="efi-iS-lcF" firstAttribute="top" secondItem="FdP-d6-fHH" secondAttribute="bottom" constant="30" id="sta-f9-cC1"/>
-                            <constraint firstItem="FdP-d6-fHH" firstAttribute="leading" secondItem="gCj-po-shZ" secondAttribute="leading" id="yYB-5b-JWs"/>
+                            <constraint firstItem="FdP-d6-fHH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="JGP-GG-Woy"/>
+                            <constraint firstItem="FdP-d6-fHH" firstAttribute="leading" secondItem="gCj-po-shZ" secondAttribute="leading" id="JPc-2q-2g9"/>
+                            <constraint firstItem="FdP-d6-fHH" firstAttribute="top" secondItem="gCj-po-shZ" secondAttribute="top" id="TyN-Gj-8KU"/>
+                            <constraint firstItem="efi-iS-lcF" firstAttribute="top" secondItem="FdP-d6-fHH" secondAttribute="bottom" constant="30" id="XBj-3z-3Nt"/>
+                            <constraint firstItem="FdP-d6-fHH" firstAttribute="bottom" secondItem="gCj-po-shZ" secondAttribute="bottom" id="e5d-Ni-Nik"/>
+                            <constraint firstItem="efi-iS-lcF" firstAttribute="leading" secondItem="1xf-4O-stD" secondAttribute="leading" id="kWS-Jx-nGZ"/>
+                            <constraint firstItem="gCj-po-shZ" firstAttribute="trailing" secondItem="FdP-d6-fHH" secondAttribute="trailing" id="ojF-Hs-3nK"/>
+                            <constraint firstItem="gCj-po-shZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pho-Eh-WhB"/>
+                            <constraint firstItem="1xf-4O-stD" firstAttribute="top" secondItem="efi-iS-lcF" secondAttribute="bottom" constant="30" id="r7a-LQ-y3G"/>
+                            <constraint firstItem="gCj-po-shZ" firstAttribute="leading" secondItem="efi-iS-lcF" secondAttribute="leading" id="rFW-FS-qgI"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="pc4-WJ-Ubp"/>
+                    <navigationItem key="navigationItem" id="pc4-WJ-Ubp">
+                        <barButtonItem key="rightBarButtonItem" title="Score" id="o5x-gC-dGb">
+                            <connections>
+                                <action selector="showScore:" destination="BYZ-38-t0r" id="pqb-mS-CMM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="button1" destination="gCj-po-shZ" id="aJU-SE-Frs"/>
                         <outlet property="button2" destination="efi-iS-lcF" id="J4h-pH-llg"/>
                         <outlet property="button3" destination="1xf-4O-stD" id="WNx-3o-XSJ"/>
+                        <outlet property="scoreButton" destination="o5x-gC-dGb" id="Hdg-N5-Yov"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

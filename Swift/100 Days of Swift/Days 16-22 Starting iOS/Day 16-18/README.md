@@ -15,7 +15,7 @@
 ### Day 18 - Part Three
 1. Wrap up
 
-### Project 1 Challenge 
+### Project 1 Challenges
 
 1. User Interface Builder to select the text label inside your table view cell and adjust its size to something larger.
 

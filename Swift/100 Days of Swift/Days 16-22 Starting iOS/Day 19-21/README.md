@@ -14,7 +14,7 @@
 ### Day 21 - Part Three
 1. Wrap up
 
-### Project 2 Challenge
+### Project 2 Challenges
 
 1. Try showing the player's score in the navigation bar, alongside the flag to guess.
 

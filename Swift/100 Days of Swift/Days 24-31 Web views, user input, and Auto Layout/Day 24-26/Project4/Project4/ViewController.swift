@@ -49,7 +49,6 @@ class ViewController: UIViewController, WKNavigationDelegate {
             ac.addAction(UIAlertAction(title: website, style: .default, handler: openPage))
         }
         
-        
         ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         ac.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
         present(ac, animated: true)
@@ -75,14 +74,26 @@ class ViewController: UIViewController, WKNavigationDelegate {
         let url = navigationAction.request.url
         
         if let host = url?.host {
+            
             for website in websites {
                 if host.contains(website) {
+                    print("Accessing Host: " + host)
                     decisionHandler(.allow)
                     return
                 }
             }
+            
+            warning(host: host)
+            print("Denied Host: " + host)
         }
+        
         decisionHandler(.cancel)
+    }
+    
+    func warning(host: String) {
+        let warning = UIAlertController(title: "Warning", message: "\(host) is blocked.", preferredStyle: .alert)
+        warning.addAction(UIAlertAction(title: "Okay", style: .cancel, handler: nil))
+        present(warning, animated: true)
     }
     
 }

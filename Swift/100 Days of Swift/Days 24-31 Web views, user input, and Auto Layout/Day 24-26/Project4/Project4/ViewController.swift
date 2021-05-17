@@ -10,12 +10,14 @@ import WebKit
 
 class ViewController: UIViewController, WKNavigationDelegate {
     var webView: WKWebView!
+    var progressView: UIProgressView!
     
     override func loadView() {
         webView = WKWebView()
         webView.navigationDelegate = self
         view = webView
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,7 +26,11 @@ class ViewController: UIViewController, WKNavigationDelegate {
         let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let refresh = UIBarButtonItem(barButtonSystemItem: .refresh, target: webView, action: #selector(webView.reload))
         
-        toolbarItems = [spacer, refresh]
+        progressView = UIProgressView(progressViewStyle: .default)
+        progressView.sizeToFit()
+        let progressButton = UIBarButtonItem(customView: progressView)
+        
+        toolbarItems = [progressButton, spacer, refresh]
         navigationController?.isToolbarHidden = false
         
         let url = URL(string: "https://www.hackingwithswift.com")!

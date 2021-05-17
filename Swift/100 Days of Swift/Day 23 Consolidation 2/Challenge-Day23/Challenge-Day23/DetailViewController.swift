@@ -33,8 +33,7 @@ class DetailViewController: UIViewController {
         navigationItem.largeTitleDisplayMode = .never
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareTapped))
         
-        imageView.layer.borderWidth = 1
-        imageView.layer.borderColor = UIColor.lightGray.cgColor
+        imageView.layer.backgroundColor = UIColor.lightGray.cgColor
         
         if let imageToLoad = selectedImage {
             imageView.image = UIImage(named: imageToLoad)

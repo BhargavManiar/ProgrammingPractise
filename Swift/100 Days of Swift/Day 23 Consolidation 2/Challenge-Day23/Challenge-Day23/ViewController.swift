@@ -49,6 +49,11 @@ class ViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Picture", for:  indexPath)
+        self.tableView.semanticContentAttribute = .forceRightToLeft
+        cell.imageView?.image = UIImage(named: pictures[indexPath.row])
+        cell.imageView?.layer.borderWidth = 0.5
+        cell.imageView?.layer.borderColor = UIColor.lightGray.cgColor
+        
         var name = pictures[indexPath.row]
         
         name.removeLast(7)

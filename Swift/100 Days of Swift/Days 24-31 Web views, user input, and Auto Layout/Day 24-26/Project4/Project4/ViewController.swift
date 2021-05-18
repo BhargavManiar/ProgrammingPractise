@@ -11,7 +11,7 @@ import WebKit
 class ViewController: UIViewController, WKNavigationDelegate {
     var webView: WKWebView!
     var progressView: UIProgressView!
-    let websites = ["apple.com", "hackingwithswift.com", "github.com", "youtube.com", "wikipedia.com"]
+    var websites = [String]()
     var selectedWebsite : String = ""
     
     override func loadView() {
@@ -45,16 +45,6 @@ class ViewController: UIViewController, WKNavigationDelegate {
         
         webView.load(URLRequest(url: url))
         webView.allowsBackForwardNavigationGestures = true
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.hidesBarsOnSwipe = true
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.hidesBarsOnSwipe = false
     }
     
     @objc func openTapped() {
@@ -92,7 +82,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
             
             for website in websites {
                 if host.contains(website) {
-                    print("Accessing Host: " + host)
+                    //print("Accessing Host: " + host)
                     decisionHandler(.allow)
                     return
                 }

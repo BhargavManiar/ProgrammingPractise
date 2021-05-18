@@ -7,8 +7,18 @@
 
 import UIKit
 
-class TableTableViewController: UITableViewController {
-    let websites = ["apple.com", "hackingwithswift.com", "github.com", "youtube.com", "wikipedia.com"]
+extension String {
+    func capitalisingFirstLetter() -> String{
+        return prefix(1).capitalized + dropFirst()
+    }
+    
+    mutating func capitaliseFirstLetter() {
+        self = self.capitalisingFirstLetter()
+    }
+}
+
+class TableViewController: UITableViewController {
+    let websites = ["apple.com", "hackingwithswift.com", "github.com", "youtube.com", "wikipedia.org"]
     var name : String = ""
     
     override func viewDidLoad() {
@@ -24,13 +34,16 @@ class TableTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Website", for: indexPath)
-        cell.textLabel?.text = websites[indexPath.row]
+        name = websites[indexPath.row].capitalisingFirstLetter()
+        name.removeLast(4)
+        cell.textLabel?.text = name
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let vc = storyboard?.instantiateViewController(identifier: "Browser") as? ViewController {
             vc.selectedWebsite = websites[indexPath.row]
+            vc.websites = websites
             navigationController?.pushViewController(vc, animated: true)
         }
     }

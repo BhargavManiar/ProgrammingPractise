@@ -15,7 +15,7 @@
 ### Day 26 
 1. Wrap up
 
-### Project 3 Challenges 
+## Project 3 Challenges 
 
 1. If users try visit a URL that isn't allowed, show an alert saying it's blocked.
 

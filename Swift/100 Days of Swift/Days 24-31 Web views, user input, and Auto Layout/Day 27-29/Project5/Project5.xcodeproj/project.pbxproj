@@ -13,6 +13,7 @@
 		4CCDB1B32655295B000CA8DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CCDB1B12655295B000CA8DA /* Main.storyboard */; };
 		4CCDB1B52655295F000CA8DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CCDB1B42655295F000CA8DA /* Assets.xcassets */; };
 		4CCDB1B82655295F000CA8DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CCDB1B62655295F000CA8DA /* LaunchScreen.storyboard */; };
+		4CCDB1C026552BB2000CA8DA /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4CCDB1BF26552BB2000CA8DA /* start.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4CCDB1B42655295F000CA8DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CCDB1B72655295F000CA8DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4CCDB1B92655295F000CA8DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CCDB1BF26552BB2000CA8DA /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = start.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				4CCDB1B12655295B000CA8DA /* Main.storyboard */,
 				4CCDB1B42655295F000CA8DA /* Assets.xcassets */,
 				4CCDB1B62655295F000CA8DA /* LaunchScreen.storyboard */,
+				4CCDB1BF26552BB2000CA8DA /* start.txt */,
 				4CCDB1B92655295F000CA8DA /* Info.plist */,
 			);
 			path = Project5;
@@ -125,6 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CCDB1B82655295F000CA8DA /* LaunchScreen.storyboard in Resources */,
+				4CCDB1C026552BB2000CA8DA /* start.txt in Resources */,
 				4CCDB1B52655295F000CA8DA /* Assets.xcassets in Resources */,
 				4CCDB1B32655295B000CA8DA /* Main.storyboard in Resources */,
 			);
@@ -287,6 +291,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XD436Y578P;
 				INFOPLIST_FILE = Project5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -305,6 +310,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XD436Y578P;
 				INFOPLIST_FILE = Project5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

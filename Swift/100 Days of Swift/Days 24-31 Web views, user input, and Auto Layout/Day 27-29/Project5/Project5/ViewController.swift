@@ -66,33 +66,47 @@ class ViewController: UITableViewController {
         let errorTitle: String
         let errorMessage: String
         
-        if isPossible(word: lowerAnswer) {
-            if isOriginal(word: lowerAnswer) {
-                if isReal(word: lowerAnswer) {
-                    usedWords.insert(answer, at: 0)
-                    
-                    let indexPath = IndexPath(row: 0, section: 0)
-                    tableView.insertRows(at: [indexPath], with: .automatic)
-                    
-                    return
+        if isMinLength(word: lowerAnswer) {
+            if isSameAsGiven(word: lowerAnswer) {
+                if isPossible(word: lowerAnswer) {
+                    if isOriginal(word: lowerAnswer) {
+                        if isReal(word: lowerAnswer) {
+                            usedWords.insert(answer, at: 0)
+                            
+                            let indexPath = IndexPath(row: 0, section: 0)
+                            tableView.insertRows(at: [indexPath], with: .automatic)
+                            
+                            return
+                        } else {
+                            errorTitle = "Word not recognised"
+                            errorMessage = "You can't just make them up, you know!"
+                        }
+                    } else {
+                        errorTitle = "Word already used"
+                        errorMessage = "Be more original!"
+                    }
                 } else {
-                    errorTitle = "Word not recognised"
-                    errorMessage = "You can't just make them up, you know!"
+                    guard let title = title else { return } // Just for educational purposed, not required
+                    errorTitle = "Word not possible"
+                    errorMessage = "You can't spell that word from \(title.lowercased())."
                 }
             } else {
-                errorTitle = "Word already used"
-                errorMessage = "Be more original!"
+                errorTitle = "Same as given word"
+                errorMessage = "Enter a differnt word"
             }
         } else {
-            guard let title = title else { return } // Just for educational purposed, not required
-            errorTitle = "Word not possible"
-            errorMessage = "You can't spell that word from \(title.lowercased())."
+            errorTitle = "Word length too small"
+            errorMessage = "Enter a longer word"
         }
         
         let ac = UIAlertController(title: errorTitle, message: errorMessage, preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "OK", style: .default))
         present(ac, animated: true)
+        
+        
     }
+    
+    // Below are functions for validation
     
     func isPossible(word: String) -> Bool {
         guard var tempWord = title?.lowercased() else {return false}
@@ -118,5 +132,23 @@ class ViewController: UITableViewController {
         let misspelledRange = checker.rangeOfMisspelledWord(in: word, range: range, startingAt: 0, wrap: false, language: "en")
         return misspelledRange.location == NSNotFound
     }
+    
+    
+    func isMinLength(word: String) -> Bool {
+        if word.count < 3 {
+            return false
+        }
+        return true
+     }
+    
+    func isSameAsGiven(word: String) -> Bool {
+        guard let tempWord = title?.lowercased() else {return false}
+        
+        if word.lowercased() == tempWord {
+            return false
+        }
+        return true
+    }
+    
 }
 

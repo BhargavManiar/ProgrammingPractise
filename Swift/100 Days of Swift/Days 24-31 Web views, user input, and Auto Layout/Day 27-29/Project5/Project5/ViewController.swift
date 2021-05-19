@@ -63,47 +63,36 @@ class ViewController: UITableViewController {
     func submit(_ answer: String) {
         let lowerAnswer = answer.lowercased()
         
-        let errorTitle: String
-        let errorMessage: String
-        
         if isMinLength(word: lowerAnswer) {
             if isSameAsGiven(word: lowerAnswer) {
                 if isPossible(word: lowerAnswer) {
                     if isOriginal(word: lowerAnswer) {
                         if isReal(word: lowerAnswer) {
+                            
                             usedWords.insert(answer, at: 0)
                             
                             let indexPath = IndexPath(row: 0, section: 0)
                             tableView.insertRows(at: [indexPath], with: .automatic)
                             
                             return
+                            
                         } else {
-                            errorTitle = "Word not recognised"
-                            errorMessage = "You can't just make them up, you know!"
+                            showErrorMessage(title: "Word not recognised", message: "You can't just make them up, you know!")
                         }
                     } else {
-                        errorTitle = "Word already used"
-                        errorMessage = "Be more original!"
+                        showErrorMessage(title: "Word already used", message: "Be more original!")
                     }
                 } else {
                     guard let title = title else { return } // Just for educational purposed, not required
-                    errorTitle = "Word not possible"
-                    errorMessage = "You can't spell that word from \(title.lowercased())."
+                    showErrorMessage(title: "Word not possible", message: "You can't spell that word from \(title.lowercased()).")
                 }
             } else {
-                errorTitle = "Same as given word"
-                errorMessage = "Enter a differnt word"
+                showErrorMessage(title: "Same as start word", message: "Enter a differnt word")
             }
         } else {
-            errorTitle = "Word length too small"
-            errorMessage = "Enter a longer word"
+            showErrorMessage(title: "Word length too small", message: "Enter a longer word")
         }
-        
-        let ac = UIAlertController(title: errorTitle, message: errorMessage, preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "OK", style: .default))
-        present(ac, animated: true)
-        
-        
+    
     }
     
     // Below are functions for validation
@@ -150,5 +139,12 @@ class ViewController: UITableViewController {
         return true
     }
     
+    // Error message alert
+    
+    func showErrorMessage(title: String, message: String) {
+        let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .default))
+        present(ac, animated: true)
+    }
 }
 

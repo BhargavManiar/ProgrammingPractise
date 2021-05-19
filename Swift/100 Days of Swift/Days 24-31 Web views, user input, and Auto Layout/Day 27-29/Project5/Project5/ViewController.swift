@@ -31,11 +31,7 @@ class ViewController: UITableViewController {
         
     }
     
-    @objc func startGame() {
-        title = allWords.randomElement()
-        usedWords.removeAll(keepingCapacity: true) // Remove previous guesses
-        tableView.reloadData()
-    }
+    // Table view functions
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return usedWords.count
@@ -47,6 +43,14 @@ class ViewController: UITableViewController {
         return cell
     }
     
+    // Game functions
+    
+    @objc func startGame() {
+        title = allWords.randomElement()
+        usedWords.removeAll(keepingCapacity: true) // Remove previous guesses
+        tableView.reloadData()
+    }
+    
     @objc func promptForAnswer() {
         let ac = UIAlertController(title: "Enter answer", message: nil, preferredStyle: .alert)
         ac.addTextField()
@@ -54,7 +58,7 @@ class ViewController: UITableViewController {
         let submitAction = UIAlertAction(title: "Submit", style: .default) {
             [weak self, weak ac] _ in
             guard let answer = ac?.textFields?[0].text else { return }
-            self?.submit(answer)
+            self?.submit(answer.lowercased())
         }
         
         ac.addAction(submitAction)
@@ -96,7 +100,7 @@ class ViewController: UITableViewController {
     
     }
     
-    // Below are functions for validation
+    // Functions for validation
     
     func isPossible(word: String) -> Bool {
         guard var tempWord = title?.lowercased() else {return false}

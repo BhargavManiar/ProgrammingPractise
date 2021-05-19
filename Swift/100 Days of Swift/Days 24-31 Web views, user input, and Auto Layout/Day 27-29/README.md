@@ -25,3 +25,10 @@ just compare the start word against their input word and return false if they ar
 should accept an error message and a title, and do all the UIAlertController work from there.
 
 3. Add a left bar button item that calls startGame(), so users can restart with a new word whenever they want to.
+
+### Bonus 
+
+Once you’ve done those three, there’s a really subtle bug in our game and I’d like you to try finding and fixing it.
+
+To trigger the bug, look for a three-letter word in your starting word, and enter it with an uppercase letter. Once it appears in the
+table, try entering it again all lowercase – you’ll see it gets entered. Can you figure out what causes this and how to fix it?

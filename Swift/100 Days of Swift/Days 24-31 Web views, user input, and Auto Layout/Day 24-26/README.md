@@ -19,11 +19,11 @@
 
 1. If users try visit a URL that isn't allowed, show an alert saying it's blocked.
 
-2. Try making two new toolbar items with the titles Back and Forward. You should make them use webView.goBack and webView.goForward.
+2. Try making two new toolbar items with the titles Back and Forward. You should make them use webView.goBack 
+and webView.goForward.
 
-3. For more of a challenge, try changin the initial view controller to a table view like in project 1, where users can choose their
-website from a list rather than having the first in the array loaded up front. 
+3. For more of a challenge, try changin the initial view controller to a table view like in project 1, where users can
+ choose their website from a list rather than having the first in the array loaded up front. 
 
-Tip
-Once you have completed project 5, you might like to return here to add in the option to load the list of websites from a file, 
-rather than having them hard-coded in an array.
+### Tip
+Once you have completed project 5, you might like to return here to add in the option to load the list of websites from a file, rather than having them hard-coded in an array.

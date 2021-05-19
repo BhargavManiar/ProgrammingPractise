@@ -76,15 +76,28 @@ class ViewController: UITableViewController {
     }
     
     func isPossible(word: String) -> Bool {
+        guard var tempWord = title?.lowercased() else {return false}
+        
+        for letter in word {    // Check if letters in the word exist in the given word
+            if let position = tempWord.firstIndex(of: letter) {
+                tempWord.remove(at: position)
+            } else {
+                return false
+            }
+        }
+        
         return true
     }
     
     func isOriginal(word: String) -> Bool {
-        return true
+        return !usedWords.contains(word) // Check if the word was already given
     }
     
     func isReal(word: String) -> Bool {
-        return true
+        let checker = UITextChecker()
+        let range = NSRange(location: 0, length: word.utf16.count)
+        let misspelledRange = checker.rangeOfMisspelledWord(in: word, range: range, startingAt: 0, wrap: false, language: "en")
+        return misspelledRange.location == NSNotFound
     }
 }
 

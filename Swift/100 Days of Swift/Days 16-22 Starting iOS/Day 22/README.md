@@ -3,7 +3,7 @@
 ## Contents 
 
 ### Day 22
-1.  About technique projects
+1. About technique projects
 2. UIActivityViewController explained
 3. Wrap up
 

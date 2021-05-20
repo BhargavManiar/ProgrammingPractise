@@ -22,6 +22,9 @@
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efi-iS-lcF">
                                 <rect key="frame" x="107" y="230" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="efi-iS-lcF" secondAttribute="height" multiplier="2:1" id="o8q-G0-jgX"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J5t-MF-CLc"/>
@@ -29,6 +32,9 @@
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1xf-4O-stD">
                                 <rect key="frame" x="107" y="360" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1xf-4O-stD" secondAttribute="height" multiplier="2:1" id="ner-qb-dto"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oXs-3E-cyy"/>
@@ -36,6 +42,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCj-po-shZ">
                                 <rect key="frame" x="107" y="100" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gCj-po-shZ" secondAttribute="height" multiplier="2:1" id="arG-4g-p0X"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wym-II-zQT"/>
@@ -49,12 +58,15 @@
                             <constraint firstItem="FdP-d6-fHH" firstAttribute="leading" secondItem="gCj-po-shZ" secondAttribute="leading" id="JPc-2q-2g9"/>
                             <constraint firstItem="FdP-d6-fHH" firstAttribute="top" secondItem="gCj-po-shZ" secondAttribute="top" id="TyN-Gj-8KU"/>
                             <constraint firstItem="efi-iS-lcF" firstAttribute="top" secondItem="FdP-d6-fHH" secondAttribute="bottom" constant="30" id="XBj-3z-3Nt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="1xf-4O-stD" secondAttribute="bottom" constant="20" id="cIg-Yh-Y7n"/>
                             <constraint firstItem="FdP-d6-fHH" firstAttribute="bottom" secondItem="gCj-po-shZ" secondAttribute="bottom" id="e5d-Ni-Nik"/>
+                            <constraint firstItem="1xf-4O-stD" firstAttribute="height" secondItem="efi-iS-lcF" secondAttribute="height" id="hzL-wh-jRi"/>
                             <constraint firstItem="efi-iS-lcF" firstAttribute="leading" secondItem="1xf-4O-stD" secondAttribute="leading" id="kWS-Jx-nGZ"/>
                             <constraint firstItem="gCj-po-shZ" firstAttribute="trailing" secondItem="FdP-d6-fHH" secondAttribute="trailing" id="ojF-Hs-3nK"/>
                             <constraint firstItem="gCj-po-shZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pho-Eh-WhB"/>
                             <constraint firstItem="1xf-4O-stD" firstAttribute="top" secondItem="efi-iS-lcF" secondAttribute="bottom" constant="30" id="r7a-LQ-y3G"/>
                             <constraint firstItem="gCj-po-shZ" firstAttribute="leading" secondItem="efi-iS-lcF" secondAttribute="leading" id="rFW-FS-qgI"/>
+                            <constraint firstItem="efi-iS-lcF" firstAttribute="height" secondItem="gCj-po-shZ" secondAttribute="height" id="t6u-yZ-lNi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pc4-WJ-Ubp"/>

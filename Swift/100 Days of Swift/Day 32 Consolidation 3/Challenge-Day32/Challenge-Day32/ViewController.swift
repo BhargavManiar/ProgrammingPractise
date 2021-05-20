@@ -27,6 +27,8 @@ class ViewController: UITableViewController {
         
         toolbarItems = [spacer, spacer, spacer, share]
         navigationController?.isToolbarHidden = false
+        toolbarItems![3].isEnabled = false
+    
         
         // Table view options
         tableView.allowsSelection = false
@@ -50,6 +52,7 @@ class ViewController: UITableViewController {
         let alertController = UIAlertController(title: "Enter item", message: nil, preferredStyle: .alert)
         alertController.addTextField()
         navigationItem.leftBarButtonItem?.isEnabled = true
+        toolbarItems![3].isEnabled = true
         
         let submitItem = UIAlertAction(title: "Add", style: .default) {
             [weak self, weak alertController] _ in
@@ -65,6 +68,8 @@ class ViewController: UITableViewController {
     
     @objc func trashItems() {
         shoppingList.removeAll(keepingCapacity: true)
+        navigationItem.leftBarButtonItem?.isEnabled = false
+        toolbarItems![3].isEnabled = false
         tableView.reloadData()
     }
     

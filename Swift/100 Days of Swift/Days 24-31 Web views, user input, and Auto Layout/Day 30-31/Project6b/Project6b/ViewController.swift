@@ -65,8 +65,9 @@ class ViewController: UIViewController {
             label.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
             label.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
             
-            label.heightAnchor.constraint(equalToConstant: 88).isActive = true
-
+//            label.heightAnchor.constraint(equalToConstant: 88).isActive = true
+            // 1/5th the main view and -10 spacing
+            label.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, multiplier: 0.2, constant: -10).isActive = true
             
             if let previous = previous {
                 label.topAnchor.constraint(equalTo: previous.bottomAnchor, constant: 10).isActive = true

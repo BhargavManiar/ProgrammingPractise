@@ -2,7 +2,7 @@
 # Day 32: Consolidation III
 
 ## Description 
-This is a check mark for projects 4 to 6, the link below has the contents listed.
+This is a check mark for projects 4 to 6, the link below has the details for the contents listed.
 
 ### Link to Day 32
 https://www.hackingwithswift.com/100/32

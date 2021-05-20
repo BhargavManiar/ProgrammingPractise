@@ -19,12 +19,12 @@ class ViewController: UITableViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(trashItems))
         navigationItem.leftBarButtonItem?.isEnabled = false
         
+        // Bar button items
+        let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let share = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareTapped))
+        
+        
     }
-    
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewDidAppear(animated)
-//
-//    }
 
     // Table view functions
     
@@ -60,6 +60,12 @@ class ViewController: UITableViewController {
     @objc func trashItems() {
         shoppingList.removeAll(keepingCapacity: true)
         tableView.reloadData()
+    }
+    
+    @objc func shareTapped() {
+        let list = shoppingList.joined(separator: "\n")
+        let viewController = UIActivityViewController(activityItems: [list], applicationActivities: [])
+        present(viewController, animated: true)
     }
 
 }

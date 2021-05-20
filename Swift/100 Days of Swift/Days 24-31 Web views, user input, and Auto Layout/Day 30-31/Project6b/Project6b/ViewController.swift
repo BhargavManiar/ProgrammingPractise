@@ -13,7 +13,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         let label1 = UILabel()
-        label1.translatesAutoresizingMaskIntoConstraints = false
+        label1.translatesAutoresizingMaskIntoConstraints = false // TAMIC is an old standard, no longer used
         label1.backgroundColor = .red
         label1.text = "THESE"
         label1.sizeToFit()

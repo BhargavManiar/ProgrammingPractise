@@ -49,5 +49,9 @@ class ViewController: UITableViewController {
         present(alertController, animated: true)
     }
     
+    @objc func trashItems() {
+        shoppingList.removeAll(keepingCapacity: true)
+        tableView.reloadData()
+    }
 }
 

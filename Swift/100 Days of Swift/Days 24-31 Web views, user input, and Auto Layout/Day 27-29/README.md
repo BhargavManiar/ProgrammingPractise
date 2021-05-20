@@ -17,6 +17,7 @@
 1. Wrap up
 
 ## Project 5 Challenges
+
 1. Disallow answers that are shorter than three letters or are just our start word. For the three-letter check, the easiest
 thing to do is put a check into isReal() that returns false if the word length is under three letters. For the second part,
 just compare the start word against their input word and return false if they are the same.

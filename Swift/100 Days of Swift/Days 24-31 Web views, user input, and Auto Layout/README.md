@@ -1,8 +1,6 @@
 
 # Days 24-31: Web views, user input, and Auto Layout
 
-Using what I have learnt, days 24-31 will focus on building iOS apps.
-
 ## Contents 
 
 Day 24 - Project 4, part one

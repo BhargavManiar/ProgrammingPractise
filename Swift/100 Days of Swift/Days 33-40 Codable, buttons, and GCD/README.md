@@ -1,7 +1,6 @@
 
 # Days 33-40: Codable, buttons, and GCD
 
-
 ## Contents 
 
 Day 33 - Project 7, part one

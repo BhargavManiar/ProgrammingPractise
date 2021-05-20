@@ -1,6 +1,5 @@
 # Days 16-22: Starting iOS
 
-Using what I have learnt, days 16-22 will focus on building iOS apps.
 
 ## Contents
 

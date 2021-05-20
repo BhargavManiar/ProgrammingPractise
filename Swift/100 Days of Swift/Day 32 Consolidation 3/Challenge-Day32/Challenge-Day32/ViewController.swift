@@ -28,10 +28,15 @@ class ViewController: UITableViewController {
         toolbarItems = [spacer, spacer, spacer, share]
         navigationController?.isToolbarHidden = false
         toolbarItems![3].isEnabled = false
-    
         
         // Table view options
         tableView.allowsSelection = false
+    }
+    
+    func disableButtons() {
+        navigationItem.leftBarButtonItem?.isEnabled = false
+        toolbarItems![3].isEnabled = false
+        
     }
 
     // Table view functions
@@ -50,8 +55,13 @@ class ViewController: UITableViewController {
         if editingStyle == .delete {
             shoppingList.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            if shoppingList.count == 0 {
+                disableButtons()
+            }
         }
     }
+    
     // Shoppinglist functions
     
     @objc func addItem() {
@@ -74,9 +84,8 @@ class ViewController: UITableViewController {
     
     @objc func trashItems() {
         shoppingList.removeAll(keepingCapacity: true)
-        navigationItem.leftBarButtonItem?.isEnabled = false
-        toolbarItems![3].isEnabled = false
         tableView.reloadData()
+        disableButtons()
     }
     
     @objc func shareTapped() {

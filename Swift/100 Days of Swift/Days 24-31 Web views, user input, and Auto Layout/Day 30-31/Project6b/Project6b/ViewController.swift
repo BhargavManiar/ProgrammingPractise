@@ -41,7 +41,12 @@ class ViewController: UIViewController {
         label5.backgroundColor = .orange
         label5.text = "LABELS"
         label5.sizeToFit()
-
+        
+        view.addSubview(label1)
+        view.addSubview(label2)
+        view.addSubview(label3)
+        view.addSubview(label4)
+        view.addSubview(label5)
 
     }
 

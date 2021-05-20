@@ -31,5 +31,23 @@ class ViewController: UITableViewController {
         return cell
     }
 
+    // Shoppinglist functions
+    
+    @objc func addItem() {
+        let alertController = UIAlertController(title: "Enter item", message: nil, preferredStyle: .alert)
+        alertController.addTextField()
+        
+        let submitItem = UIAlertAction(title: "Add", style: .default) {
+            [weak self, weak alertController] _ in
+            guard let itemAdded = alertController?.textFields?[0].text else { return }
+            self?.shoppingList.insert(itemAdded, at: 0)
+            let indexPath = IndexPath(row: 0, section: 0)
+            self?.tableView.insertRows(at: [indexPath], with: .automatic)
+        }
+        
+        alertController.addAction(submitItem)
+        present(alertController, animated: true)
+    }
+    
 }
 

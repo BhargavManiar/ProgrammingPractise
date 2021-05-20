@@ -13,8 +13,10 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Title
         title = "Shopping List"
         
+        // Navigation bar items
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addItem))
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(trashItems))
         navigationItem.leftBarButtonItem?.isEnabled = false
@@ -26,6 +28,8 @@ class ViewController: UITableViewController {
         toolbarItems = [spacer, spacer, spacer, share]
         navigationController?.isToolbarHidden = false
         
+        // Table view options
+        tableView.allowsSelection = false
     }
 
     // Table view functions

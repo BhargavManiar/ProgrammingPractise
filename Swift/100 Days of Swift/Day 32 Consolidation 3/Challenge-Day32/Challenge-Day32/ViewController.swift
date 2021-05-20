@@ -23,6 +23,8 @@ class ViewController: UITableViewController {
         let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let share = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareTapped))
         
+        toolbarItems = [spacer, share, spacer]
+        navigationController?.isToolbarHidden = false
         
     }
 

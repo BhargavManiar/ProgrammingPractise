@@ -12,12 +12,17 @@ class ViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+    
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addItem))
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(trashItems))
+        navigationItem.leftBarButtonItem?.isEnabled = false
         
     }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//
+//    }
 
     // Table view functions
     
@@ -36,6 +41,7 @@ class ViewController: UITableViewController {
     @objc func addItem() {
         let alertController = UIAlertController(title: "Enter item", message: nil, preferredStyle: .alert)
         alertController.addTextField()
+        navigationItem.leftBarButtonItem?.isEnabled = true
         
         let submitItem = UIAlertAction(title: "Add", style: .default) {
             [weak self, weak alertController] _ in
@@ -53,5 +59,5 @@ class ViewController: UITableViewController {
         shoppingList.removeAll(keepingCapacity: true)
         tableView.reloadData()
     }
-}
 
+}

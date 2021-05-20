@@ -1,7 +1,8 @@
+
 # Day 23: Consolidation II
 
 ## Description
-This is a check mark for projects 1 to 3, the link below shows has contents listed.
+This is a check mark for projects 1 to 3, the link below has the details for the contents listed.
 
 ### Link to Day 23
 https://www.hackingwithswift.com/100/23

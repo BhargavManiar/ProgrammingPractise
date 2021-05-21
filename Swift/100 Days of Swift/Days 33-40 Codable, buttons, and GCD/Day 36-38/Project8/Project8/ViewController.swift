@@ -24,6 +24,19 @@ class ViewController: UIViewController {
         scoreLabel.text = "Score: 0"
         view.addSubview(scoreLabel)
         
+        cluesLabel = UILabel()
+        cluesLabel.translatesAutoresizingMaskIntoConstraints = false
+        cluesLabel.font = UIFont.systemFont(ofSize: 24)
+        cluesLabel.text = "CLUES" // placeholder text
+        cluesLabel.numberOfLines = 0
+        view.addSubview(cluesLabel)
+        
+        answersLabel = UILabel()
+        answersLabel.translatesAutoresizingMaskIntoConstraints = false
+        answersLabel.font = UIFont.systemFont(ofSize: 24)
+        answersLabel.numberOfLines = 0
+        view.addSubview(answersLabel)
+        
         NSLayoutConstraint.activate([
             scoreLabel.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
             scoreLabel.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor)

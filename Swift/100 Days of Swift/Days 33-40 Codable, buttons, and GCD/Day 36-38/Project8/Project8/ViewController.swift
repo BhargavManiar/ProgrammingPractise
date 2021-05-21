@@ -18,7 +18,11 @@ class ViewController: UIViewController {
         view = UIView()
         view.backgroundColor = .white
         
-        // more code later
+        scoreLabel = UILabel()
+        scoreLabel.translatesAutoresizingMaskIntoConstraints = false
+        scoreLabel.textAlignment = .right
+        scoreLabel.text = "Score: 0"
+        view.addSubview(scoreLabel)
     }
     
     override func viewDidLoad() {

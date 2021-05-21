@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4C7A6B2B264E9E7A00C1F175 /* Project2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C7A6B2B264E9E7A00C1F175 /* Project6a.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project6a.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C7A6B2E264E9E7A00C1F175 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C7A6B30264E9E7A00C1F175 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4C7A6B32264E9E7A00C1F175 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 		4C7A6B22264E9E7A00C1F175 = {
 			isa = PBXGroup;
 			children = (
-				4C7A6B2D264E9E7A00C1F175 /* Project2 */,
+				4C7A6B2D264E9E7A00C1F175 /* Project6a */,
 				4C7A6B2C264E9E7A00C1F175 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,12 +48,12 @@
 		4C7A6B2C264E9E7A00C1F175 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4C7A6B2B264E9E7A00C1F175 /* Project2.app */,
+				4C7A6B2B264E9E7A00C1F175 /* Project6a.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4C7A6B2D264E9E7A00C1F175 /* Project2 */ = {
+		4C7A6B2D264E9E7A00C1F175 /* Project6a */ = {
 			isa = PBXGroup;
 			children = (
 				4C7A6B2E264E9E7A00C1F175 /* AppDelegate.swift */,
@@ -64,15 +64,15 @@
 				4C7A6B39264E9E7C00C1F175 /* LaunchScreen.storyboard */,
 				4C7A6B3C264E9E7C00C1F175 /* Info.plist */,
 			);
-			path = Project2;
+			path = Project6a;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4C7A6B2A264E9E7A00C1F175 /* Project2 */ = {
+		4C7A6B2A264E9E7A00C1F175 /* Project6a */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4C7A6B3F264E9E7C00C1F175 /* Build configuration list for PBXNativeTarget "Project2" */;
+			buildConfigurationList = 4C7A6B3F264E9E7C00C1F175 /* Build configuration list for PBXNativeTarget "Project6a" */;
 			buildPhases = (
 				4C7A6B27264E9E7A00C1F175 /* Sources */,
 				4C7A6B28264E9E7A00C1F175 /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = Project2;
+			name = Project6a;
 			productName = Project2;
-			productReference = 4C7A6B2B264E9E7A00C1F175 /* Project2.app */;
+			productReference = 4C7A6B2B264E9E7A00C1F175 /* Project6a.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -101,7 +101,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4C7A6B26264E9E7A00C1F175 /* Build configuration list for PBXProject "Project2" */;
+			buildConfigurationList = 4C7A6B26264E9E7A00C1F175 /* Build configuration list for PBXProject "Project6a" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -114,7 +114,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4C7A6B2A264E9E7A00C1F175 /* Project2 */,
+				4C7A6B2A264E9E7A00C1F175 /* Project6a */,
 			);
 		};
 /* End PBXProject section */
@@ -288,12 +288,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XD436Y578P;
-				INFOPLIST_FILE = Project2/Info.plist;
+				INFOPLIST_FILE = Project6a/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Bhargav.Project2;
+				PRODUCT_BUNDLE_IDENTIFIER = Bhargav.Project6a;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -307,12 +307,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XD436Y578P;
-				INFOPLIST_FILE = Project2/Info.plist;
+				INFOPLIST_FILE = Project6a/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Bhargav.Project2;
+				PRODUCT_BUNDLE_IDENTIFIER = Bhargav.Project6a;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -322,7 +322,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4C7A6B26264E9E7A00C1F175 /* Build configuration list for PBXProject "Project2" */ = {
+		4C7A6B26264E9E7A00C1F175 /* Build configuration list for PBXProject "Project6a" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4C7A6B3D264E9E7C00C1F175 /* Debug */,
@@ -331,7 +331,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4C7A6B3F264E9E7C00C1F175 /* Build configuration list for PBXNativeTarget "Project2" */ = {
+		4C7A6B3F264E9E7C00C1F175 /* Build configuration list for PBXNativeTarget "Project6a" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4C7A6B40264E9E7C00C1F175 /* Debug */,

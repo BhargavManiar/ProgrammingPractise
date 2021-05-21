@@ -19,7 +19,9 @@ class ViewController: UITableViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Credits", style: .plain, target: self, action: #selector(showCredits))
         let filterButton = UIBarButtonItem(image: UIImage(systemName: "line.horizontal.3.decrease.circle"), style: .plain, target: self, action: #selector(filterButton))
         let clearFilterButton = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(clearFilter))
-        navigationItem.leftBarButtonItems = [filterButton, clearFilterButton]
+        let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        
+        navigationItem.leftBarButtonItems = [filterButton, spacer, clearFilterButton, spacer]
         changeButtonState(active: true)
         
         let urlString : String
@@ -106,8 +108,9 @@ class ViewController: UITableViewController {
     
     func changeButtonState(active: Bool) {
         navigationItem.leftBarButtonItems?[0].isEnabled = true    // Search Filter, always remain active
-        navigationItem.leftBarButtonItems?[1].isEnabled = !active   // Clear Fiter
+        navigationItem.leftBarButtonItems?[2].isEnabled = !active   // Clear Fiter
     }
+    
     // Table View Functions
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

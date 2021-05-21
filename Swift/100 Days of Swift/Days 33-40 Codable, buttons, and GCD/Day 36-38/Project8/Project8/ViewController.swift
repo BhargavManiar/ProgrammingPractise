@@ -39,7 +39,16 @@ class ViewController: UIViewController {
         
         NSLayoutConstraint.activate([
             scoreLabel.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
-            scoreLabel.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor)
+            scoreLabel.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
+            
+            cluesLabel.topAnchor.constraint(equalTo: scoreLabel.bottomAnchor),
+            cluesLabel.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: 100),
+            cluesLabel.widthAnchor.constraint(equalTo: view.layoutMarginsGuide.widthAnchor, multiplier: 0.6, constant: -100),
+            
+            answersLabel.topAnchor.constraint(equalTo: scoreLabel.bottomAnchor),
+            answersLabel.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -100),
+            answersLabel.widthAnchor.constraint(equalTo: view.layoutMarginsGuide.widthAnchor, constant: -100),
+            answersLabel.heightAnchor.constraint(equalTo: cluesLabel.heightAnchor)
             
             // more constraints to be added
         ])

@@ -15,7 +15,7 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Credits", style: .plain, target: self, action: #selector(showCredits))
-        let filterButton = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(filterButton))
+        let filterButton = UIBarButtonItem(image: UIImage(systemName: "line.horizontal.3.decrease.circle"), style: .plain, target: self, action: #selector(filterButton))
         let clearFilterButton = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(clearFilter))
         navigationItem.leftBarButtonItems = [filterButton, clearFilterButton]
         changeButtonState(active: true)
@@ -100,8 +100,8 @@ class ViewController: UITableViewController {
     }
     
     func changeButtonState(active: Bool) {
-        navigationItem.leftBarButtonItems?[0].isEnabled = active
-        navigationItem.leftBarButtonItems?[1].isEnabled = !active
+        navigationItem.leftBarButtonItems?[0].isEnabled = true    // Search Filter, always remain active
+        navigationItem.leftBarButtonItems?[1].isEnabled = !active   // Clear Fiter
     }
     // Table View Functions
     

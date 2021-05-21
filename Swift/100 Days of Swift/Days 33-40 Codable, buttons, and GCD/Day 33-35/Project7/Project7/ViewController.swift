@@ -9,9 +9,12 @@ import UIKit
 
 class ViewController: UITableViewController {
     var petitions = [Petition]()
+    var filteredPetitions = [Petition]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Credits", style: .plain, target: self, action: #selector(showCredits))
          
         let urlString : String
         
@@ -36,11 +39,21 @@ class ViewController: UITableViewController {
         
     }
     
+    @objc func showCredits() {
+        let alertController = UIAlertController(title: "Credits", message: "Data from: www.hackingwithswift.com", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Okay", style: .default))
+        present(alertController, animated: true)
+    }
+    
+    // Error Alert
+    
     func showError() {
         let alertControler = UIAlertController(title: "Loading error", message: "There was a problem loading the feed; please check your connection and try again.", preferredStyle: .alert)
         alertControler.addAction(UIAlertAction(title: "OK", style: .default))
         present(alertControler, animated: true)
     }
+    
+    // JSON Parse
     
     func parse(json: Data) { // Data is any type of binary data
         let decoder = JSONDecoder()
@@ -50,6 +63,8 @@ class ViewController: UITableViewController {
             tableView.reloadData()
         }
     }
+    
+    // Table View Functions
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return petitions.count

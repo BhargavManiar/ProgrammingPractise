@@ -28,12 +28,12 @@ class ViewController: UITableViewController {
         if let url = URL(string: urlString) {
             if let data = try? Data(contentsOf: url) {
                 parse(json: data)
-            } else {
-                showError()
+                return
             }
-        } else {
-            showError()
         }
+        
+         showError() // Only runs if the above statements fail
+        
     }
     
     func showError() {

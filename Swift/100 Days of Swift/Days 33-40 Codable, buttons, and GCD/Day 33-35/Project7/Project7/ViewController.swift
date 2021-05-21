@@ -9,15 +9,16 @@ import UIKit
 
 class ViewController: UITableViewController {
     var petitions = [Petition]()
-    //var filteredPetitions = [Petition]()
+    var originalPetitions = [Petition]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Credits", style: .plain, target: self, action: #selector(showCredits))
-        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(filterButton))
-        clearFilterButton = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(clearFilter))
-
+        let filterButton = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(filterButton))
+        let clearFilterButton = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(clearFilter))
+        navigationItem.leftBarButtonItems = [filterButton, clearFilterButton]
+        changeButtonState(active: true)
         
         let urlString : String
         
@@ -38,7 +39,7 @@ class ViewController: UITableViewController {
             }
         }
         
-         showError() // Only runs if the above statements fail
+        showError() // Only runs if the above statements fail
     }
     
     // Credit button alert
@@ -64,6 +65,7 @@ class ViewController: UITableViewController {
         
         if let jsonPetitions = try? decoder.decode(Petitions.self, from: json) {
             petitions = jsonPetitions.results
+            originalPetitions = petitions
             tableView.reloadData()
         }
     }
@@ -84,11 +86,23 @@ class ViewController: UITableViewController {
     
     func filter(searchTerm: String) {
         var filtered = [Petition]()
+        petitions = originalPetitions
         filtered = petitions.filter {$0.title.contains(searchTerm) || $0.body.contains(searchTerm)}
         petitions = filtered
+        changeButtonState(active: false)
         tableView.reloadData()
     }
     
+    @objc func clearFilter() {
+        petitions = originalPetitions
+        changeButtonState(active: true)
+        tableView.reloadData()
+    }
+    
+    func changeButtonState(active: Bool) {
+        navigationItem.leftBarButtonItems?[0].isEnabled = active
+        navigationItem.leftBarButtonItems?[1].isEnabled = !active
+    }
     // Table View Functions
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

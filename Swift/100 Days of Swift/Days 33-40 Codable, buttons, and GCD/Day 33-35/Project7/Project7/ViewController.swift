@@ -92,7 +92,7 @@ class ViewController: UITableViewController {
     func filter(searchTerm: String) {
         var filtered = [Petition]()
         petitions = originalPetitions
-        filtered = petitions.filter {$0.title.contains(searchTerm) || $0.body.contains(searchTerm)}
+        filtered = petitions.filter {$0.title.lowercased().contains(searchTerm) || $0.body.lowercased().contains(searchTerm)}
         petitions = filtered
         changeButtonState(active: false)
         tableView.reloadData()

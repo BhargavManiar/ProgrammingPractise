@@ -53,6 +53,9 @@ class ViewController: UIViewController {
             
             // more constraints to be added
         ])
+        
+        cluesLabel.backgroundColor = .red
+        answersLabel.backgroundColor = .blue
     }
     
     override func viewDidLoad() {

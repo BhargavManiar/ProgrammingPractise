@@ -48,7 +48,7 @@ class ViewController: UIViewController {
             
             answersLabel.topAnchor.constraint(equalTo: scoreLabel.bottomAnchor),
             answersLabel.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -100),
-            answersLabel.widthAnchor.constraint(equalTo: view.layoutMarginsGuide.widthAnchor, constant: -100),
+            answersLabel.widthAnchor.constraint(equalTo: view.layoutMarginsGuide.widthAnchor, multiplier: 0.4, constant: -100),
             answersLabel.heightAnchor.constraint(equalTo: cluesLabel.heightAnchor)
             
             // more constraints to be added

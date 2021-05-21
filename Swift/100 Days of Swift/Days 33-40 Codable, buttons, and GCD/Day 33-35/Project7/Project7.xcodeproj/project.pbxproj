@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4CB7A3D32657C39D00C83300 /* Petition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB7A3D22657C39D00C83300 /* Petition.swift */; };
 		4CB7A3D52657C40400C83300 /* Petitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB7A3D42657C40400C83300 /* Petitions.swift */; };
+		4CB7A3D72657C6B200C83300 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB7A3D62657C6B200C83300 /* DetailViewController.swift */; };
 		4CC1A5DC2656F12100CB5B28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC1A5DB2656F12100CB5B28 /* AppDelegate.swift */; };
 		4CC1A5DE2656F12100CB5B28 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC1A5DD2656F12100CB5B28 /* SceneDelegate.swift */; };
 		4CC1A5E02656F12100CB5B28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC1A5DF2656F12100CB5B28 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		4CB7A3D22657C39D00C83300 /* Petition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petition.swift; sourceTree = "<group>"; };
 		4CB7A3D42657C40400C83300 /* Petitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petitions.swift; sourceTree = "<group>"; };
+		4CB7A3D62657C6B200C83300 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		4CC1A5D82656F12100CB5B28 /* Project7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project7.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CC1A5DB2656F12100CB5B28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CC1A5DD2656F12100CB5B28 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				4CC1A5DB2656F12100CB5B28 /* AppDelegate.swift */,
 				4CC1A5DD2656F12100CB5B28 /* SceneDelegate.swift */,
 				4CC1A5DF2656F12100CB5B28 /* ViewController.swift */,
+				4CB7A3D62657C6B200C83300 /* DetailViewController.swift */,
 				4CB7A3D22657C39D00C83300 /* Petition.swift */,
 				4CB7A3D42657C40400C83300 /* Petitions.swift */,
 				4CC1A5E12656F12100CB5B28 /* Main.storyboard */,
@@ -146,6 +149,7 @@
 				4CC1A5E02656F12100CB5B28 /* ViewController.swift in Sources */,
 				4CB7A3D32657C39D00C83300 /* Petition.swift in Sources */,
 				4CC1A5DC2656F12100CB5B28 /* AppDelegate.swift in Sources */,
+				4CB7A3D72657C6B200C83300 /* DetailViewController.swift in Sources */,
 				4CC1A5DE2656F12100CB5B28 /* SceneDelegate.swift in Sources */,
 				4CB7A3D52657C40400C83300 /* Petitions.swift in Sources */,
 			);

@@ -46,6 +46,12 @@ class ViewController: UITableViewController {
         cell.detailTextLabel?.text = petition.body
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let viewController = DetailViewController()
+        viewController.detailItem = petitions[indexPath.row]
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 
 
 }

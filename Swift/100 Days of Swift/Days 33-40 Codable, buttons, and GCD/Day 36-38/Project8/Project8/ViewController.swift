@@ -35,6 +35,7 @@ class ViewController: UIViewController {
         answersLabel.translatesAutoresizingMaskIntoConstraints = false
         answersLabel.font = UIFont.systemFont(ofSize: 24)
         answersLabel.text = "ANSWERS"
+        answersLabel.textAlignment = .right
         answersLabel.numberOfLines = 0
         view.addSubview(answersLabel)
         

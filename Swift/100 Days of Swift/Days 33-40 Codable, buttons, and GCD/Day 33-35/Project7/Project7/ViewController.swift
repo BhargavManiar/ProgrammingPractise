@@ -116,6 +116,7 @@ class ViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let petition = petitions[indexPath.row]
         cell.textLabel?.text = petition.title
+        cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 15)
         cell.detailTextLabel?.text = petition.body
         return cell
     }

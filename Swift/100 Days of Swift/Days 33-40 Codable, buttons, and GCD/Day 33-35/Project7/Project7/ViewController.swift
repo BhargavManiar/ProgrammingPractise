@@ -9,13 +9,16 @@ import UIKit
 
 class ViewController: UITableViewController {
     var petitions = [Petition]()
-    var filteredPetitions = [Petition]()
+    //var filteredPetitions = [Petition]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Credits", style: .plain, target: self, action: #selector(showCredits))
-         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Credits", style: .plain, target: self, action: #selector(showCredits))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(filterButton))
+        clearFilterButton = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(clearFilter))
+
+        
         let urlString : String
         
         if navigationController?.tabBarItem.tag == 0 {
@@ -36,8 +39,9 @@ class ViewController: UITableViewController {
         }
         
          showError() // Only runs if the above statements fail
-        
     }
+    
+    // Credit button alert
     
     @objc func showCredits() {
         let alertController = UIAlertController(title: "Credits", message: "Data from: www.hackingwithswift.com", preferredStyle: .alert)
@@ -48,9 +52,9 @@ class ViewController: UITableViewController {
     // Error Alert
     
     func showError() {
-        let alertControler = UIAlertController(title: "Loading error", message: "There was a problem loading the feed; please check your connection and try again.", preferredStyle: .alert)
-        alertControler.addAction(UIAlertAction(title: "OK", style: .default))
-        present(alertControler, animated: true)
+        let alertController = UIAlertController(title: "Loading error", message: "There was a problem loading the feed; please check your connection and try again.", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alertController, animated: true)
     }
     
     // JSON Parse
@@ -62,6 +66,27 @@ class ViewController: UITableViewController {
             petitions = jsonPetitions.results
             tableView.reloadData()
         }
+    }
+    
+    @objc func filterButton() {
+        let filterController = UIAlertController(title: "Filter", message: "Enter a search term", preferredStyle: .alert)
+        filterController.addTextField()
+        
+        let filterTerm = UIAlertAction(title: "Submit", style: .default) {
+            [weak self, weak filterController] _ in
+            guard let answer = filterController?.textFields?[0].text else { return }
+            self?.filter(searchTerm: answer.lowercased())
+        }
+        
+        filterController.addAction(filterTerm)
+        present(filterController, animated: true)
+    }
+    
+    func filter(searchTerm: String) {
+        var filtered = [Petition]()
+        filtered = petitions.filter {$0.title.contains(searchTerm) || $0.body.contains(searchTerm)}
+        petitions = filtered
+        tableView.reloadData()
     }
     
     // Table View Functions
@@ -83,7 +108,6 @@ class ViewController: UITableViewController {
         viewController.detailItem = petitions[indexPath.row]
         navigationController?.pushViewController(viewController, animated: true)
     }
-
 
 }
 

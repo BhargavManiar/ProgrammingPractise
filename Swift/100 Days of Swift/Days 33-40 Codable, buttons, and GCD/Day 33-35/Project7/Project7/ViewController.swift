@@ -74,6 +74,8 @@ class ViewController: UITableViewController {
         let filterController = UIAlertController(title: "Filter", message: "Enter a search term", preferredStyle: .alert)
         filterController.addTextField()
         
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default)
+        
         let filterTerm = UIAlertAction(title: "Submit", style: .default) {
             [weak self, weak filterController] _ in
             guard let answer = filterController?.textFields?[0].text else { return }
@@ -81,6 +83,7 @@ class ViewController: UITableViewController {
         }
         
         filterController.addAction(filterTerm)
+        filterController.addAction(cancelAction)
         present(filterController, animated: true)
     }
     

@@ -28,8 +28,18 @@ class ViewController: UITableViewController {
         if let url = URL(string: urlString) {
             if let data = try? Data(contentsOf: url) {
                 parse(json: data)
+            } else {
+                showError()
             }
+        } else {
+            showError()
         }
+    }
+    
+    func showError() {
+        let alertControler = UIAlertController(title: "Loading error", message: "There was a problem loading the feed; please check your connection and try again.", preferredStyle: .alert)
+        alertControler.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alertControler, animated: true)
     }
     
     func parse(json: Data) { // Data is any type of binary data

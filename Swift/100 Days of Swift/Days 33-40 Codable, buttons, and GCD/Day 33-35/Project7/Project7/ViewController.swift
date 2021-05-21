@@ -12,12 +12,18 @@ class ViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+         
+        let urlString : String
         
-        // White House API
-        // let urlString = "https://api.whitehouse.gov/v1/petitions.json?limit=100"
-        
-        // Hacking With Swift Cache
-        let urlString = "https://www.hackingwithswift.com/samples/petitions-1.json"
+        if navigationController?.tabBarItem.tag == 0 {
+            // Hacking With Swift Cache
+            urlString = "https://www.hackingwithswift.com/samples/petitions-1.json"
+        } else {
+            // White House API
+            //urlString = "https://api.whitehouse.gov/v1/petitions.json?limit=100"
+            urlString = "https://www.hackingwithswift.com/samples/petitions-2.json"
+        }
+            
         
         if let url = URL(string: urlString) {
             if let data = try? Data(contentsOf: url) {

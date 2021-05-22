@@ -39,11 +39,11 @@ class ViewController: UITableViewController {
     // Error Alert
     
     @objc func showError() {
-        DispatchQueue.main.async { [weak self] in
-            let alertController = UIAlertController(title: "Loading error", message: "There was a problem loading the feed; please check your connection and try again.", preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: "OK", style: .default))
-            self?.present(alertController, animated: true)
-        }
+        
+        let alertController = UIAlertController(title: "Loading error", message: "There was a problem loading the feed; please check your connection and try again.", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alertController, animated: true)
+        
     }
     
     // JSON Parse
@@ -83,7 +83,8 @@ class ViewController: UITableViewController {
                 return
             }
         }
-        showError()
+        
+        performSelector(onMainThread: #selector(showError), with: nil, waitUntilDone: false)
         
     }
     

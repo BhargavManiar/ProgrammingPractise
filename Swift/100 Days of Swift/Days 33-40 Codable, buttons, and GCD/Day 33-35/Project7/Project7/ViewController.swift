@@ -24,7 +24,7 @@ class ViewController: UITableViewController {
         navigationItem.leftBarButtonItems = [filterButton, spacer, clearFilterButton, spacer]
         changeButtonState(active: true)
         
-        performSelector(inBackground: #selector(fetchJSON), with: nil)      
+        performSelector(inBackground: #selector(fetchJSON), with: nil)
         
     }
     
@@ -38,7 +38,7 @@ class ViewController: UITableViewController {
     
     // Error Alert
     
-    func showError() {
+    @objc func showError() {
         DispatchQueue.main.async { [weak self] in
             let alertController = UIAlertController(title: "Loading error", message: "There was a problem loading the feed; please check your connection and try again.", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default))

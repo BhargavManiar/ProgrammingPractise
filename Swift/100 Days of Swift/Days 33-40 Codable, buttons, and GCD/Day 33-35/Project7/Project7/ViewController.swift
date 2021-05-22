@@ -24,28 +24,7 @@ class ViewController: UITableViewController {
         navigationItem.leftBarButtonItems = [filterButton, spacer, clearFilterButton, spacer]
         changeButtonState(active: true)
         
-        let urlString : String
-        
-        if navigationController?.tabBarItem.tag == 0 {
-            // Hacking With Swift Cache
-            urlString = "https://www.hackingwithswift.com/samples/petitions-1.json"
-        } else {
-            // White House API
-            //urlString = "https://api.whitehouse.gov/v1/petitions.json?limit=100"
-            urlString = "https://www.hackingwithswift.com/samples/petitions-2.json"
-        }
-        
-        DispatchQueue.global(qos: .userInitiated).async {
-            [weak self] in
-            if let url = URL(string: urlString) {
-                if let data = try? Data(contentsOf: url) {
-                    self?.parse(json: data)
-                    return
-                }
-            }
-            self?.showError()
-        }
-        
+        performSelector(inBackground: #selector(fetchJSON), with: nil)      
         
     }
     
@@ -83,6 +62,29 @@ class ViewController: UITableViewController {
             
             
         }
+    }
+    
+    @objc func fetchJSON {
+        let urlString : String
+        
+        if navigationController?.tabBarItem.tag == 0 {
+            // Hacking With Swift Cache
+            urlString = "https://www.hackingwithswift.com/samples/petitions-1.json"
+        } else {
+            // White House API
+            //urlString = "https://api.whitehouse.gov/v1/petitions.json?limit=100"
+            urlString = "https://www.hackingwithswift.com/samples/petitions-2.json"
+        }
+        
+
+        if let url = URL(string: urlString) {
+            if let data = try? Data(contentsOf: url) {
+                parse(json: data)
+                return
+            }
+        }
+        showError()
+        
     }
     
     @objc func filterButton() {

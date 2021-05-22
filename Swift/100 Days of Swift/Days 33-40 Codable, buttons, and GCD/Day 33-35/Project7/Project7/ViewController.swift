@@ -43,9 +43,10 @@ class ViewController: UITableViewController {
                     return
                 }
             }
+            self?.showError()
         }
         
-        showError() // Only runs if the above statements fail
+        
     }
     
     // Credit button alert

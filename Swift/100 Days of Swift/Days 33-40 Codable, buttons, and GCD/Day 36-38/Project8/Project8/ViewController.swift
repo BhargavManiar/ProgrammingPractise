@@ -29,6 +29,7 @@ class ViewController: UIViewController {
         cluesLabel.font = UIFont.systemFont(ofSize: 24)
         cluesLabel.text = "CLUES" // placeholder text
         cluesLabel.numberOfLines = 0
+        cluesLabel.setContentCompressionResistancePriority(UILayoutPriority(1), for: .vertical)
         view.addSubview(cluesLabel)
         
         answersLabel = UILabel()
@@ -37,6 +38,7 @@ class ViewController: UIViewController {
         answersLabel.text = "ANSWERS"
         answersLabel.textAlignment = .right
         answersLabel.numberOfLines = 0
+        answersLabel.setContentCompressionResistancePriority(UILayoutPriority(1), for: .vertical)
         view.addSubview(answersLabel)
         
         currentAnswer = UITextField()

@@ -55,12 +55,9 @@ class ViewController: UITableViewController {
             petitions = jsonPetitions.results
             originalPetitions = petitions
             
-            DispatchQueue.main.async {
-                [weak self] in
-                self?.tableView.reloadData()
-            }
-            
-            
+            tableView.performSelector(onMainThread: #selector(UITableView.reloadData), with: nil, waitUntilDone: false)
+        } else {
+            performSelector(onMainThread: #selector(showError), with: nil, waitUntilDone: false)
         }
     }
     

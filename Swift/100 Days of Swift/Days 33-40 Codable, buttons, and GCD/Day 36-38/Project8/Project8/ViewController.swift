@@ -126,6 +126,20 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    // Button functions
+    
+    @objc func letterTapped(_ sender: UIButton) {
+        
+    }
+    
+    @objc func submitTapped(_ sender: UIButton) {
+        
+    }
+    
+    @objc func clearTapped(_ sender: UIButton) {
+        
+    }
 
 
 }

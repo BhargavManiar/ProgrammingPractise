@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     
     var activatedButtons = [UIButton]()
     var solutions = [String]()
+    var solutionFound = 0
     
     var score = 0 {
         didSet {
@@ -160,8 +161,9 @@ class ViewController: UIViewController {
             
             currentAnswer.text = ""
             score += 1
+            solutionFound += 1
             
-            if score % 7 == 0 {
+            if solutionFound % 7 == 0 {
                 let ac = UIAlertController(title: "Well done!", message: "Are you ready for the next level?", preferredStyle: .alert)
                 ac.addAction(UIAlertAction(title: "Let's go!", style: .default, handler: levelUp))
                 present(ac, animated: true)
@@ -170,6 +172,7 @@ class ViewController: UIViewController {
         } else {
             let ac = UIAlertController(title: "Incorrect Guess!", message: "Try again", preferredStyle: .alert)
             ac.addAction((UIAlertAction(title: "OK", style: .default, handler: nil)))
+            score -= 1
             present(ac, animated: true)
         }
     }

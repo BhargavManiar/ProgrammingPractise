@@ -24,6 +24,7 @@ class ViewController: UIViewController {
         }
     }
     var level = 1
+    var maxLevel = 2
     
     override func loadView() {
         view = UIView()
@@ -163,9 +164,13 @@ class ViewController: UIViewController {
             score += 1
             solutionFound += 1
             
-            if solutionFound % 7 == 0 {
+            if solutionFound % 7 == 0 && level != maxLevel{
                 let ac = UIAlertController(title: "Well done!", message: "Are you ready for the next level?", preferredStyle: .alert)
                 ac.addAction(UIAlertAction(title: "Let's go!", style: .default, handler: levelUp))
+                present(ac, animated: true)
+            } else if (solutionFound == 14 && level == maxLevel) {
+                let ac = UIAlertController(title: "Game Finished", message: "Play Again?", preferredStyle: .alert)
+                ac.addAction((UIAlertAction(title: "OK", style: .default, handler: startAgain)))
                 present(ac, animated: true)
             }
         
@@ -228,9 +233,19 @@ class ViewController: UIViewController {
         }
     }
 
-    func levelUp(action: UIAlertAction) {
+    @objc func levelUp(action: UIAlertAction) {
         level += 1
         
+        solutions.removeAll(keepingCapacity: true)
+        loadLevel()
+        
+        for button in letterButtons {
+            button.isHidden = false
+        }
+    }
+    
+    @objc func startAgain(action: UIAlertAction) {
+        level = 1 // Reset level to 1
         solutions.removeAll(keepingCapacity: true)
         loadLevel()
         

@@ -61,7 +61,7 @@ class ViewController: UITableViewController {
         }
     }
     
-    @objc func fetchJSON {
+    @objc func fetchJSON() {
         let urlString : String
         
         if navigationController?.tabBarItem.tag == 0 {

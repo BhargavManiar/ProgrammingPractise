@@ -25,3 +25,5 @@ method so that if firstIndex(of:) failed to find the guess you show the alert.
 
 3. Try making the game also deduct points if the player makes an incorrect guess. Think about how you can move to the next
 level – we can’t use a simple division remainder on the player’s score any more, because they might have lost some points.
+
+Project 9 Challenge 2 requires editing this app.

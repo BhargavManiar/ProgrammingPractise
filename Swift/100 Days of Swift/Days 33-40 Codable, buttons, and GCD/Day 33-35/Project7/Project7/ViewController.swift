@@ -28,7 +28,7 @@ class ViewController: UITableViewController {
         
     }
     
-    // Credit button alert
+    // Credit Button Alert
     
     @objc func showCredits() {
         let alertController = UIAlertController(title: "Credits", message: "Data from: www.hackingwithswift.com", preferredStyle: .alert)
@@ -85,6 +85,8 @@ class ViewController: UITableViewController {
         
     }
     
+    // Filter Button
+    
     @objc func filterButton() {
         let filterController = UIAlertController(title: "Filter", message: "Enter a search term", preferredStyle: .alert)
         filterController.addTextField()
@@ -94,7 +96,7 @@ class ViewController: UITableViewController {
         let filterTerm = UIAlertAction(title: "Submit", style: .default) {
             [weak self, weak filterController] _ in
             guard let answer = filterController?.textFields?[0].text else { return }
-            self?.filter(searchTerm: answer.lowercased())
+            self?.performSelector(inBackground: #selector(self?.filter), with: answer.lowercased())
         }
         
         filterController.addAction(filterTerm)
@@ -102,13 +104,16 @@ class ViewController: UITableViewController {
         present(filterController, animated: true)
     }
     
-    func filter(searchTerm: String) {
+    @objc func filter(searchTerm: String) {
         var filtered = [Petition]()
         petitions = originalPetitions
-        filtered = petitions.filter {$0.title.lowercased().contains(searchTerm) || $0.body.lowercased().contains(searchTerm)}
+        filtered = petitions.filter{$0.title.lowercased().contains(searchTerm) || $0.body.lowercased().contains(searchTerm)}
         petitions = filtered
-        changeButtonState(active: false)
-        tableView.reloadData()
+        
+        DispatchQueue.main.async { [weak self] in
+            self?.changeButtonState(active: false)
+            self?.tableView.reloadData()
+        }
     }
     
     @objc func clearFilter() {

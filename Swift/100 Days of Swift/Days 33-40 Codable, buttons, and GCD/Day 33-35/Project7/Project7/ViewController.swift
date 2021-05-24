@@ -55,14 +55,16 @@ class ViewController: UITableViewController {
             petitions = jsonPetitions.results
             originalPetitions = petitions
             
-            tableView.performSelector(onMainThread: #selector(UITableView.reloadData), with: nil, waitUntilDone: false)
+            DispatchQueue.main.async { [weak self] in
+                self?.tableView.reloadData()
+            }
         } else {
             performSelector(onMainThread: #selector(showError), with: nil, waitUntilDone: false)
         }
     }
     
     @objc func fetchJSON() {
-        let urlString : String
+        var urlString : String
         
         if navigationController?.tabBarItem.tag == 0 {
             // Hacking With Swift Cache
@@ -72,7 +74,6 @@ class ViewController: UITableViewController {
             //urlString = "https://api.whitehouse.gov/v1/petitions.json?limit=100"
             urlString = "https://www.hackingwithswift.com/samples/petitions-2.json"
         }
-        
 
         if let url = URL(string: urlString) {
             if let data = try? Data(contentsOf: url) {

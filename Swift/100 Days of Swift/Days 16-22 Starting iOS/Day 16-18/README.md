@@ -24,3 +24,4 @@
 3. Rather than show image names in the details title bar show ‘Picture x of y’, where y is the total number of images and x is the picture’s position in the array. 
 
 Project 3 Challenge 2 requires editing this app.
+Project 9 Challenge 1 requires editing this app.

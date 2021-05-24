@@ -26,3 +26,5 @@ let them enter that string. This is a tough one, so I’ve included some hints b
 
 3. Experiment with the HTML – this isn’t a HTML or CSS tutorial, but you can find lots of resources
 online to give you enough knowledge to tinker with the layout a little.
+
+Project 9 Challenge 3 requires editing this app.

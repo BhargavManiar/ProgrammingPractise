@@ -24,26 +24,8 @@ class ViewController: UITableViewController {
         navigationItem.leftBarButtonItems = [filterButton, spacer, clearFilterButton, spacer]
         changeButtonState(active: true)
         
-        let urlString : String
+        performSelector(inBackground: #selector(fetchJSON), with: nil)
         
-        if navigationController?.tabBarItem.tag == 0 {
-            // Hacking With Swift Cache
-            urlString = "https://www.hackingwithswift.com/samples/petitions-1.json"
-        } else {
-            // White House API
-            //urlString = "https://api.whitehouse.gov/v1/petitions.json?limit=100"
-            urlString = "https://www.hackingwithswift.com/samples/petitions-2.json"
-        }
-            
-        
-        if let url = URL(string: urlString) {
-            if let data = try? Data(contentsOf: url) {
-                parse(json: data)
-                return
-            }
-        }
-        
-        showError() // Only runs if the above statements fail
     }
     
     // Credit button alert
@@ -56,10 +38,12 @@ class ViewController: UITableViewController {
     
     // Error Alert
     
-    func showError() {
+    @objc func showError() {
+        
         let alertController = UIAlertController(title: "Loading error", message: "There was a problem loading the feed; please check your connection and try again.", preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .default))
         present(alertController, animated: true)
+        
     }
     
     // JSON Parse
@@ -70,8 +54,35 @@ class ViewController: UITableViewController {
         if let jsonPetitions = try? decoder.decode(Petitions.self, from: json) {
             petitions = jsonPetitions.results
             originalPetitions = petitions
-            tableView.reloadData()
+            
+            tableView.performSelector(onMainThread: #selector(UITableView.reloadData), with: nil, waitUntilDone: false)
+        } else {
+            performSelector(onMainThread: #selector(showError), with: nil, waitUntilDone: false)
         }
+    }
+    
+    @objc func fetchJSON() {
+        let urlString : String
+        
+        if navigationController?.tabBarItem.tag == 0 {
+            // Hacking With Swift Cache
+            urlString = "https://www.hackingwithswift.com/samples/petitions-1.json"
+        } else {
+            // White House API
+            //urlString = "https://api.whitehouse.gov/v1/petitions.json?limit=100"
+            urlString = "https://www.hackingwithswift.com/samples/petitions-2.json"
+        }
+        
+
+        if let url = URL(string: urlString) {
+            if let data = try? Data(contentsOf: url) {
+                parse(json: data)
+                return
+            }
+        }
+        
+        performSelector(onMainThread: #selector(showError), with: nil, waitUntilDone: false)
+        
     }
     
     @objc func filterButton() {
@@ -133,5 +144,3 @@ class ViewController: UITableViewController {
     }
 
 }
-
-

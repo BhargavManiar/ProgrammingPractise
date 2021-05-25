@@ -48,6 +48,29 @@ class ViewController: UIViewController {
     }
     
     // Game Functions
+    @objc func startGame(action: UIAlertAction) {
+        if let obtainedWord = allWords.randomElement() {
+            hiddenWord = obtainedWord
+        }
+        print("Start Game -> Hidden Word: \(String(describing: hiddenWord))")
+        
+        //var setCurrentWord: String = "";
+        for character in hiddenWord! {
+            print("Start Game -> Character: \(String(describing: character))")
+            //setCurrentWord += "?"
+            if currentWord != nil {
+                currentWord! += "?"
+            } else {
+                currentWord = "?"
+            }
+        }
+        //currentWord = setCurrentWord
+        
+        print("Start Game -> Current Word: \(String(describing: currentWord))")
+        title = currentWord
+        usedLetters.removeAll(keepingCapacity: true) // Remove previous gueses
+    }
+    
     @objc func startGame() {
         if let obtainedWord = allWords.randomElement() {
             hiddenWord = obtainedWord
@@ -119,8 +142,27 @@ class ViewController: UIViewController {
     
     func wrongAnswer() {
         wrongAnswerScore += 1 // Increment wrong answer score
+        if(wrongAnswerScore == 7) {
+            endGame(win: false)
+        } else {
+            showErrorMessage(title: "Incorrect", message: "Try another letter")
+        }
         print("Check Input -> Wrong Answer: \(wrongAnswerScore)")
-        showErrorMessage(title: "Incorrect", message: "Try another letter")
+        
+    }
+    
+    func endGame(win: Bool) {
+        var message: String
+        if win == true {
+            message = "You Won!"
+        } else {
+            message = "You Lost. The word was " + hiddenWord!
+            title = hiddenWord
+        }
+        
+        let alertController = UIAlertController(title: "Game Over", message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Play Again", style: .default, handler: startGame))
+        present(alertController, animated: true)
     }
     
     func showErrorMessage(title: String, message: String) {

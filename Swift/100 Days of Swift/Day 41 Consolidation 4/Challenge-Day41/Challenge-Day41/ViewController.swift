@@ -89,19 +89,18 @@ class ViewController: UIViewController {
         var indexPosition = 0
         
         if input.count == 1 {
-            // update the currentWord as well as the title
             if (!usedLetters.contains(input)) {
                 usedLetters.append(input) // Remember letter used
                 if (hiddenWord!.contains(input)) {
                     print("Character '\(String(describing: input))' found")
-                    // Show where the letter is on the
                     for i in hiddenWord! {
                         if String(i) == input {
+                            // Update the currentWord, show where the letter is on the hideen work
                             currentWord = currentWord?.replace(input, at: indexPosition)
                         }
                         indexPosition += 1
                     }
-                    title = currentWord
+                    title = currentWord // Update the title
                 } else {
                     wrongAnswer += 1 // Increment wrong answer score
                     print("Check Input -> Wrong Answer: \(wrongAnswer)")

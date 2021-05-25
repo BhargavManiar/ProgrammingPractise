@@ -76,7 +76,17 @@ class ViewController: UIViewController {
     
     func checkInput(_ input: String) {
         if input.count == 1 {
-            // continue
+            // update the currentWord as well as the title
+            if (usedLetters.contains(input)) {
+                showErrorMessage(title: "Letter used already!", message: "Enter a differnet letter")
+            } else {
+                usedLetters.append(input) // Remember letter used
+                if ((hiddenWord?.contains(input)) != nil) {
+                    print("Character \(String(describing: input))found")
+                } else {
+                    wrongAnswer += 1 // Increment wrong answer score
+                }
+            }
         } else {
             showErrorMessage(title: "Invalid input", message: "You need to enter one character")
         }

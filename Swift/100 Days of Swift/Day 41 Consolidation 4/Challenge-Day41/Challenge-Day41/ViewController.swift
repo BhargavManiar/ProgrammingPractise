@@ -170,7 +170,7 @@ class ViewController: UIViewController {
     }
     
     func resetGameVariables() {
-        print("Resetting Variables")
+        print("Reset Game Variables: Resetting Variables")
         usedLetters.removeAll()
         hiddenWord = ""
         currentWord = ""

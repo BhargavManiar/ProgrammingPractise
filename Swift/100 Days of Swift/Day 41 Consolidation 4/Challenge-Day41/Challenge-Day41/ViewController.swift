@@ -16,7 +16,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // Obtain the words from file manager
+        
+        // Put a ??? title word on the nav bar
+        // Add + button on the nav bar
     }
 
 

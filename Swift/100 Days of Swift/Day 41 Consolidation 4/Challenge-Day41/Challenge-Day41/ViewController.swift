@@ -43,7 +43,7 @@ class ViewController: UIViewController {
         // Add + button on the nav bar
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(promptForInput))
         
-        // Put a ??? title word on the nav bar
+        // Start the game and add a ??? title word on the nav bar
         startGame()
     }
     
@@ -97,13 +97,13 @@ class ViewController: UIViewController {
                     print("Check Input -> Wrong Answer: \(wrongAnswer)")
                     showErrorMessage(title: "Incorrect", message: "Try another letter")
                 }
-                
             } else {
                 showErrorMessage(title: "Letter used already!", message: "Enter a differnet letter")
             }
         } else {
             showErrorMessage(title: "Invalid input", message: "You need to enter one character")
         }
+        
     }
     
     func updateTitle(_ input: String) {

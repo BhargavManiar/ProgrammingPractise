@@ -10,9 +10,9 @@ import UIKit
 class ViewController: UIViewController {
     var usedLetters = [String]()
     var allWords = [String]()
-    var userInput: String = ""
-    var hiddenWord: String = ""
-    var currentWord: String = ""
+    var userInput: String?
+    var hiddenWord: String?
+    var currentWord: String?
     var wrongAnswer: Int = 0
     
     override func viewDidLoad() {
@@ -34,8 +34,21 @@ class ViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(promptForInput))
         
         // Put a ??? title word on the nav bar
+        startGame()
     }
-
+    
+    @objc func startGame() {
+        hiddenWord = allWords.randomElement()
+        for _ in hiddenWord! {
+            currentWord! += "?"
+        }
+        title = currentWord
+        usedLetters.removeAll(keepingCapacity: true) // Remove previous gueses
+    }
+    
+    @objc func promptForInput() {
+        
+    }
 
 }
 

@@ -18,9 +18,8 @@ extension String {
 }
 
 class ViewController: UIViewController {
-    var usedLetters = [String]()
     var allWords = [String]()
-    var userInput: String?
+    var usedLetters = [String]() // resetable
     var hiddenWord: String?
     var currentWord: String?
     var wrongAnswerScore: Int = 0
@@ -49,7 +48,7 @@ class ViewController: UIViewController {
     
     // Game Functions
     @objc func startGame(action: UIAlertAction) {
-        print("Starting Job")
+        print("Initial Game Start")
         
         if let obtainedWord = allWords.randomElement() {
             hiddenWord = obtainedWord
@@ -171,6 +170,8 @@ class ViewController: UIViewController {
             print("Player lost")
         }
         
+        // rest variables
+        
         let alertController = UIAlertController(title: "Game Over", message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Play Again", style: .default, handler: startGame))
         present(alertController, animated: true)
@@ -183,4 +184,3 @@ class ViewController: UIViewController {
     }
 
 }
-

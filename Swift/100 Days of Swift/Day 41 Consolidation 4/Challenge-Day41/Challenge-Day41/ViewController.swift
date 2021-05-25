@@ -50,15 +50,16 @@ class ViewController: UIViewController {
     
     // Game Functions
     @objc func startGame(action: UIAlertAction) {
-        print("Start Game: Play Again")
+        let funcName = "startGame"
+        logger(functionName: funcName, message: "Play Again")
+        
         if let obtainedWord = allWords.randomElement() {
             hiddenWord = obtainedWord
         }
-        
-        print("Start Game -> Hidden Word: \(String(describing: hiddenWord))")
+        logger(functionName: funcName, variableName: "hiddenWord", variableOutput: "\(String(describing: hiddenWord))")
         
         for character in hiddenWord! {
-            print("Start Game -> Character: \(String(describing: character))")
+            logger(functionName: funcName, variableName: "character", variableOutput: "\(character)")
             if currentWord != nil {
                 currentWord! += "?"
             } else {
@@ -66,21 +67,22 @@ class ViewController: UIViewController {
             }
         }
         
-        print("Start Game -> Current Word: \(String(describing: currentWord))")
+        logger(functionName: funcName, variableName: "currentWord", variableOutput: "\(String(describing: currentWord))")
         title = currentWord
         usedLetters.removeAll(keepingCapacity: true) // Remove previous gueses
     }
     
     @objc func startGame() {
-        print("Start Game: Initial Game Start")
+        let funcName = "startGame"
+        logger(functionName: funcName, message: "Initial Game Start")
         
         if let obtainedWord = allWords.randomElement() {
             hiddenWord = obtainedWord
         }
-        print("Start Game -> Hidden Word: \(String(describing: hiddenWord))")
+        logger(functionName: funcName, variableName: "hiddenWord", variableOutput: "\(String(describing: hiddenWord))")
         
         for character in hiddenWord! {
-            print("Start Game -> Character: \(String(describing: character))")
+            logger(functionName: funcName, variableName: "character", variableOutput: "\(character)")
             if currentWord != nil {
                 currentWord! += "?"
             } else {
@@ -88,12 +90,15 @@ class ViewController: UIViewController {
             }
         }
         
-        print("Start Game -> Current Word: \(String(describing: currentWord))")
+        logger(functionName: funcName, variableName: "currentWord", variableOutput: "\(String(describing: currentWord))")
         title = currentWord
         usedLetters.removeAll(keepingCapacity: true) // Remove previous gueses
     }
     
     @objc func promptForInput() {
+        let funcName = "promptForInput"
+        logger(functionName: funcName, message: "Input Button Pressed")
+        
         let alertController = UIAlertController(title: "Enter character", message: nil, preferredStyle: .alert)
         alertController.addTextField()
         
@@ -108,25 +113,34 @@ class ViewController: UIViewController {
     }
     
     func checkInput(_ input: String) {
+        let funcName = "checkInput"
         if input.count == 1 {
             if (!usedLetters.contains(input)) {
                 usedLetters.append(input) // Remember letter used
+                logger(functionName: funcName, variableName: "usedLetters", variableOutput: "\(usedLetters)")
+                
                 if (hiddenWord!.contains(input)) {
+                    logger(functionName: funcName, message: "Hidden letter found")
                     updateTitle(input)
                 } else {
+                    logger(functionName: funcName, message: "Hidden letter not found")
                     wrongAnswer()
                 }
             } else {
+                logger(functionName: funcName, message: "Letter reuse detected")
                 showErrorMessage(title: "Letter used already!", message: "Enter a differnet letter")
             }
         } else {
+            logger(functionName: funcName, message: "Input greater than 1")
             showErrorMessage(title: "Invalid input", message: "You need to enter one character")
         }
     }
     
     func updateTitle(_ input: String) {
+        let funcName = "updateTitle"
         var indexPosition = 0
-        print("Character '\(String(describing: input))' found")
+        logger(functionName: funcName, variableName: "input", variableOutput: "\(input)")
+        
         for i in hiddenWord! {
             if String(i) == input {
                 // Update the currentWord, show where the letter is on the hideen work
@@ -138,14 +152,16 @@ class ViewController: UIViewController {
             }
             
             indexPosition += 1
-            print("Update Title -> Index Position: \(indexPosition)")
+            logger(functionName: funcName, variableName: "indexPosition", variableOutput: "\(indexPosition)")
         }
         title = currentWord // Update the title
     }
     
     func wrongAnswer() {
+        let funcName = "wrongAnswer"
         wrongAnswerScore += 1 // Increment wrong answer score
-        print("Wrong Answer -> Wrong Answer: \(wrongAnswerScore)")
+        logger(functionName: funcName, variableName: "wrongAnswerScore", variableOutput: "\(wrongAnswerScore)")
+        
         if(wrongAnswerScore == 7) {
             endGame(win: false)
         } else {
@@ -154,14 +170,16 @@ class ViewController: UIViewController {
     }
     
     func endGame(win: Bool) {
+        let funcName = "endGame"
         var message: String
+        
         if win == true {
             message = "You Won!"
-            print("End Game: Player won")
+            logger(functionName: funcName, message: "Player Won")
         } else {
             message = "You Lost. The word was " + hiddenWord!
             title = hiddenWord
-            print("End Game: Player lost")
+            logger(functionName: funcName, message: "Player Lost")
         }
         
         resetGameVariables() // rest variables
@@ -172,18 +190,25 @@ class ViewController: UIViewController {
     }
     
     func resetGameVariables() {
-        print("Reset Game Variables: Resetting Variables")
+        let funcName = "resetGameVariables"
+        
+        logger(functionName: funcName, message: "Resetting Variables")
+        
         usedLetters.removeAll()
         hiddenWord = ""
         currentWord = ""
         wrongAnswerScore = 0
-        print("Reset Game Variables -> Used Letters \(usedLetters)")
-        print("Reset Game Variables -> Hidden Words \(hiddenWord!)")
-        print("Reset Game Variables -> Current Word \(currentWord!)")
-        print("Reset Game Variables -> Wrong Answer Score \(wrongAnswerScore)")
+        
+        logger(functionName: funcName, variableName: "usedLetters", variableOutput: "\(usedLetters)")
+        logger(functionName: funcName, variableName: "hiddenWord", variableOutput: "\(String(describing: hiddenWord))")
+        logger(functionName: funcName, variableName: "currentWord", variableOutput: "\(String(describing: currentWord))")
+        logger(functionName: funcName, variableName: "wrongAnswerScore", variableOutput: "\(wrongAnswerScore)")
     }
     
     func showErrorMessage(title: String, message: String) {
+        let funcName = "showErrorMessage"
+        logger(functionName: funcName, variableName: "message", variableOutput: "\(message)")
+        
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .default))
         present(alertController, animated: true)

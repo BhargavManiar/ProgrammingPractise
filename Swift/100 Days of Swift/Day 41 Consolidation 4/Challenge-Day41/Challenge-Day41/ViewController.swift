@@ -24,6 +24,8 @@ class ViewController: UIViewController {
     var currentWord: String?
     var wrongAnswerScore: Int = 0
     
+    var loggerEnable: Bool = true // for logging on std output
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -186,5 +188,21 @@ class ViewController: UIViewController {
         alertController.addAction(UIAlertAction(title: "OK", style: .default))
         present(alertController, animated: true)
     }
-
+    
+    // Logger Functions
+    
+    // Messages from a function
+    func logger(functionName: String, message: String) {
+        if loggerEnable {
+            print("\(functionName): \(message)")
+        }
+    }
+    
+    // Variable output from a function
+    func logger(functionName: String, variableName: String, variableOutput: String) {
+        if loggerEnable{
+            print("\(functionName) -> \(variableName): \(variableOutput)")
+        }
+        
+    }
 }

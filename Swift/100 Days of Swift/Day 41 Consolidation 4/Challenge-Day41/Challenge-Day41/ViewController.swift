@@ -47,6 +47,7 @@ class ViewController: UIViewController {
         startGame()
     }
     
+    // Game Functions
     @objc func startGame() {
         if let obtainedWord = allWords.randomElement() {
             hiddenWord = obtainedWord

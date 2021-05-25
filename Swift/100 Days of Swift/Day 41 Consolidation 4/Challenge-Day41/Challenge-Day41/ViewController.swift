@@ -49,9 +49,12 @@ class ViewController: UIViewController {
     
     // Game Functions
     @objc func startGame(action: UIAlertAction) {
+        print("Starting Job")
+        
         if let obtainedWord = allWords.randomElement() {
             hiddenWord = obtainedWord
         }
+        
         print("Start Game -> Hidden Word: \(String(describing: hiddenWord))")
         
         //var setCurrentWord: String = "";
@@ -135,7 +138,13 @@ class ViewController: UIViewController {
                 // Update the currentWord, show where the letter is on the hideen work
                 currentWord = currentWord?.replace(input, at: indexPosition)
             }
+            
+            if (currentWord?.contains("?") == false) {
+                endGame(win: true)
+            }
+            
             indexPosition += 1
+            print("Update Title -> Index Position: \(indexPosition)")
         }
         title = currentWord // Update the title
     }
@@ -155,9 +164,11 @@ class ViewController: UIViewController {
         var message: String
         if win == true {
             message = "You Won!"
+            print("Player won")
         } else {
             message = "You Lost. The word was " + hiddenWord!
             title = hiddenWord
+            print("Player lost")
         }
         
         let alertController = UIAlertController(title: "Game Over", message: message, preferredStyle: .alert)

@@ -103,9 +103,11 @@ class ViewController: UIViewController {
                         }
                         indexPosition += 1
                     }
+                    title = currentWord
                 } else {
                     wrongAnswer += 1 // Increment wrong answer score
                     print("Check Input -> Wrong Answer: \(wrongAnswer)")
+                    showErrorMessage(title: "Incorrect", message: "Try another letter")
                 }
             }
         } else {

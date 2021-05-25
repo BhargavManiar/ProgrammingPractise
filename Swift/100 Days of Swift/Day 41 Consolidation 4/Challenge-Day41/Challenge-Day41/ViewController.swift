@@ -30,8 +30,10 @@ class ViewController: UIViewController {
             allWords = ["honey"]
         }
         
-        // Put a ??? title word on the nav bar
         // Add + button on the nav bar
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(promptForInput))
+        
+        // Put a ??? title word on the nav bar
     }
 
 

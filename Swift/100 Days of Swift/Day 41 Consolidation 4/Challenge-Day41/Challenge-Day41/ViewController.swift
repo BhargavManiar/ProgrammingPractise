@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     var userInput: String?
     var hiddenWord: String?
     var currentWord: String?
-    var wrongAnswer: Int = 0
+    var wrongAnswerScore: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -93,9 +93,7 @@ class ViewController: UIViewController {
                 if (hiddenWord!.contains(input)) {
                     updateTitle(input)
                 } else {
-                    wrongAnswer += 1 // Increment wrong answer score
-                    print("Check Input -> Wrong Answer: \(wrongAnswer)")
-                    showErrorMessage(title: "Incorrect", message: "Try another letter")
+                    wrongAnswer()
                 }
             } else {
                 showErrorMessage(title: "Letter used already!", message: "Enter a differnet letter")
@@ -117,6 +115,12 @@ class ViewController: UIViewController {
             indexPosition += 1
         }
         title = currentWord // Update the title
+    }
+    
+    func wrongAnswer() {
+        wrongAnswerScore += 1 // Increment wrong answer score
+        print("Check Input -> Wrong Answer: \(wrongAnswerScore)")
+        showErrorMessage(title: "Incorrect", message: "Try another letter")
     }
     
     func showErrorMessage(title: String, message: String) {

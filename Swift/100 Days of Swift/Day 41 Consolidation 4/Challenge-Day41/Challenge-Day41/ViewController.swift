@@ -85,22 +85,12 @@ class ViewController: UIViewController {
     }
     
     func checkInput(_ input: String) {
-        
-        var indexPosition = 0
-        
+
         if input.count == 1 {
             if (!usedLetters.contains(input)) {
                 usedLetters.append(input) // Remember letter used
                 if (hiddenWord!.contains(input)) {
-                    print("Character '\(String(describing: input))' found")
-                    for i in hiddenWord! {
-                        if String(i) == input {
-                            // Update the currentWord, show where the letter is on the hideen work
-                            currentWord = currentWord?.replace(input, at: indexPosition)
-                        }
-                        indexPosition += 1
-                    }
-                    title = currentWord // Update the title
+                    updateTitle(input)
                 } else {
                     wrongAnswer += 1 // Increment wrong answer score
                     print("Check Input -> Wrong Answer: \(wrongAnswer)")
@@ -113,6 +103,19 @@ class ViewController: UIViewController {
         } else {
             showErrorMessage(title: "Invalid input", message: "You need to enter one character")
         }
+    }
+    
+    func updateTitle(_ input: String) {
+        var indexPosition = 0
+        print("Character '\(String(describing: input))' found")
+        for i in hiddenWord! {
+            if String(i) == input {
+                // Update the currentWord, show where the letter is on the hideen work
+                currentWord = currentWord?.replace(input, at: indexPosition)
+            }
+            indexPosition += 1
+        }
+        title = currentWord // Update the title
     }
     
     func showErrorMessage(title: String, message: String) {

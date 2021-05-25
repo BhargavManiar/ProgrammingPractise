@@ -48,7 +48,6 @@ class ViewController: UIViewController {
     
     // Game Functions
     @objc func startGame(action: UIAlertAction) {
-        print("Initial Game Start")
         
         if let obtainedWord = allWords.randomElement() {
             hiddenWord = obtainedWord
@@ -74,6 +73,8 @@ class ViewController: UIViewController {
     }
     
     @objc func startGame() {
+        print("Initial Game Start")
+        
         if let obtainedWord = allWords.randomElement() {
             hiddenWord = obtainedWord
         }
@@ -170,11 +171,18 @@ class ViewController: UIViewController {
             print("Player lost")
         }
         
-        // rest variables
+        resetGameVariables() // rest variables
         
         let alertController = UIAlertController(title: "Game Over", message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Play Again", style: .default, handler: startGame))
         present(alertController, animated: true)
+    }
+    
+    func resetGameVariables() {
+        usedLetters.removeAll()
+        hiddenWord = ""
+        currentWord = ""
+        wrongAnswerScore = 0
     }
     
     func showErrorMessage(title: String, message: String) {

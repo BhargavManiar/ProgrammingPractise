@@ -179,10 +179,15 @@ class ViewController: UIViewController {
     }
     
     func resetGameVariables() {
+        print("Resetting Variables")
         usedLetters.removeAll()
         hiddenWord = ""
         currentWord = ""
         wrongAnswerScore = 0
+        print("Reset Game Variables -> Used Letters \(usedLetters)")
+        print("Reset Game Variables -> Hidden Words \(hiddenWord!)")
+        print("Reset Game Variables -> Current Word \(currentWord!)")
+        print("Reset Game Variables -> Wrong Answer Score \(wrongAnswerScore)")
     }
     
     func showErrorMessage(title: String, message: String) {

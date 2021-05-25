@@ -18,6 +18,9 @@ extension String {
 }
 
 class ViewController: UIViewController {
+    @IBOutlet var livesRemaining: UILabel!
+    @IBOutlet var lettersUsed: UITextView!
+    
     var allWords = [String]()
     var usedLetters = [String]() // resetable
     var hiddenWord: String?
@@ -43,6 +46,11 @@ class ViewController: UIViewController {
         
         // Add + button on the nav bar
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(promptForInput))
+        
+        // Setup other UI elements
+        livesRemaining.text = "Remaining Lives: 7"
+        lettersUsed.isEditable = false
+        lettersUsed.text = " "
         
         // Start the game and add a ??? title word on the nav bar
         startGame()
@@ -141,6 +149,8 @@ class ViewController: UIViewController {
         var indexPosition = 0
         logger(functionName: funcName, variableName: "input", variableOutput: "\(input)")
         
+        lettersUsed.text += "\(input), "
+        
         for i in hiddenWord! {
             if String(i) == input {
                 // Update the currentWord, show where the letter is on the hideen work
@@ -160,6 +170,7 @@ class ViewController: UIViewController {
     func wrongAnswer() {
         let funcName = "wrongAnswer"
         wrongAnswerScore += 1 // Increment wrong answer score
+        livesRemaining.text = "Remaining Lives: \(7-wrongAnswerScore)"
         logger(functionName: funcName, variableName: "wrongAnswerScore", variableOutput: "\(wrongAnswerScore)")
         
         if(wrongAnswerScore == 7) {

@@ -75,7 +75,17 @@ class ViewController: UIViewController {
     }
     
     func checkInput(_ input: String) {
-        
+        if input.count == 1 {
+            // continue
+        } else {
+            showErrorMessage(title: "Invalid input", message: "You need to enter one character")
+        }
+    }
+    
+    func showErrorMessage(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alertController, animated: true)
     }
 
 }

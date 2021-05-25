@@ -85,6 +85,9 @@ class ViewController: UIViewController {
     }
     
     func checkInput(_ input: String) {
+        
+        var indexPosition = 0
+        
         if input.count == 1 {
             // update the currentWord as well as the title
             if (usedLetters.contains(input)) {
@@ -96,9 +99,9 @@ class ViewController: UIViewController {
                     // Show where the letter is on the
                     for i in hiddenWord! {
                         if String(i) == input {
-                            // Add code later
+                            currentWord = currentWord?.replace(input, at: indexPosition)
                         }
-                        
+                        indexPosition += 1
                     }
                 } else {
                     wrongAnswer += 1 // Increment wrong answer score

@@ -48,7 +48,7 @@ class ViewController: UIViewController {
     
     // Game Functions
     @objc func startGame(action: UIAlertAction) {
-        
+        print("Start Game: Play Again")
         if let obtainedWord = allWords.randomElement() {
             hiddenWord = obtainedWord
         }
@@ -70,7 +70,7 @@ class ViewController: UIViewController {
     }
     
     @objc func startGame() {
-        print("Initial Game Start")
+        print("Start Game: Initial Game Start")
         
         if let obtainedWord = allWords.randomElement() {
             hiddenWord = obtainedWord
@@ -106,7 +106,6 @@ class ViewController: UIViewController {
     }
     
     func checkInput(_ input: String) {
-
         if input.count == 1 {
             if (!usedLetters.contains(input)) {
                 usedLetters.append(input) // Remember letter used
@@ -121,7 +120,6 @@ class ViewController: UIViewController {
         } else {
             showErrorMessage(title: "Invalid input", message: "You need to enter one character")
         }
-        
     }
     
     func updateTitle(_ input: String) {
@@ -145,13 +143,12 @@ class ViewController: UIViewController {
     
     func wrongAnswer() {
         wrongAnswerScore += 1 // Increment wrong answer score
+        print("Wrong Answer -> Wrong Answer: \(wrongAnswerScore)")
         if(wrongAnswerScore == 7) {
             endGame(win: false)
         } else {
             showErrorMessage(title: "Incorrect", message: "Try another letter")
         }
-        print("Check Input -> Wrong Answer: \(wrongAnswerScore)")
-        
     }
     
     func endGame(win: Bool) {

@@ -80,17 +80,14 @@ class ViewController: UIViewController {
         }
         print("Start Game -> Hidden Word: \(String(describing: hiddenWord))")
         
-        //var setCurrentWord: String = "";
         for character in hiddenWord! {
             print("Start Game -> Character: \(String(describing: character))")
-            //setCurrentWord += "?"
             if currentWord != nil {
                 currentWord! += "?"
             } else {
                 currentWord = "?"
             }
         }
-        //currentWord = setCurrentWord
         
         print("Start Game -> Current Word: \(String(describing: currentWord))")
         title = currentWord

@@ -81,10 +81,18 @@ class ViewController: UIViewController {
                 showErrorMessage(title: "Letter used already!", message: "Enter a differnet letter")
             } else {
                 usedLetters.append(input) // Remember letter used
-                if ((hiddenWord?.contains(input)) != nil) {
-                    print("Character \(String(describing: input))found")
+                if (hiddenWord!.contains(input)) {
+                    print("Character '\(String(describing: input))' found")
+                    // Show where the letter is on the
+                    for i in hiddenWord! {
+                        if String(i) == input {
+                            // Add code later
+                        }
+                        
+                    }
                 } else {
                     wrongAnswer += 1 // Increment wrong answer score
+                    print("Check Input -> Wrong Answer: \(wrongAnswer)")
                 }
             }
         } else {

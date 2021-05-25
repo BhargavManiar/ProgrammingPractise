@@ -155,11 +155,11 @@ class ViewController: UIViewController {
         var message: String
         if win == true {
             message = "You Won!"
-            print("Player won")
+            print("End Game: Player won")
         } else {
             message = "You Lost. The word was " + hiddenWord!
             title = hiddenWord
-            print("Player lost")
+            print("End Game: Player lost")
         }
         
         resetGameVariables() // rest variables

@@ -61,6 +61,20 @@ class ViewController: UIViewController {
     }
     
     @objc func promptForInput() {
+        let alertController = UIAlertController(title: "Enter character", message: nil, preferredStyle: .alert)
+        alertController.addTextField()
+        
+        let submitAction = UIAlertAction(title: "Submit", style: .default) {
+            [weak self, weak alertController] _ in
+            guard let answer = alertController?.textFields?[0].text else { return }
+            self?.checkInput(answer.lowercased())
+        }
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alertController.addAction(submitAction)
+        present(alertController, animated: true)
+    }
+    
+    func checkInput(_ input: String) {
         
     }
 

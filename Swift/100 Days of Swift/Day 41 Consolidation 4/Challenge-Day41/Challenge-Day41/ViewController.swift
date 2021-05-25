@@ -97,7 +97,7 @@ class ViewController: UIViewController {
     
     @objc func promptForInput() {
         let funcName = "promptForInput"
-        logger(functionName: funcName, message: "Input Button Pressed")
+        logger(functionName: funcName, message: "Input button pressed")
         
         let alertController = UIAlertController(title: "Enter character", message: nil, preferredStyle: .alert)
         alertController.addTextField()
@@ -175,11 +175,11 @@ class ViewController: UIViewController {
         
         if win == true {
             message = "You Won!"
-            logger(functionName: funcName, message: "Player Won")
+            logger(functionName: funcName, message: "Player won")
         } else {
             message = "You Lost. The word was " + hiddenWord!
             title = hiddenWord
-            logger(functionName: funcName, message: "Player Lost")
+            logger(functionName: funcName, message: "Player lost")
         }
         
         resetGameVariables() // rest variables

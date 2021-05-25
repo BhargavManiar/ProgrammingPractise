@@ -7,6 +7,16 @@
 
 import UIKit
 
+extension String {
+    func replace(_ with: String, at index: Int) -> String {
+        var modifiedString = String()
+        for (i, char) in self.enumerated() {
+            modifiedString += String((i == index) ? with : String(char))
+        }
+        return modifiedString
+    }
+}
+
 class ViewController: UIViewController {
     var usedLetters = [String]()
     var allWords = [String]()

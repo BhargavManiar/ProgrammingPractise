@@ -125,6 +125,7 @@ class ViewController: UIViewController {
         if input.count == 1 {
             if (!usedLetters.contains(input)) {
                 usedLetters.append(input) // Remember letter used
+                lettersUsed.text += "\(input), " // Show used letter
                 logger(functionName: funcName, variableName: "usedLetters", variableOutput: "\(usedLetters)")
                 
                 if (hiddenWord!.contains(input)) {
@@ -148,8 +149,6 @@ class ViewController: UIViewController {
         let funcName = "updateTitle"
         var indexPosition = 0
         logger(functionName: funcName, variableName: "input", variableOutput: "\(input)")
-        
-        lettersUsed.text += "\(input), "
         
         for i in hiddenWord! {
             if String(i) == input {
@@ -214,6 +213,13 @@ class ViewController: UIViewController {
         logger(functionName: funcName, variableName: "hiddenWord", variableOutput: "\(String(describing: hiddenWord))")
         logger(functionName: funcName, variableName: "currentWord", variableOutput: "\(String(describing: currentWord))")
         logger(functionName: funcName, variableName: "wrongAnswerScore", variableOutput: "\(wrongAnswerScore)")
+        
+        // Reset UI Elements
+        livesRemaining.text = "Remaining Lives: 7"
+        lettersUsed.text = " "
+        
+        logger(functionName: funcName, variableName: "livesRemaining", variableOutput: "\(String(describing: livesRemaining.text))")
+        logger(functionName: funcName, variableName: "lettersUsed", variableOutput: "\(String(describing: lettersUsed.text))")
     }
     
     func showErrorMessage(title: String, message: String) {

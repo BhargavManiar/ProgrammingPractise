@@ -90,9 +90,7 @@ class ViewController: UIViewController {
         
         if input.count == 1 {
             // update the currentWord as well as the title
-            if (usedLetters.contains(input)) {
-                showErrorMessage(title: "Letter used already!", message: "Enter a differnet letter")
-            } else {
+            if (!usedLetters.contains(input)) {
                 usedLetters.append(input) // Remember letter used
                 if (hiddenWord!.contains(input)) {
                     print("Character '\(String(describing: input))' found")
@@ -109,6 +107,9 @@ class ViewController: UIViewController {
                     print("Check Input -> Wrong Answer: \(wrongAnswer)")
                     showErrorMessage(title: "Incorrect", message: "Try another letter")
                 }
+                
+            } else {
+                showErrorMessage(title: "Letter used already!", message: "Enter a differnet letter")
             }
         } else {
             showErrorMessage(title: "Invalid input", message: "You need to enter one character")

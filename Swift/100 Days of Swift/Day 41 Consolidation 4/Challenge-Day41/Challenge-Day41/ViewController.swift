@@ -219,7 +219,7 @@ class ViewController: UIViewController {
         logger(functionName: funcName, variableName: "hiddenWord", variableOutput: "\(String(describing: hiddenWord))")
         logger(functionName: funcName, variableName: "currentWord", variableOutput: "\(String(describing: currentWord))")
         logger(functionName: funcName, variableName: "wrongAnswerScore", variableOutput: "\(wrongAnswerScore)")
-        logger(functionName: funcName, variableName: "hangmanImageView", variableOutput: "\(hangmanImageView.image)")
+        logger(functionName: funcName, variableName: "hangmanImageView", variableOutput: "\(String(describing: hangmanImageView.image))")
         // Reset UI Elements
         livesRemaining.text = "Remaining Lives: 7"
         lettersUsed.text = " "

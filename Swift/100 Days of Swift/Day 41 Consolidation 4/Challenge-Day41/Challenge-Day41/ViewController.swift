@@ -112,8 +112,8 @@ class ViewController: UIViewController {
         usedLetters.removeAll(keepingCapacity: true) // Remove previous gueses
     }
     
-    @objc func promptForInput() {
-        let funcName = "promptForInput"
+    @IBAction func guessLetter(_ sender: Any) {
+        let funcName = "guessLetter"
         logger(functionName: funcName, message: "Input button pressed")
         
         let alertController = UIAlertController(title: "Enter character", message: nil, preferredStyle: .alert)
@@ -239,8 +239,7 @@ class ViewController: UIViewController {
         present(alertController, animated: true)
     }
     
-    @IBAction func guessLetter(_ sender: Any) {
-    }
+
     func drawAsciiImage(live: Int) {
         
         switch live {

@@ -15,6 +15,15 @@ extension String {
         }
         return modifiedString
     }
+    
+    func containsLetters() -> Bool {
+        for char in self {
+            if (!(char >= "a" && char <= "z") && !(char >= "A" && char <= "Z")) {
+                return false
+            }
+        }
+        return true
+    }
 }
 
 class ViewController: UIViewController {

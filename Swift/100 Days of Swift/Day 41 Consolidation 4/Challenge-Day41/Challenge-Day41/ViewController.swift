@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     
     var allWords = [String]()
     var score: Int = 0
-    var usedLetters = [String]() // resetable
+    var usedLetters = [String]()
     var hiddenWord: String?
     var currentWord: String?
     var wrongAnswerScore: Int = 0

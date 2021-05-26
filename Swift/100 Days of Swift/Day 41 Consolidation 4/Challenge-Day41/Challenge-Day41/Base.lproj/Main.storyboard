@@ -16,57 +16,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="u29-oB-vC2">
-                                <rect key="frame" x="16" y="220" width="288" height="128"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="u29-oB-vC2">
+                                <rect key="frame" x="16" y="174" width="288" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZy-sW-Krq">
-                                <rect key="frame" x="16" y="118" width="288" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remaining Lives: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZy-sW-Krq">
+                                <rect key="frame" x="16" y="66" width="288" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJp-HB-uUJ">
-                                <rect key="frame" x="16" y="172" width="288" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Used Letters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJp-HB-uUJ">
+                                <rect key="frame" x="16" y="132" width="288" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="zLI-SG-fAD">
-                                <rect key="frame" x="16" y="382" width="288" height="166"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EAn-eR-tgq">
+                                <rect key="frame" x="16" y="261" width="288" height="222"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFV-YY-kZi">
+                                <rect key="frame" x="116" y="504" width="88" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Guess Letter"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="u29-oB-vC2" firstAttribute="leading" secondItem="zLI-SG-fAD" secondAttribute="leading" id="2sm-aN-Y8C"/>
-                            <constraint firstItem="LZy-sW-Krq" firstAttribute="trailing" secondItem="aJp-HB-uUJ" secondAttribute="trailing" id="An9-jU-VCm"/>
-                            <constraint firstItem="zLI-SG-fAD" firstAttribute="top" secondItem="u29-oB-vC2" secondAttribute="bottom" constant="34" id="Cx5-F7-pSk"/>
-                            <constraint firstItem="LZy-sW-Krq" firstAttribute="leading" secondItem="aJp-HB-uUJ" secondAttribute="leading" id="JyY-HX-6jL"/>
-                            <constraint firstItem="aJp-HB-uUJ" firstAttribute="top" secondItem="LZy-sW-Krq" secondAttribute="bottom" constant="33" id="NnN-vI-QWe"/>
-                            <constraint firstItem="u29-oB-vC2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="O3f-wO-NCx"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zLI-SG-fAD" secondAttribute="bottom" constant="20" id="TCT-X0-wfD"/>
-                            <constraint firstItem="u29-oB-vC2" firstAttribute="top" secondItem="aJp-HB-uUJ" secondAttribute="bottom" constant="27" id="Xlv-8q-ojQ"/>
-                            <constraint firstItem="aJp-HB-uUJ" firstAttribute="leading" secondItem="u29-oB-vC2" secondAttribute="leading" id="cJC-PJ-gHe"/>
-                            <constraint firstItem="LZy-sW-Krq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="d9F-8m-zt4"/>
-                            <constraint firstItem="u29-oB-vC2" firstAttribute="trailing" secondItem="zLI-SG-fAD" secondAttribute="trailing" id="fEx-ed-DJ3"/>
-                            <constraint firstItem="LZy-sW-Krq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="74" id="kFC-yp-AlC"/>
-                            <constraint firstItem="aJp-HB-uUJ" firstAttribute="trailing" secondItem="u29-oB-vC2" secondAttribute="trailing" id="oYC-xa-qJp"/>
-                            <constraint firstItem="LZy-sW-Krq" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="syQ-Rl-WZH"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FtC-cz-O5e"/>
                     <connections>
-                        <outlet property="asciiArt" destination="zLI-SG-fAD" id="pGl-nF-W14"/>
                         <outlet property="lettersUsed" destination="u29-oB-vC2" id="NrQ-FI-ati"/>
                         <outlet property="livesRemaining" destination="LZy-sW-Krq" id="LHf-Bz-L4W"/>
                         <outlet property="usedLettersTitle" destination="aJp-HB-uUJ" id="v2P-G1-G9W"/>

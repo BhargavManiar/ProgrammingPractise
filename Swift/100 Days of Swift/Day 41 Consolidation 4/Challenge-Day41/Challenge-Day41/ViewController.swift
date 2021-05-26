@@ -70,7 +70,6 @@ class ViewController: UIViewController {
         }
         
         title = currentWord!
-        scoreTotal.text = "Score: \(score)"
     }
     
     @objc func startGame() {
@@ -87,7 +86,6 @@ class ViewController: UIViewController {
         }
         
         title = currentWord!
-        scoreTotal.text = "Score: \(score)"
     }
     
     @IBAction func guessLetter(_ sender: Any) {

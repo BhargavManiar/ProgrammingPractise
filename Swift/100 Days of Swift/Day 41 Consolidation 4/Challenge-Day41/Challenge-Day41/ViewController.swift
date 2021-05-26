@@ -115,7 +115,6 @@ class ViewController: UIViewController {
         if let obtainedWord = allWords.randomElement() {
             hiddenWord = obtainedWord
         }
-        print(hiddenWord!)
         
         for _ in hiddenWord! {
             if currentWord != nil {

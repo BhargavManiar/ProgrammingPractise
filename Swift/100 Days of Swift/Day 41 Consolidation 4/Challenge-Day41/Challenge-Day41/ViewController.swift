@@ -21,7 +21,6 @@ class ViewController: UIViewController {
     @IBOutlet var livesRemaining: UILabel!
     @IBOutlet var lettersUsed: UITextView!
     @IBOutlet var usedLettersTitle: UILabel!
-    @IBOutlet var asciiArt: UITextView!
     
     var allWords = [String]()
     var usedLetters = [String]() // resetable
@@ -52,9 +51,9 @@ class ViewController: UIViewController {
         lettersUsed.text = " "
         usedLettersTitle.text = "Used Letters"
         usedLettersTitle.isHidden = true
-        asciiArt.text = " "
-        asciiArt.isEditable = false
-        drawAsciiImage(live: wrongAnswerScore) // update the ascii image initially
+//        asciiArt.text = " "
+//        asciiArt.isEditable = false
+        //drawAsciiImage(live: wrongAnswerScore) // update the ascii image initially
         
         // Start the game and add a ??? title word on the nav bar
         startGame()
@@ -175,7 +174,7 @@ class ViewController: UIViewController {
         let funcName = "wrongAnswer"
         wrongAnswerScore += 1 // Increment wrong answer score
         livesRemaining.text = "Remaining Lives: \(7-wrongAnswerScore)"
-        drawAsciiImage(live: wrongAnswerScore) // update the ascii image
+        //drawAsciiImage(live: wrongAnswerScore) // update the ascii image
         logger(functionName: funcName, variableName: "wrongAnswerScore", variableOutput: "\(wrongAnswerScore)")
         if(wrongAnswerScore == 7) {
             endGame(win: false)
@@ -220,11 +219,11 @@ class ViewController: UIViewController {
         // Reset UI Elements
         livesRemaining.text = "Remaining Lives: 7"
         lettersUsed.text = " "
-        asciiArt.text = ""
+        //asciiArt.text = ""
         
         logger(functionName: funcName, variableName: "livesRemaining", variableOutput: "\(String(describing: livesRemaining.text))")
         logger(functionName: funcName, variableName: "lettersUsed", variableOutput: "\(String(describing: lettersUsed.text))")
-        logger(functionName: funcName, variableName: "asciiArt", variableOutput: "\(String(describing: asciiArt.text))")
+        //logger(functionName: funcName, variableName: "asciiArt", variableOutput: "\(String(describing: asciiArt.text))")
     }
     
     func showErrorMessage(title: String, message: String) {
@@ -237,118 +236,15 @@ class ViewController: UIViewController {
     }
     
 
-    func drawAsciiImage(live: Int) {
-        
-        switch live {
-        case 0:
-            asciiArt.text =
-            """
-              _______
-             |/      |
-             |
-             |
-             |
-             |
-             |
-            _|___
-            """
-        case 1:
-            asciiArt.text =
-            """
-            _______
-           |/      |
-           |      (_)
-           |
-           |
-           |
-           |
-          _|___
-          
-          """
-            
-        case 2:
-            asciiArt.text =
-            """
-              _______
-             |/      |
-             |      (_)
-             |        |
-             |        |
-             |
-             |
-            _|___
-            """
-            
-        case 3:
-            asciiArt.text =
-            """
-              _______
-             |/      |
-             |      (_)
-             |       \\|
-             |        |
-             |
-             |
-            _|___
-            """
-            
-        case 4:
-            asciiArt.text =
-            """
-              _______
-             |/      |
-             |      (_)
-             |       \\|/
-             |        |
-             |
-             |
-            _|___
-            """
-            
-        case 5:
-            asciiArt.text =
-            """
-              _______
-             |/      |
-             |      (_)
-             |       \\|/
-             |        |
-             |       /
-             |
-            _|___
-            """
-            
-        case 6:
-            asciiArt.text =
-            """
-              _______
-             |/      |
-             |      (_)
-             |       \\|/
-             |        |
-             |       / \
-             |
-            _|___
-            """
-            
-        case 7:
-            asciiArt.text =
-            """
-              _______
-             |/      |
-             |
-             |      \\ /
-             |       |
-             |      /|\
-             |      (_)
-            _|___
-            """
-        default:
-            asciiArt.text = " "
-        }
-        
-
-    }
+//    func drawAsciiImage(live: Int) {
+//        
+//        switch live {
+//        default:
+//            
+//        }
+//        
+//
+//    }
     
     // Logger Functions
     

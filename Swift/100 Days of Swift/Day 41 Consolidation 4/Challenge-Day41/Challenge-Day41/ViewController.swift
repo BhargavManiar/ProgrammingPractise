@@ -55,7 +55,9 @@ class ViewController: UIViewController {
         lettersUsed.text = " "
         usedLettersTitle.text = "Used Letters"
         usedLettersTitle.isHidden = true
+        asciiArt.text = " "
         asciiArt.isEditable = false
+        drawAsciiImage(live: wrongAnswerScore) // update the ascii image initially
         
         // Start the game and add a ??? title word on the nav bar
         startGame()
@@ -135,7 +137,6 @@ class ViewController: UIViewController {
                 usedLettersTitle.isHidden = false
                 lettersUsed.text += "\(input), " // Show used letter
                 logger(functionName: funcName, variableName: "usedLetters", variableOutput: "\(usedLetters)")
-                
                 if (hiddenWord!.contains(input)) {
                     logger(functionName: funcName, message: "Hidden letter found")
                     updateTitle(input)
@@ -157,7 +158,6 @@ class ViewController: UIViewController {
         let funcName = "updateTitle"
         var indexPosition = 0
         logger(functionName: funcName, variableName: "input", variableOutput: "\(input)")
-        
         for i in hiddenWord! {
             if String(i) == input {
                 // Update the currentWord, show where the letter is on the hideen work
@@ -178,8 +178,8 @@ class ViewController: UIViewController {
         let funcName = "wrongAnswer"
         wrongAnswerScore += 1 // Increment wrong answer score
         livesRemaining.text = "Remaining Lives: \(7-wrongAnswerScore)"
+        drawAsciiImage(live: wrongAnswerScore) // update the ascii image
         logger(functionName: funcName, variableName: "wrongAnswerScore", variableOutput: "\(wrongAnswerScore)")
-        
         if(wrongAnswerScore == 7) {
             endGame(win: false)
         } else {
@@ -274,8 +274,8 @@ class ViewController: UIViewController {
               _______
              |/      |
              |      (_)
-             |       |
-             |       |
+             |        |
+             |        |
              |
              |
             _|___
@@ -287,8 +287,8 @@ class ViewController: UIViewController {
               _______
              |/      |
              |      (_)
-             |     \\|
-             |       |
+             |       \\|
+             |        |
              |
              |
             _|___
@@ -300,8 +300,8 @@ class ViewController: UIViewController {
               _______
              |/      |
              |      (_)
-             |     \\|/
-             |       |
+             |       \\|/
+             |        |
              |
              |
             _|___
@@ -313,9 +313,9 @@ class ViewController: UIViewController {
               _______
              |/      |
              |      (_)
-             |     \\|/
-             |       |
-             |      /
+             |       \\|/
+             |        |
+             |       /
              |
             _|___
             """
@@ -326,9 +326,9 @@ class ViewController: UIViewController {
               _______
              |/      |
              |      (_)
-             |     \\|/
-             |       |
-             |      / \
+             |       \\|/
+             |        |
+             |       / \
              |
             _|___
             """
@@ -339,7 +339,7 @@ class ViewController: UIViewController {
               _______
              |/      |
              |
-             |     \\ /
+             |      \\ /
              |       |
              |      /|\
              |      (_)

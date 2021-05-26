@@ -146,7 +146,7 @@ class ViewController: UIViewController {
     }
     
     func updateImageView() {
-        hangmanImageView.image = UIImage(named: "Hang Man Drawing \(wrongAnswerScore)")
+        hangmanImageView.image = UIImage(named: "Hangman Drawing \(wrongAnswerScore)")
     }
     
     func wrongAnswer() {
@@ -184,7 +184,7 @@ class ViewController: UIViewController {
         livesRemaining.text = "Remaining Lives: 7"
         lettersUsed.text = " "
         usedLettersTitle.isHidden = true
-        hangmanImageView.image = UIImage(named: "Hang Man Drawing 0")
+        hangmanImageView.image = UIImage(named: "Hangman Drawing 0")
         scoreTotal.text = "Score: \(score)"
     }
     

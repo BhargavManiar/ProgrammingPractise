@@ -46,9 +46,6 @@ class ViewController: UIViewController {
             allWords = ["honey"]
         }
         
-        // Add + button on the nav bar
-        //navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(promptForInput))
-        
         // Setup other UI elements
         livesRemaining.text = "Remaining Lives: 7"
         lettersUsed.isEditable = false

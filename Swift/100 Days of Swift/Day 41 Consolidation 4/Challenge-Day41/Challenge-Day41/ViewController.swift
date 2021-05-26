@@ -190,7 +190,7 @@ class ViewController: UIViewController {
     
     func alertControllerMessage(title: String, message: String, buttonTitle: String, handler: ((UIAlertAction) -> Void)?) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: handler))
+        alertController.addAction(UIAlertAction(title: buttonTitle, style: .default, handler: handler))
         present(alertController, animated: true)
     }
 }

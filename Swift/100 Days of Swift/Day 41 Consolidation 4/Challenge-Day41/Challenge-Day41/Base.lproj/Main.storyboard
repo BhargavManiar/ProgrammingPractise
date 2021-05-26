@@ -71,6 +71,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="FtC-cz-O5e"/>
                     <connections>
+                        <outlet property="hangmanImageView" destination="EAn-eR-tgq" id="dp9-EW-DwK"/>
                         <outlet property="lettersUsed" destination="u29-oB-vC2" id="NrQ-FI-ati"/>
                         <outlet property="livesRemaining" destination="LZy-sW-Krq" id="LHf-Bz-L4W"/>
                         <outlet property="usedLettersTitle" destination="aJp-HB-uUJ" id="v2P-G1-G9W"/>

@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     @IBOutlet var livesRemaining: UILabel!
     @IBOutlet var lettersUsed: UITextView!
     @IBOutlet var usedLettersTitle: UILabel!
+    @IBOutlet var hangmanImageView: UIImageView!
     
     var allWords = [String]()
     var usedLetters = [String]() // resetable
@@ -237,12 +238,12 @@ class ViewController: UIViewController {
     
 
 //    func drawAsciiImage(live: Int) {
-//        
+//
 //        switch live {
 //        default:
-//            
+//
 //        }
-//        
+//
 //
 //    }
     

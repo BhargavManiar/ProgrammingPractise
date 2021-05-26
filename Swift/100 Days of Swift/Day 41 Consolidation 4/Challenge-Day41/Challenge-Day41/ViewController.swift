@@ -31,8 +31,6 @@ class ViewController: UIViewController {
     var currentWord: String?
     var wrongAnswerScore: Int = 0
     
-    var loggerEnable: Bool = false // for logging on std output
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

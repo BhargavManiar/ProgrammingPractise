@@ -52,6 +52,7 @@ class ViewController: UIViewController {
         lettersUsed.text = " "
         usedLettersTitle.text = "Used Letters"
         usedLettersTitle.isHidden = true
+        hangmanImageView.image = UIImage(named: "Hang Man Drawing 0")
         
         // Start the game and add a ??? title word on the nav bar
         startGame()
@@ -168,10 +169,15 @@ class ViewController: UIViewController {
         title = currentWord // Update the title
     }
     
+    func updateImageView() {
+        hangmanImageView.image = UIImage(named: "Hang Man Drawing \(wrongAnswerScore)")
+    }
+    
     func wrongAnswer() {
         let funcName = "wrongAnswer"
         wrongAnswerScore += 1 // Increment wrong answer score
         livesRemaining.text = "Remaining Lives: \(7-wrongAnswerScore)"
+        updateImageView()
         logger(functionName: funcName, variableName: "wrongAnswerScore", variableOutput: "\(wrongAnswerScore)")
         if(wrongAnswerScore == 7) {
             endGame(win: false)
@@ -207,12 +213,13 @@ class ViewController: UIViewController {
         hiddenWord = ""
         currentWord = ""
         wrongAnswerScore = 0
+        hangmanImageView.image = UIImage(named: "Hang Man Drawing 0")
         
         logger(functionName: funcName, variableName: "usedLetters", variableOutput: "\(usedLetters)")
         logger(functionName: funcName, variableName: "hiddenWord", variableOutput: "\(String(describing: hiddenWord))")
         logger(functionName: funcName, variableName: "currentWord", variableOutput: "\(String(describing: currentWord))")
         logger(functionName: funcName, variableName: "wrongAnswerScore", variableOutput: "\(wrongAnswerScore)")
-        
+        logger(functionName: funcName, variableName: "hangmanImageView", variableOutput: "\(hangmanImageView.image)")
         // Reset UI Elements
         livesRemaining.text = "Remaining Lives: 7"
         lettersUsed.text = " "

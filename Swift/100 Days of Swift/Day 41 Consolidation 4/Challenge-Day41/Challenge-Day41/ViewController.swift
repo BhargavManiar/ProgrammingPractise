@@ -49,43 +49,14 @@ class ViewController: UIViewController {
         usedLettersTitle.text = "Used Letters"
         
         // Start the game and add a ??? title word on the nav bar
-        startGame()
+        setInitialTitle()
     }
     
     // Game Functions
     
     @objc func startGame(action: UIAlertAction) {
         resetGameVariables() // rest variables
-        
-        if let obtainedWord = allWords.randomElement() {
-            hiddenWord = obtainedWord
-        }
-        
-        for _ in hiddenWord! {
-            if currentWord != nil {
-                currentWord! += "?"
-            } else {
-                currentWord = "?"
-            }
-        }
-        
-        title = currentWord!
-    }
-    
-    @objc func startGame() {
-        if let obtainedWord = allWords.randomElement() {
-            hiddenWord = obtainedWord
-        }
-        
-        for _ in hiddenWord! {
-            if currentWord != nil {
-                currentWord! += "?"
-            } else {
-                currentWord = "?"
-            }
-        }
-        
-        title = currentWord!
+        setInitialTitle()
     }
     
     @IBAction func guessLetter(_ sender: Any) {
@@ -126,6 +97,22 @@ class ViewController: UIViewController {
         } else {
             showErrorMessage(title: "Invalid input", message: "You need to enter one character")
         }
+    }
+    
+    func setInitialTitle() {
+        if let obtainedWord = allWords.randomElement() {
+            hiddenWord = obtainedWord
+        }
+        
+        for _ in hiddenWord! {
+            if currentWord != nil {
+                currentWord! += "?"
+            } else {
+                currentWord = "?"
+            }
+        }
+        
+        title = currentWord!
     }
     
     func updateTitle(_ input: String) {

@@ -46,14 +46,10 @@ class ViewController: UIViewController {
             allWords = ["honey"]
         }
         
-        // Setup other UI elements
-        livesRemaining.text = "Remaining Lives: 7"
+        // Setup UI elements
+        resetGameVariables() // (Re)sets UI elements and game variables
         lettersUsed.isEditable = false
-        lettersUsed.text = " "
         usedLettersTitle.text = "Used Letters"
-        usedLettersTitle.isHidden = true
-        hangmanImageView.image = UIImage(named: "Hang Man Drawing 0")
-        scoreTotal.text = "Score: \(score)"
         
         // Start the game and add a ??? title word on the nav bar
         startGame()
@@ -187,15 +183,18 @@ class ViewController: UIViewController {
     }
     
     func resetGameVariables() {
+        // Reset game variables
         usedLetters.removeAll()
         hiddenWord = ""
         currentWord = ""
         wrongAnswerScore = 0
-        hangmanImageView.image = UIImage(named: "Hang Man Drawing 0")
         
         // Reset UI Elements
         livesRemaining.text = "Remaining Lives: 7"
         lettersUsed.text = " "
+        usedLettersTitle.isHidden = true
+        hangmanImageView.image = UIImage(named: "Hang Man Drawing 0")
+        scoreTotal.text = "Score: \(score)"
     }
     
     func showErrorMessage(title: String, message: String) {

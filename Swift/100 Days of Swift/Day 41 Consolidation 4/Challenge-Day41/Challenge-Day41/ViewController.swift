@@ -79,7 +79,6 @@ class ViewController: UIViewController {
                 usedLetters.append(input) // Remember letter used
                 usedLettersTitle.isHidden = false
                 
-                // Show letters used
                 if lettersUsed.text.count == 1 {
                     lettersUsed.text += "\(input)" // Add letter without comma
                 } else {

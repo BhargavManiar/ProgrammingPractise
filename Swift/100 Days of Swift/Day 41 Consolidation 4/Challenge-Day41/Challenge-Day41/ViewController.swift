@@ -85,7 +85,6 @@ class ViewController: UIViewController {
         logger(functionName: funcName, variableName: "currentWord", variableOutput: "\(String(describing: currentWord))")
         title = currentWord!
         scoreTotal.text = "Score: \(score)"
-        usedLetters.removeAll(keepingCapacity: true) // Remove previous gueses
     }
     
     @objc func startGame() {
@@ -109,7 +108,6 @@ class ViewController: UIViewController {
         logger(functionName: funcName, variableName: "currentWord", variableOutput: "\(String(describing: currentWord))")
         title = currentWord!
         scoreTotal.text = "Score: \(score)"
-        usedLetters.removeAll(keepingCapacity: true) // Remove previous gueses
     }
     
     @IBAction func guessLetter(_ sender: Any) {

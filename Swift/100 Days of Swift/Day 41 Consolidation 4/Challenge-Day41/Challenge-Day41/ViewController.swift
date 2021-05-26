@@ -34,7 +34,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Obtain the words from file manager
+        // Obtain the words from disk
         if let wordsURL = Bundle.main.url(forResource: "words", withExtension: "txt") {
             if let words = try? String(contentsOf: wordsURL) {
                 allWords = words.components(separatedBy: "\n")
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
                 allWords = ["honey"]
             }
         }
-
+ 
         // Setup UI elements
         resetGameVariables() // (Re)sets UI elements and game variables
         lettersUsed.isEditable = false

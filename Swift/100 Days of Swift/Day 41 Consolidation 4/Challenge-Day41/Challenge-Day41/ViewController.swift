@@ -70,7 +70,7 @@ class ViewController: UIViewController {
             hiddenWord = obtainedWord
         }
         
-        for character in hiddenWord! {
+        for _ in hiddenWord! {
             if currentWord != nil {
                 currentWord! += "?"
             } else {
@@ -87,7 +87,7 @@ class ViewController: UIViewController {
             hiddenWord = obtainedWord
         }
         
-        for character in hiddenWord! {
+        for _ in hiddenWord! {
             if currentWord != nil {
                 currentWord! += "?"
             } else {

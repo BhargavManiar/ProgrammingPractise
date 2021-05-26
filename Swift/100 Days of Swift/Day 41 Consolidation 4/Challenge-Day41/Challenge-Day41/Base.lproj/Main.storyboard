@@ -46,6 +46,9 @@
                                 <rect key="frame" x="116" y="504" width="88" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Guess Letter"/>
+                                <connections>
+                                    <action selector="guessLetter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A5w-K4-7w5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

@@ -47,7 +47,7 @@ class ViewController: UIViewController {
         }
         
         // Add + button on the nav bar
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(promptForInput))
+        //navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(promptForInput))
         
         // Setup other UI elements
         livesRemaining.text = "Remaining Lives: 7"
@@ -239,6 +239,8 @@ class ViewController: UIViewController {
         present(alertController, animated: true)
     }
     
+    @IBAction func guessLetter(_ sender: Any) {
+    }
     func drawAsciiImage(live: Int) {
         
         switch live {

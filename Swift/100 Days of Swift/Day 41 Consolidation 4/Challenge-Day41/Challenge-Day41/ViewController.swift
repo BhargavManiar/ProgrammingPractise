@@ -100,7 +100,7 @@ class ViewController: UIViewController {
                         wrongAnswer()
                     }
                 } else {
-                    alertControllerMessage(title: "Letter used already!", message: "Enter a differnet letter", buttonTitle: "OK", handler: nil)
+                    alertControllerMessage(title: "Letter used already!", message: "Enter a different letter", buttonTitle: "OK", handler: nil)
                 }
             } else {
                 alertControllerMessage(title: "Invalid Input", message: "You need to enter a character", buttonTitle: "OK", handler: nil)

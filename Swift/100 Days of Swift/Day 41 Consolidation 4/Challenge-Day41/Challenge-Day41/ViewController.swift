@@ -38,14 +38,11 @@ class ViewController: UIViewController {
         if let wordsURL = Bundle.main.url(forResource: "words", withExtension: "txt") {
             if let words = try? String(contentsOf: wordsURL) {
                 allWords = words.components(separatedBy: "\n")
+            } else {
+                allWords = ["honey"]
             }
         }
-        
-        // Error handling if there are no items found
-        if allWords.isEmpty {
-            allWords = ["honey"]
-        }
-        
+
         // Setup UI elements
         resetGameVariables() // (Re)sets UI elements and game variables
         lettersUsed.isEditable = false

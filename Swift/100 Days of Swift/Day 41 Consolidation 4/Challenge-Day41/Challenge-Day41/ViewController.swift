@@ -120,8 +120,7 @@ class ViewController: UIViewController {
         score += 1
         for i in hiddenWord! {
             if String(i) == input {
-                // Update the currentWord, show where the letter is on the hideen work
-                currentWord = currentWord?.replace(input, at: indexPosition)
+                currentWord = currentWord?.replace(input, at: indexPosition) // Update the currentWord to show where the letter is on the hidden word
             }
             
             if (currentWord?.contains("?") == false) {

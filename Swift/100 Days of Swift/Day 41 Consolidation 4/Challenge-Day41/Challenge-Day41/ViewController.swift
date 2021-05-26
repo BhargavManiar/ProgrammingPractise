@@ -19,6 +19,7 @@ extension String {
 
 class ViewController: UIViewController {
     @IBOutlet var livesRemaining: UILabel!
+    @IBOutlet var scoreTotal: UILabel!
     @IBOutlet var lettersUsed: UITextView!
     @IBOutlet var usedLettersTitle: UILabel!
     @IBOutlet var hangmanImageView: UIImageView!
@@ -54,6 +55,7 @@ class ViewController: UIViewController {
         usedLettersTitle.text = "Used Letters"
         usedLettersTitle.isHidden = true
         hangmanImageView.image = UIImage(named: "Hang Man Drawing 0")
+        scoreTotal.text = "Score: \(score)"
         
         // Start the game and add a ??? title word on the nav bar
         startGame()
@@ -81,7 +83,8 @@ class ViewController: UIViewController {
         }
         
         logger(functionName: funcName, variableName: "currentWord", variableOutput: "\(String(describing: currentWord))")
-        title = "Score: \(score) " + currentWord!
+        title = currentWord!
+        scoreTotal.text = "Score: \(score)"
         usedLetters.removeAll(keepingCapacity: true) // Remove previous gueses
     }
     
@@ -104,7 +107,8 @@ class ViewController: UIViewController {
         }
         
         logger(functionName: funcName, variableName: "currentWord", variableOutput: "\(String(describing: currentWord))")
-        title = "Score: \(score) " + currentWord!
+        title = currentWord!
+        scoreTotal.text = "Score: \(score)"
         usedLetters.removeAll(keepingCapacity: true) // Remove previous gueses
     }
     
@@ -176,7 +180,9 @@ class ViewController: UIViewController {
             indexPosition += 1
             logger(functionName: funcName, variableName: "indexPosition", variableOutput: "\(indexPosition)")
         }
-        title = "Score: \(score) " + currentWord! // Update the title
+        title = currentWord!
+        scoreTotal.text = "Score: \(score)"
+        logger(functionName: funcName, variableName: "score", variableOutput: "\(score)")
     }
     
     func updateImageView() {

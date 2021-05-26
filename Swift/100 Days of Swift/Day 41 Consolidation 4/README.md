@@ -19,3 +19,8 @@ The challenge is this: make a hangman game using UIKit. As a reminder, this mean
 
 ### Link to Challenge Details
 https://www.hackingwithswift.com/guide/4/3/challenge
+
+### Resources Used 
+Words from: https://www.hangmanwords.com/words
+
+Images made by my self Bhargav using SketchBook

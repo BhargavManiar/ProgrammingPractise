@@ -61,6 +61,7 @@ class ViewController: UIViewController {
     }
     
     // Game Functions
+    
     @objc func startGame(action: UIAlertAction) {
         let funcName = "startGame"
         logger(functionName: funcName, message: "Play Again")

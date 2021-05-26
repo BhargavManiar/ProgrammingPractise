@@ -55,6 +55,7 @@ class ViewController: UIViewController {
         lettersUsed.text = " "
         usedLettersTitle.text = "Used Letters"
         usedLettersTitle.isHidden = true
+        asciiArt.isEditable = false
         
         // Start the game and add a ??? title word on the nav bar
         startGame()
@@ -234,6 +235,119 @@ class ViewController: UIViewController {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .default))
         present(alertController, animated: true)
+    }
+    
+    func drawAsciiImage(live: Int) {
+        
+        switch live {
+        case 0:
+            asciiArt.text =
+            """
+              _______
+             |/      |
+             |
+             |
+             |
+             |
+             |
+            _|___
+            """
+        case 1:
+            asciiArt.text =
+            """
+            _______
+           |/      |
+           |      (_)
+           |
+           |
+           |
+           |
+          _|___
+          
+          """
+            
+        case 2:
+            asciiArt.text =
+            """
+              _______
+             |/      |
+             |      (_)
+             |       |
+             |       |
+             |
+             |
+            _|___
+            """
+            
+        case 3:
+            asciiArt.text =
+            """
+              _______
+             |/      |
+             |      (_)
+             |     \\|
+             |       |
+             |
+             |
+            _|___
+            """
+            
+        case 4:
+            asciiArt.text =
+            """
+              _______
+             |/      |
+             |      (_)
+             |     \\|/
+             |       |
+             |
+             |
+            _|___
+            """
+            
+        case 5:
+            asciiArt.text =
+            """
+              _______
+             |/      |
+             |      (_)
+             |     \\|/
+             |       |
+             |      /
+             |
+            _|___
+            """
+            
+        case 6:
+            asciiArt.text =
+            """
+              _______
+             |/      |
+             |      (_)
+             |     \\|/
+             |       |
+             |      / \
+             |
+            _|___
+            """
+            
+        case 7:
+            asciiArt.text =
+            """
+              _______
+             |/      |
+             |
+             |     \\ /
+             |       |
+             |      /|\
+             |      (_)
+            _|___
+            """
+        default:
+            asciiArt.text = " "
+        }
+        
+
     }
     
     // Logger Functions

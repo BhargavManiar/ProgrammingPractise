@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     @IBOutlet var hangmanImageView: UIImageView!
     
     var allWords = [String]()
+    var score: Int = 0
     var usedLetters = [String]() // resetable
     var hiddenWord: String?
     var currentWord: String?
@@ -80,7 +81,7 @@ class ViewController: UIViewController {
         }
         
         logger(functionName: funcName, variableName: "currentWord", variableOutput: "\(String(describing: currentWord))")
-        title = currentWord
+        title = "Score: \(score) " + currentWord!
         usedLetters.removeAll(keepingCapacity: true) // Remove previous gueses
     }
     
@@ -103,7 +104,7 @@ class ViewController: UIViewController {
         }
         
         logger(functionName: funcName, variableName: "currentWord", variableOutput: "\(String(describing: currentWord))")
-        title = currentWord
+        title = "Score: \(score) " + currentWord!
         usedLetters.removeAll(keepingCapacity: true) // Remove previous gueses
     }
     
@@ -160,6 +161,7 @@ class ViewController: UIViewController {
     func updateTitle(_ input: String) {
         let funcName = "updateTitle"
         var indexPosition = 0
+        score += 1
         logger(functionName: funcName, variableName: "input", variableOutput: "\(input)")
         for i in hiddenWord! {
             if String(i) == input {
@@ -174,7 +176,7 @@ class ViewController: UIViewController {
             indexPosition += 1
             logger(functionName: funcName, variableName: "indexPosition", variableOutput: "\(indexPosition)")
         }
-        title = currentWord // Update the title
+        title = "Score: \(score) " + currentWord! // Update the title
     }
     
     func updateImageView() {

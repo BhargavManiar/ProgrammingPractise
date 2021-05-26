@@ -16,6 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="u29-oB-vC2">
+                                <rect key="frame" x="16" y="220" width="288" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZy-sW-Krq">
                                 <rect key="frame" x="16" y="118" width="288" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -23,32 +31,25 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJp-HB-uUJ">
-                                <rect key="frame" x="16" y="181" width="42" height="21"/>
+                                <rect key="frame" x="16" y="172" width="288" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="u29-oB-vC2">
-                                <rect key="frame" x="16" y="210" width="288" height="128"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="aJp-HB-uUJ" firstAttribute="leading" secondItem="u29-oB-vC2" secondAttribute="leading" id="1c6-hQ-Y9q"/>
-                            <constraint firstItem="LZy-sW-Krq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="74" id="4Gc-RK-qqg"/>
-                            <constraint firstItem="LZy-sW-Krq" firstAttribute="trailing" secondItem="u29-oB-vC2" secondAttribute="trailing" id="J7z-uC-yZW"/>
-                            <constraint firstItem="LZy-sW-Krq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="NHk-dC-fjr"/>
-                            <constraint firstItem="LZy-sW-Krq" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="TXU-Cd-XW6"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="u29-oB-vC2" secondAttribute="bottom" constant="230" id="cJt-UU-ohk"/>
-                            <constraint firstItem="aJp-HB-uUJ" firstAttribute="top" secondItem="LZy-sW-Krq" secondAttribute="bottom" constant="42" id="hhI-cs-hzC"/>
-                            <constraint firstItem="u29-oB-vC2" firstAttribute="top" secondItem="aJp-HB-uUJ" secondAttribute="bottom" constant="8" id="pll-eZ-nBc"/>
-                            <constraint firstItem="aJp-HB-uUJ" firstAttribute="leading" secondItem="LZy-sW-Krq" secondAttribute="leading" id="yXV-Be-UaG"/>
+                            <constraint firstItem="LZy-sW-Krq" firstAttribute="trailing" secondItem="aJp-HB-uUJ" secondAttribute="trailing" id="BRm-Wd-0wA"/>
+                            <constraint firstItem="u29-oB-vC2" firstAttribute="top" secondItem="aJp-HB-uUJ" secondAttribute="bottom" constant="27" id="C4b-zJ-bNf"/>
+                            <constraint firstItem="LZy-sW-Krq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="74" id="Cx6-Pn-gsR"/>
+                            <constraint firstItem="LZy-sW-Krq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="FzV-hL-Kk2"/>
+                            <constraint firstItem="aJp-HB-uUJ" firstAttribute="trailing" secondItem="u29-oB-vC2" secondAttribute="trailing" id="SMR-np-OKe"/>
+                            <constraint firstItem="LZy-sW-Krq" firstAttribute="leading" secondItem="aJp-HB-uUJ" secondAttribute="leading" id="cVX-4a-wHg"/>
+                            <constraint firstItem="LZy-sW-Krq" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="eQp-JC-Vuw"/>
+                            <constraint firstItem="aJp-HB-uUJ" firstAttribute="top" secondItem="LZy-sW-Krq" secondAttribute="bottom" constant="33" id="jQz-ib-T99"/>
+                            <constraint firstItem="aJp-HB-uUJ" firstAttribute="leading" secondItem="u29-oB-vC2" secondAttribute="leading" id="jWx-FZ-ANA"/>
+                            <constraint firstItem="u29-oB-vC2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ydu-fW-kgm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FtC-cz-O5e"/>
@@ -60,7 +61,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="926.08695652173924" y="55.580357142857139"/>
+            <point key="canvasLocation" x="924.375" y="54.929577464788736"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Jwl-RJ-kWU">

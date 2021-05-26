@@ -83,28 +83,32 @@ class ViewController: UIViewController {
     }
     
     func checkInput(_ input: String) {
+        
         if input.count == 1 {
-            if (!usedLetters.contains(input)) {
-                usedLetters.append(input) // Remember letter used
-                usedLettersTitle.isHidden = false
-                
-                if lettersUsed.text.count == 1 {
-                    lettersUsed.text += "\(input)" // Add letter without comma
+            if input.containsLetters() == true {
+                if (!usedLetters.contains(input)) {
+                    usedLetters.append(input) // Remember letter used
+                    usedLettersTitle.isHidden = false // Show title label
+                    if lettersUsed.text.count == 1 {
+                        lettersUsed.text += "\(input)" // Add letter without comma
+                    } else {
+                        lettersUsed.text += ", \(input)" // Add letter with comma
+                    }
+                    if (hiddenWord!.contains(input)) {
+                        updateTitle(input)
+                    } else {
+                        wrongAnswer()
+                    }
                 } else {
-                    lettersUsed.text += ", \(input)" // Add letter with comma
-                }
-                
-                if (hiddenWord!.contains(input)) {
-                    updateTitle(input)
-                } else {
-                    wrongAnswer()
+                    alertControllerMessage(title: "Letter used already!", message: "Enter a differnet letter", buttonTitle: "OK", handler: nil)
                 }
             } else {
-                alertControllerMessage(title: "Letter used already!", message: "Enter a differnet letter", buttonTitle: "OK", handler: nil)
+                alertControllerMessage(title: "Invalid Input", message: "You need to enter a character", buttonTitle: "OK", handler: nil)
             }
         } else {
             alertControllerMessage(title: "Invalid input", message: "You need to enter one character", buttonTitle: "OK", handler: nil)
         }
+        
     }
     
     func setInitialTitle() {

@@ -63,6 +63,7 @@ class ViewController: UIViewController {
     @objc func startGame(action: UIAlertAction) {
         let funcName = "startGame"
         logger(functionName: funcName, message: "Play Again")
+        resetGameVariables() // rest variables
         
         if let obtainedWord = allWords.randomElement() {
             hiddenWord = obtainedWord
@@ -195,8 +196,6 @@ class ViewController: UIViewController {
             title = hiddenWord
             logger(functionName: funcName, message: "Player lost")
         }
-        
-        resetGameVariables() // rest variables
         
         let alertController = UIAlertController(title: "Game Over", message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Play Again", style: .default, handler: startGame))

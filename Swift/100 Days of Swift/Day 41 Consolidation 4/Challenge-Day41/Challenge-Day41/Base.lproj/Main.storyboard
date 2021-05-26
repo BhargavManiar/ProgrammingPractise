@@ -22,6 +22,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJp-HB-uUJ">
+                                <rect key="frame" x="16" y="181" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="u29-oB-vC2">
                                 <rect key="frame" x="16" y="210" width="288" height="128"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -34,19 +40,22 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="LZy-sW-Krq" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="C12-Oj-aiG"/>
-                            <constraint firstItem="LZy-sW-Krq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="E8q-Hb-Htb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="u29-oB-vC2" secondAttribute="bottom" constant="230" id="LTl-he-TlJ"/>
-                            <constraint firstItem="u29-oB-vC2" firstAttribute="top" secondItem="LZy-sW-Krq" secondAttribute="bottom" constant="71" id="NV8-pL-WpE"/>
-                            <constraint firstItem="LZy-sW-Krq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="74" id="QNA-nS-ARm"/>
-                            <constraint firstItem="LZy-sW-Krq" firstAttribute="leading" secondItem="u29-oB-vC2" secondAttribute="leading" id="Tch-gV-COl"/>
-                            <constraint firstItem="LZy-sW-Krq" firstAttribute="trailing" secondItem="u29-oB-vC2" secondAttribute="trailing" id="bnJ-Gz-Rd0"/>
+                            <constraint firstItem="aJp-HB-uUJ" firstAttribute="leading" secondItem="u29-oB-vC2" secondAttribute="leading" id="1c6-hQ-Y9q"/>
+                            <constraint firstItem="LZy-sW-Krq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="74" id="4Gc-RK-qqg"/>
+                            <constraint firstItem="LZy-sW-Krq" firstAttribute="trailing" secondItem="u29-oB-vC2" secondAttribute="trailing" id="J7z-uC-yZW"/>
+                            <constraint firstItem="LZy-sW-Krq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="NHk-dC-fjr"/>
+                            <constraint firstItem="LZy-sW-Krq" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="TXU-Cd-XW6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="u29-oB-vC2" secondAttribute="bottom" constant="230" id="cJt-UU-ohk"/>
+                            <constraint firstItem="aJp-HB-uUJ" firstAttribute="top" secondItem="LZy-sW-Krq" secondAttribute="bottom" constant="42" id="hhI-cs-hzC"/>
+                            <constraint firstItem="u29-oB-vC2" firstAttribute="top" secondItem="aJp-HB-uUJ" secondAttribute="bottom" constant="8" id="pll-eZ-nBc"/>
+                            <constraint firstItem="aJp-HB-uUJ" firstAttribute="leading" secondItem="LZy-sW-Krq" secondAttribute="leading" id="yXV-Be-UaG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FtC-cz-O5e"/>
                     <connections>
                         <outlet property="lettersUsed" destination="u29-oB-vC2" id="NrQ-FI-ati"/>
                         <outlet property="livesRemaining" destination="LZy-sW-Krq" id="LHf-Bz-L4W"/>
+                        <outlet property="usedLettersTitle" destination="aJp-HB-uUJ" id="v2P-G1-G9W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

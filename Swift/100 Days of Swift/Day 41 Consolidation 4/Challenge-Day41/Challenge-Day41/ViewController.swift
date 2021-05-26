@@ -20,6 +20,7 @@ extension String {
 class ViewController: UIViewController {
     @IBOutlet var livesRemaining: UILabel!
     @IBOutlet var lettersUsed: UITextView!
+    @IBOutlet var usedLettersTitle: UILabel!
     
     var allWords = [String]()
     var usedLetters = [String]() // resetable
@@ -51,6 +52,8 @@ class ViewController: UIViewController {
         livesRemaining.text = "Remaining Lives: 7"
         lettersUsed.isEditable = false
         lettersUsed.text = " "
+        usedLettersTitle.text = "Used Letters"
+        usedLettersTitle.isHidden = true
         
         // Start the game and add a ??? title word on the nav bar
         startGame()
@@ -125,6 +128,7 @@ class ViewController: UIViewController {
         if input.count == 1 {
             if (!usedLetters.contains(input)) {
                 usedLetters.append(input) // Remember letter used
+                usedLettersTitle.isHidden = false
                 lettersUsed.text += "\(input), " // Show used letter
                 logger(functionName: funcName, variableName: "usedLetters", variableOutput: "\(usedLetters)")
                 

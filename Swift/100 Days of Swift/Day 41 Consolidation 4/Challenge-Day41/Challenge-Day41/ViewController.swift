@@ -92,10 +92,10 @@ class ViewController: UIViewController {
                     wrongAnswer()
                 }
             } else {
-                showErrorMessage(title: "Letter used already!", message: "Enter a differnet letter")
+                alertControllerMessage(title: "Letter used already!", message: "Enter a differnet letter", buttonTitle: "OK", handler: nil)
             }
         } else {
-            showErrorMessage(title: "Invalid input", message: "You need to enter one character")
+            alertControllerMessage(title: "Invalid input", message: "You need to enter one character", buttonTitle: "OK", handler: nil)
         }
     }
     
@@ -145,7 +145,7 @@ class ViewController: UIViewController {
         if(wrongAnswerScore == 7) {
             endGame(win: false)
         } else {
-            showErrorMessage(title: "Incorrect", message: "Try another letter")
+            alertControllerMessage(title: "Incorrect", message: "Try another letter", buttonTitle: "OK", handler: nil)
         }
     }
     
@@ -155,13 +155,11 @@ class ViewController: UIViewController {
         if win == true {
             message = "You Won!"
         } else {
-            message = "You Lost. The word was " + hiddenWord!
+            message = "You Lost. The word was '" + hiddenWord! + "'."
             title = hiddenWord
         }
         
-        let alertController = UIAlertController(title: "Game Over", message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "Play Again", style: .default, handler: startGame))
-        present(alertController, animated: true)
+        alertControllerMessage(title: "Game Over", message: message, buttonTitle: "Play Again?", handler: startGame)
     }
     
     func resetGameVariables() {
@@ -179,10 +177,9 @@ class ViewController: UIViewController {
         scoreTotal.text = "Score: \(score)"
     }
     
-    func showErrorMessage(title: String, message: String) {
-        
+    func alertControllerMessage(title: String, message: String, buttonTitle: String, handler: ((UIAlertAction) -> Void)?) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .default))
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: handler))
         present(alertController, animated: true)
     }
     

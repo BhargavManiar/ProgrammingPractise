@@ -223,9 +223,11 @@ class ViewController: UIViewController {
         // Reset UI Elements
         livesRemaining.text = "Remaining Lives: 7"
         lettersUsed.text = " "
+        asciiArt.text = ""
         
         logger(functionName: funcName, variableName: "livesRemaining", variableOutput: "\(String(describing: livesRemaining.text))")
         logger(functionName: funcName, variableName: "lettersUsed", variableOutput: "\(String(describing: lettersUsed.text))")
+        logger(functionName: funcName, variableName: "asciiArt", variableOutput: "\(String(describing: asciiArt.text))")
     }
     
     func showErrorMessage(title: String, message: String) {

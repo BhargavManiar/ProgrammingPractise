@@ -66,6 +66,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="FtC-cz-O5e"/>
                     <connections>
+                        <outlet property="asciiArt" destination="zLI-SG-fAD" id="pGl-nF-W14"/>
                         <outlet property="lettersUsed" destination="u29-oB-vC2" id="NrQ-FI-ati"/>
                         <outlet property="livesRemaining" destination="LZy-sW-Krq" id="LHf-Bz-L4W"/>
                         <outlet property="usedLettersTitle" destination="aJp-HB-uUJ" id="v2P-G1-G9W"/>

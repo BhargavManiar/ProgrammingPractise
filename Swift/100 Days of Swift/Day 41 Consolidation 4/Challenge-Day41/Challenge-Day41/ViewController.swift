@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     @IBOutlet var livesRemaining: UILabel!
     @IBOutlet var lettersUsed: UITextView!
     @IBOutlet var usedLettersTitle: UILabel!
+    @IBOutlet var asciiArt: UITextView!
     
     var allWords = [String]()
     var usedLetters = [String]() // resetable

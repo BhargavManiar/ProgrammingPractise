@@ -28,5 +28,7 @@
 ## Resources
 
 Link for Git Hub page - https://github.com/twostraws/HackingWithSwift
-Hacking with Swift Website - https://www.hackingwithswift.com 
+
+Hacking with Swift Website - https://www.hackingwithswift.com
+
 100 Days of Swift - https://www.hackingwithswift.com/100

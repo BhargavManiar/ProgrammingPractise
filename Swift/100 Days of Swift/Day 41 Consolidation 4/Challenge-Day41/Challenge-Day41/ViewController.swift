@@ -130,7 +130,15 @@ class ViewController: UIViewController {
             if (!usedLetters.contains(input)) {
                 usedLetters.append(input) // Remember letter used
                 usedLettersTitle.isHidden = false
-                lettersUsed.text += "\(input), " // Show used letter
+                logger(functionName: funcName, variableName: "lettersUsed.text.count", variableOutput: "\(lettersUsed.text.count)")
+                
+                // Show letters used
+                if lettersUsed.text.count == 1 {
+                    lettersUsed.text += "\(input)" // Add letter without comma
+                } else {
+                    lettersUsed.text += ", \(input)" // Add letter with comma
+                }
+                
                 logger(functionName: funcName, variableName: "usedLetters", variableOutput: "\(usedLetters)")
                 if (hiddenWord!.contains(input)) {
                     logger(functionName: funcName, message: "Hidden letter found")

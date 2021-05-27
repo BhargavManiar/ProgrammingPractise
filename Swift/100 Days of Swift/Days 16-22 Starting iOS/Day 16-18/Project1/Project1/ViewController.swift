@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UITableViewController {
+class ViewController: UICollectionViewController {//UITableViewController {
     var pictures = [String]()
     
     override func viewDidLoad() {
@@ -17,7 +17,8 @@ class ViewController: UITableViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         
         performSelector(inBackground: #selector(loadImages), with: nil)
-        tableView.reloadData()
+        // tableView.reloadData()
+        collectionView.reloadData()
     }
     
     @objc func loadImages() {
@@ -55,6 +56,6 @@ class ViewController: UITableViewController {
             navigationController?.pushViewController(vc, animated: true)
         }
     }
- */
+    */
 }
 

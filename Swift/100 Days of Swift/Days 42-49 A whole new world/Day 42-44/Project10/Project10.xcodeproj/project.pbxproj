@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C7B03E0265F9FE200879453 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7B03DF265F9FE200879453 /* Person.swift */; };
 		4CE3178D265EF1CC00705129 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE3178C265EF1CC00705129 /* AppDelegate.swift */; };
 		4CE3178F265EF1CC00705129 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE3178E265EF1CC00705129 /* SceneDelegate.swift */; };
 		4CE31791265EF1CC00705129 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE31790265EF1CC00705129 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C7B03DF265F9FE200879453 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Person.swift; path = Project10/Person.swift; sourceTree = "<group>"; };
 		4CE31789265EF1CC00705129 /* Project10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project10.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CE3178C265EF1CC00705129 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CE3178E265EF1CC00705129 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +44,7 @@
 		4CE31780265EF1CC00705129 = {
 			isa = PBXGroup;
 			children = (
+				4C7B03DF265F9FE200879453 /* Person.swift */,
 				4CE3178B265EF1CC00705129 /* Project10 */,
 				4CE3178A265EF1CC00705129 /* Products */,
 			);
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C7B03E0265F9FE200879453 /* Person.swift in Sources */,
 				4CE31791265EF1CC00705129 /* ViewController.swift in Sources */,
 				4CE3178D265EF1CC00705129 /* AppDelegate.swift in Sources */,
 				4CE317A1265EF49000705129 /* PersonCell.swift in Sources */,

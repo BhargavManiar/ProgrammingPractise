@@ -73,17 +73,37 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let person = people[indexPath.item]
         
-        let ac = UIAlertController(title: "Rename person", message: nil, preferredStyle: .alert)
-        ac.addTextField()
-        
-        ac.addAction(UIAlertAction(title: "OK", style: .default) { [weak self, weak ac] _ in
-            guard let newName = ac?.textFields?[0].text else { return }
-            person.name = newName
-            self?.collectionView.reloadData()
-        })
-        
-        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-        present(ac, animated: true)
+        let actionSheetController = UIAlertController(title: "Action", message: nil, preferredStyle: .actionSheet)
+
+        let editAction = UIAlertAction(title: "Rename", style: .default) { [weak self] (action) in
+            let alertController = UIAlertController(title: "Rename person", message: nil, preferredStyle: .alert)
+
+            alertController.addTextField()
+            alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+            alertController.addAction(UIAlertAction(title: "OK", style: .default) { [weak self, weak alertController] _ in
+                guard let newName = alertController?.textFields?[0].text else { return }
+                person.name = newName
+                self?.collectionView.reloadData()
+            })
+            self?.present(alertController, animated: true)
+        }
+
+        let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { [weak self] (action) in
+            let deleteAlertController = UIAlertController(title: "Delete Item", message: nil, preferredStyle: .alert)
+
+            deleteAlertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+            deleteAlertController.addAction(UIAlertAction(title: "Delete", style: .destructive){ [weak self] _ in
+                self?.people.remove(at: indexPath.item)
+                self?.collectionView.reloadData()
+                //self?.collectionView.deleteItems(at: [indexPath])
+            })
+            self?.present(deleteAlertController, animated: true)
+        }
+
+        actionSheetController.addAction(editAction)
+        actionSheetController.addAction(deleteAction)
+        actionSheetController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        present(actionSheetController, animated: true)
     }
 }
 

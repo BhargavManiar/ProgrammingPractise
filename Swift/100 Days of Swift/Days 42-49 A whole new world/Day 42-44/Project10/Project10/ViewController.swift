@@ -118,7 +118,6 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
             deleteAlertController.addAction(UIAlertAction(title: "Delete", style: .destructive){ [weak self] _ in
                 self?.people.remove(at: indexPath.item)
                 self?.collectionView.reloadData()
-                //self?.collectionView.deleteItems(at: [indexPath])
             })
             self?.present(deleteAlertController, animated: true)
         }

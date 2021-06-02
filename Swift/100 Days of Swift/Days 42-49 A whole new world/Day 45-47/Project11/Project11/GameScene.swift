@@ -88,7 +88,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 let box = SKSpriteNode(color: UIColor(red: CGFloat.random(in: 0...1), green: CGFloat.random(in: 0...1), blue: CGFloat.random(in: 0...1), alpha: 1), size: size)
                 box.zRotation = CGFloat.random(in: 0...3)
                 box.position = location
-                
                 box.physicsBody = SKPhysicsBody(rectangleOf: box.size)
                 box.physicsBody?.isDynamic = false
                 addChild(box)
@@ -147,6 +146,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         } else if object.name == "bad" {
             destroy(ball: ball)
             score -= 1
+            remaingBalls -= 1 // Only remove balls if they go in a bad slot
         }
     }
     

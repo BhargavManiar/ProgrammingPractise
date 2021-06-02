@@ -10,15 +10,15 @@ import SpriteKit
 class GameScene: SKScene, SKPhysicsContactDelegate {
     let ballColours = ["ballPurple", "ballBlue", "ballCyan", "ballGreen", "ballRed", "ballYellow", "ballGrey"]
     
-    var scoreLabel: SKLabelNode!
+//    var scoreLabel: SKLabelNode!
     var remainingBallsLabel: SKLabelNode!
     var editLabel: SKLabelNode!
     
-    var score = 0 {
-        didSet {
-            scoreLabel.text = "Score \(score)"
-        }
-    }
+//    var score = 0 {
+//        didSet {
+//            scoreLabel.text = "Score \(score)"
+//        }
+//    }
     var remaingBalls = 5 {
         didSet {
             remainingBallsLabel.text = "Balls left: \(remaingBalls)"
@@ -42,16 +42,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         background.zPosition = -1
         addChild(background)
         
-        scoreLabel = SKLabelNode(fontNamed: "Chalkduster")
-        scoreLabel.text = "Score 0"
-        scoreLabel.horizontalAlignmentMode = .right
-        scoreLabel.position = CGPoint(x: 980, y: 700)
-        addChild(scoreLabel)
+//        scoreLabel = SKLabelNode(fontNamed: "Chalkduster")
+//        scoreLabel.text = "Score 0"
+//        scoreLabel.horizontalAlignmentMode = .right
+//        scoreLabel.position = CGPoint(x: 980, y: 700)
+//        addChild(scoreLabel)
         
         remainingBallsLabel = SKLabelNode(fontNamed: "Chalkduster")
         remainingBallsLabel.text = "Balls left: \(remaingBalls)"
         remainingBallsLabel.horizontalAlignmentMode = .right
-        remainingBallsLabel.position = CGPoint(x: 980, y: 600)
+        remainingBallsLabel.position = CGPoint(x: 980, y: 700)
         addChild(remainingBallsLabel)
         
         editLabel = SKLabelNode(fontNamed: "Chalkduster")
@@ -93,13 +93,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 box.name = "box"
                 addChild(box)
             } else {
-                let ball = SKSpriteNode(imageNamed:  ballColours.randomElement()!)
-                ball.physicsBody = SKPhysicsBody(circleOfRadius: ball.size.width / 2.0)
-                ball.physicsBody?.restitution = 0.4
-                ball.physicsBody?.contactTestBitMask = ball.physicsBody?.collisionBitMask ?? 0
-                ball.position = CGPoint(x: location.x, y: 650)
-                ball.name = "ball"
-                addChild(ball)
+                if remaingBalls > 0 {
+                    let ball = SKSpriteNode(imageNamed:  ballColours.randomElement()!)
+                    ball.physicsBody = SKPhysicsBody(circleOfRadius: ball.size.width / 2.0)
+                    ball.physicsBody?.restitution = 0.4
+                    ball.physicsBody?.contactTestBitMask = ball.physicsBody?.collisionBitMask ?? 0
+                    ball.position = CGPoint(x: location.x, y: 650)
+                    ball.name = "ball"
+                    addChild(ball)
+                }
             }
         }
     }
@@ -147,10 +149,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         if object.name == "good" {
             destroy(ball: ball)
-            score += 1
+//            score += 1
         } else if object.name == "bad" {
             destroy(ball: ball)
-            score -= 1
+//            score -= 1
             remaingBalls -= 1 // Only remove balls if they go in a bad slot
         }
     }

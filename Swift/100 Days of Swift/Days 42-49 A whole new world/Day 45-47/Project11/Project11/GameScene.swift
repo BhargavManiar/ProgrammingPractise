@@ -145,9 +145,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func collision(between ball: SKNode, object: SKNode) {
         if object.name == "box" {
             object.removeFromParent() // Remove the box if there is a collision
-        }
-        
-        if object.name == "good" {
+            // Check if remaining boxes are 0
+            if !boxesPresent() { // Winning case
+                finishGame(didWin: true)
+            } else if remaingBalls == 0 { // Losing case
+                finishGame(didWin: false)
+            }
+        } else if object.name == "good" {
             destroy(ball: ball)
 //            score += 1
         } else if object.name == "bad" {
@@ -174,6 +178,23 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             collision(between: nodeA, object: nodeB)
         } else if contact.bodyB.node?.name == "ball" {
             collision(between: nodeB, object: nodeA)
+        }
+    }
+    
+    func boxesPresent() -> Bool{
+        for node in self.children {
+            if node.name == "box" {
+                return true;
+            }
+        }
+        return false
+    }
+    
+    func finishGame(didWin status: Bool) {
+        if status {
+            // show a winning label
+        } else {
+            // show a losing label
         }
     }
 }

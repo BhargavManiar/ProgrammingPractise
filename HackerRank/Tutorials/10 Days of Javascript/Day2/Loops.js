@@ -27,19 +27,14 @@ function readLine() {
  * Print your output using 'console.log()'.
  */
 function vowelsAndConsonants(s) {
-    var vowels = []
     var consonants = []
     
     for(var i = 0; i < s.length; i++) {
         if (s[i] === "a" || s[i] === "e" || s[i] === "i" || s[i] === "o" || s[i] === "u") {
-            vowels.push(s[i]);
+            console.log(s[i])
         } else {
             consonants.push(s[i]);
         }
-    }
-    
-    for(i = 0; i < vowels.length; i++) {
-        console.log(vowels[i]);
     }
     
     for(i = 0; i < consonants.length; i++) {

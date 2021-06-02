@@ -11,14 +11,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let ballColours = ["ballPurple", "ballBlue", "ballCyan", "ballGreen", "ballRed", "ballYellow", "ballGrey"]
     
     var scoreLabel: SKLabelNode!
+    var remainingBallsLabel: SKLabelNode!
+    var editLabel: SKLabelNode!
     
     var score = 0 {
         didSet {
             scoreLabel.text = "Score \(score)"
         }
     }
+    var remaingBalls = 5 {
+        didSet {
+            remainingBallsLabel.text = "Balls left: \(remaingBalls)"
+        }
+    }
     
-    var editLabel: SKLabelNode!
     var editingMode: Bool = false {
         didSet {
             if editingMode {
@@ -41,6 +47,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         scoreLabel.horizontalAlignmentMode = .right
         scoreLabel.position = CGPoint(x: 980, y: 700)
         addChild(scoreLabel)
+        
+        remainingBallsLabel = SKLabelNode(fontNamed: "Chalkduster")
+        remainingBallsLabel.text = "Balls left: \(remaingBalls)"
+        remainingBallsLabel.horizontalAlignmentMode = .right
+        remainingBallsLabel.position = CGPoint(x: 980, y: 600)
+        addChild(remainingBallsLabel)
         
         editLabel = SKLabelNode(fontNamed: "Chalkduster")
         editLabel.text = "Edit"

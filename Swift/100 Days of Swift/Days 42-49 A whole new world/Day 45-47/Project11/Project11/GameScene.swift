@@ -90,6 +90,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 box.position = location
                 box.physicsBody = SKPhysicsBody(rectangleOf: box.size)
                 box.physicsBody?.isDynamic = false
+                box.name = "box"
                 addChild(box)
             } else {
                 let ball = SKSpriteNode(imageNamed:  ballColours.randomElement()!)
@@ -140,6 +141,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func collision(between ball: SKNode, object: SKNode) {
+        if object.name == "box" {
+            object.removeFromParent() // Remove the box if there is a collision
+        }
+        
         if object.name == "good" {
             destroy(ball: ball)
             score += 1

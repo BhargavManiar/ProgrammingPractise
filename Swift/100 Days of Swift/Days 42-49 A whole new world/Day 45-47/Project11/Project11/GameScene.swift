@@ -13,6 +13,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 //    var scoreLabel: SKLabelNode!
     var remainingBallsLabel: SKLabelNode!
     var gameFinishedLabel: SKLabelNode!
+    var gameFinished: Bool = false
 //    var editLabel: SKLabelNode!
     
 //    var score = 0 {
@@ -81,7 +82,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         guard let touch = touches.first else { return }
         let location = touch.location(in: self)
 //        let objects = nodes(at: location)
-        if remaingBalls > 0 {
+        if remaingBalls > 0 && !gameFinished{
             let ball = SKSpriteNode(imageNamed:  ballColours.randomElement()!)
             ball.physicsBody = SKPhysicsBody(circleOfRadius: ball.size.width / 2.0)
             ball.physicsBody?.restitution = 0.4
@@ -217,8 +218,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // Check if remaining boxes are 0
         if !boxesPresent() { // Winning case
             finishGame(didWin: true)
+            gameFinished = true
         } else if remaingBalls == 0 { // Losing case
             finishGame(didWin: false)
+            gameFinished = true
         }
     }
     func generateRandomBoxes() {

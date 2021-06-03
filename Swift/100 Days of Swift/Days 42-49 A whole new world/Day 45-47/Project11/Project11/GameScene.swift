@@ -159,7 +159,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         } else if object.name == "bad" {
             destroy(ball: ball)
 //            score -= 1
-            remaingBalls -= 1 // Only remove balls if they go in a bad slot
         }
     }
     

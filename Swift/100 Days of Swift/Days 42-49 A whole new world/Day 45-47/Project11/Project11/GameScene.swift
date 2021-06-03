@@ -78,7 +78,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         guard let touch = touches.first else { return }
         let location = touch.location(in: self)
 //        let objects = nodes(at: location)
-        
+        if remaingBalls > 0 {
+            let ball = SKSpriteNode(imageNamed:  ballColours.randomElement()!)
+            ball.physicsBody = SKPhysicsBody(circleOfRadius: ball.size.width / 2.0)
+            ball.physicsBody?.restitution = 0.4
+            ball.physicsBody?.contactTestBitMask = ball.physicsBody?.collisionBitMask ?? 0
+            ball.position = CGPoint(x: location.x, y: 650)
+            ball.name = "ball"
+            remaingBalls -= 1
+            addChild(ball)
+        }
         
 //        if objects.contains(editLabel) {
 //            editingMode.toggle()

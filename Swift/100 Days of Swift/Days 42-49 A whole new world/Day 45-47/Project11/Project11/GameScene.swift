@@ -200,4 +200,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             print("Game lost")
         }
     }
+    
+    func generateRandomBoxes() {
+        // create a box
+        for _ in 1...10 {
+            let size = CGSize(width: Int.random(in: 16...128), height: 16)
+            let box = SKSpriteNode(color: UIColor(red: CGFloat.random(in: 0...1), green: CGFloat.random(in: 0...1), blue: CGFloat.random(in: 0...1), alpha: 1), size: size)
+            box.zRotation = CGFloat.random(in: 0...3)
+            box.position = CGPoint(x: Int.random(in: 12...1012), y: Int.random(in: 12...600))
+            box.physicsBody = SKPhysicsBody(rectangleOf: box.size)
+            box.physicsBody?.isDynamic = false
+            box.name = "box"
+            addChild(box)
+        }
+    }
 }

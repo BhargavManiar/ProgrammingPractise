@@ -12,6 +12,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
 //    var scoreLabel: SKLabelNode!
     var remainingBallsLabel: SKLabelNode!
+    var gameFinishedLabel: SKLabelNode!
 //    var editLabel: SKLabelNode!
     
 //    var score = 0 {
@@ -204,12 +205,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func finishGame(didWin status: Bool) {
+        gameFinishedLabel = SKLabelNode(fontNamed: "Chalkduster")
+        gameFinishedLabel.horizontalAlignmentMode = .center
+        gameFinishedLabel.position = CGPoint(x: 512, y: 384)
         if status {
             // show a winning label
             print("Game won")
+            gameFinishedLabel.text = "You Won!"
+            addChild(gameFinishedLabel)
         } else {
             // show a losing label
             print("Game lost")
+            gameFinishedLabel.text = "You Lost"
+            addChild(gameFinishedLabel)
         }
     }
     

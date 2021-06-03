@@ -159,18 +159,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func collision(between ball: SKNode, object: SKNode) {
         if object.name == "box" {
             object.removeFromParent() // Remove the box if there is a collision
-            // Check if remaining boxes are 0
-            if !boxesPresent() { // Winning case
-                finishGame(didWin: true)
-            } else if remaingBalls == 0 { // Losing case
-                finishGame(didWin: false)
-            }
         } else if object.name == "good" {
             destroy(ball: ball)
 //            score += 1
             remaingBalls += 1
+            checkGameState()
         } else if object.name == "bad" {
             destroy(ball: ball)
+            checkGameState()
 //            score -= 1
         }
     }
@@ -209,18 +205,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         gameFinishedLabel.horizontalAlignmentMode = .center
         gameFinishedLabel.position = CGPoint(x: 512, y: 384)
         if status {
-            // show a winning label
-            print("Game won")
             gameFinishedLabel.text = "You Won!"
             addChild(gameFinishedLabel)
         } else {
-            // show a losing label
-            print("Game lost")
             gameFinishedLabel.text = "You Lost"
             addChild(gameFinishedLabel)
         }
     }
     
+    func checkGameState() {
+        // Check if remaining boxes are 0
+        if !boxesPresent() { // Winning case
+            finishGame(didWin: true)
+        } else if remaingBalls == 0 { // Losing case
+            finishGame(didWin: false)
+        }
+    }
     func generateRandomBoxes() {
         // create a box
         for _ in 1...10 {

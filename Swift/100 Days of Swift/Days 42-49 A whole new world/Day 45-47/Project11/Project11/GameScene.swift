@@ -72,6 +72,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         makeBouncer(at: CGPoint(x: 512, y: 0))
         makeBouncer(at: CGPoint(x: 768, y: 0))
         makeBouncer(at: CGPoint(x: 1024, y: 0))
+        
+        startGame()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -223,5 +225,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             box.name = "box"
             addChild(box)
         }
+    }
+    
+    func startGame() {
+        remaingBalls = 5;
+        generateRandomBoxes();
     }
 }

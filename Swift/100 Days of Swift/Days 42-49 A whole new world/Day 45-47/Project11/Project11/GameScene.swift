@@ -100,6 +100,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     ball.physicsBody?.contactTestBitMask = ball.physicsBody?.collisionBitMask ?? 0
                     ball.position = CGPoint(x: location.x, y: 650)
                     ball.name = "ball"
+                    remaingBalls -= 1
                     addChild(ball)
                 }
             }
@@ -154,6 +155,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         } else if object.name == "good" {
             destroy(ball: ball)
 //            score += 1
+            remaingBalls += 1
         } else if object.name == "bad" {
             destroy(ball: ball)
 //            score -= 1

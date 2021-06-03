@@ -195,8 +195,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func finishGame(didWin status: Bool) {
         if status {
             // show a winning label
+            print("Game won")
         } else {
             // show a losing label
+            print("Game lost")
         }
     }
 }

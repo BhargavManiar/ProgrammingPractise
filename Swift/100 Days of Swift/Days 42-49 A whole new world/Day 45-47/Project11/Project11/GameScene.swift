@@ -160,6 +160,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func collision(between ball: SKNode, object: SKNode) {
         if object.name == "box" {
             object.removeFromParent() // Remove the box if there is a collision
+            checkGameState()
         } else if object.name == "good" {
             destroy(ball: ball)
 //            score += 1
@@ -201,6 +202,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         return false
     }
     
+    func ballsOnScreen() -> Bool{
+        for node in self.children {
+            if node.name == "ball" {
+                return true
+            }
+        }
+        return false
+    }
+    
     func finishGame(didWin status: Bool) {
         gameFinishedLabel = SKLabelNode(fontNamed: "Chalkduster")
         gameFinishedLabel.horizontalAlignmentMode = .center
@@ -219,7 +229,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if !boxesPresent() { // Winning case
             finishGame(didWin: true)
             gameFinished = true
-        } else if remaingBalls == 0 { // Losing case
+        } else if remaingBalls == 0 && !ballsOnScreen(){ // Losing case
             finishGame(didWin: false)
             gameFinished = true
         }

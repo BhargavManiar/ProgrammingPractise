@@ -13,6 +13,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 //    var scoreLabel: SKLabelNode!
     var remainingBallsLabel: SKLabelNode!
     var gameFinishedLabel: SKLabelNode!
+    var playAgainLabel: SKLabelNode!
     var gameFinished: Bool = false
 //    var editLabel: SKLabelNode!
     
@@ -61,6 +62,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 //        editLabel.position = CGPoint(x: 80, y: 700)
 //        addChild(editLabel)
         
+        playAgainLabel = SKLabelNode(fontNamed: "Chalkduster")
+        playAgainLabel.horizontalAlignmentMode = .center
+        playAgainLabel.position = CGPoint(x: 512, y: 384)
+        playAgainLabel.text = ""
+        addChild(playAgainLabel)
+        
+        gameFinishedLabel = SKLabelNode(fontNamed: "Chalkduster")
+        gameFinishedLabel.horizontalAlignmentMode = .center
+        gameFinishedLabel.position = CGPoint(x: 512, y: 484)
+        gameFinishedLabel.text = ""
+        addChild(gameFinishedLabel)
+        
         physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
         physicsWorld.contactDelegate = self
         
@@ -81,7 +94,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else { return }
         let location = touch.location(in: self)
-//        let objects = nodes(at: location)
+        let objects = nodes(at: location)
         if remaingBalls > 0 && !gameFinished{
             let ball = SKSpriteNode(imageNamed:  ballColours.randomElement()!)
             ball.physicsBody = SKPhysicsBody(circleOfRadius: ball.size.width / 2.0)
@@ -91,6 +104,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             ball.name = "ball"
             remaingBalls -= 1
             addChild(ball)
+        }
+        
+        if objects.contains(playAgainLabel) {
+            startGame()
         }
         
 //        if objects.contains(editLabel) {
@@ -160,17 +177,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func collision(between ball: SKNode, object: SKNode) {
         if object.name == "box" {
             object.removeFromParent() // Remove the box if there is a collision
-            checkGameState()
         } else if object.name == "good" {
             destroy(ball: ball)
 //            score += 1
             remaingBalls += 1
-            checkGameState()
         } else if object.name == "bad" {
             destroy(ball: ball)
-            checkGameState()
 //            score -= 1
         }
+        checkGameState()
     }
     
     func destroy(ball: SKNode) {
@@ -212,28 +227,24 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func finishGame(didWin status: Bool) {
-        gameFinishedLabel = SKLabelNode(fontNamed: "Chalkduster")
-        gameFinishedLabel.horizontalAlignmentMode = .center
-        gameFinishedLabel.position = CGPoint(x: 512, y: 384)
+        gameFinished = true
         if status {
             gameFinishedLabel.text = "You Won!"
-            addChild(gameFinishedLabel)
         } else {
             gameFinishedLabel.text = "You Lost"
-            addChild(gameFinishedLabel)
         }
+        playAgainLabel.text = "Play Again?"
     }
     
     func checkGameState() {
         // Check if remaining boxes are 0
         if !boxesPresent() { // Winning case
             finishGame(didWin: true)
-            gameFinished = true
         } else if remaingBalls == 0 && !ballsOnScreen(){ // Losing case
             finishGame(didWin: false)
-            gameFinished = true
         }
     }
+    
     func generateRandomBoxes() {
         // create a box
         for _ in 1...10 {
@@ -250,6 +261,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func startGame() {
         remaingBalls = 5;
+        gameFinishedLabel.text = ""
+        playAgainLabel.text = ""
+        gameFinished = false
+        
+        for node in self.children {
+            if node.name == "box" || node.name == "ball"{
+                node.removeFromParent()
+            }
+        }
+        
         generateRandomBoxes();
     }
 }

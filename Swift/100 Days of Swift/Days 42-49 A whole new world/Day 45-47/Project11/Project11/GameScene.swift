@@ -208,18 +208,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    func boxesPresent() -> Bool{
+    func objectsOnScreen(objectName: String) -> Bool {
         for node in self.children {
-            if node.name == "box" {
-                return true;
-            }
-        }
-        return false
-    }
-    
-    func ballsOnScreen() -> Bool{
-        for node in self.children {
-            if node.name == "ball" {
+            if node.name == objectName {
                 return true
             }
         }
@@ -238,9 +229,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func checkGameState() {
         // Check if remaining boxes are 0
-        if !boxesPresent() { // Winning case
+        if !objectsOnScreen(objectName: "box") { // Winning case
             finishGame(didWin: true)
-        } else if remaingBalls == 0 && !ballsOnScreen(){ // Losing case
+        } else if remaingBalls == 0 && !objectsOnScreen(objectName: "ball"){ // Losing case
             finishGame(didWin: false)
         }
     }

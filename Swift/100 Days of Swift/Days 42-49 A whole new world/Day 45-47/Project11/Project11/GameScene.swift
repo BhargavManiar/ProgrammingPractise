@@ -22,6 +22,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 //            scoreLabel.text = "Score \(score)"
 //        }
 //    }
+    
     var remaingBalls = 5 {
         didSet {
             remainingBallsLabel.text = "Balls left: \(remaingBalls)"

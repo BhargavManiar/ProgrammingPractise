@@ -90,5 +90,11 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate, UI
             print("Failed to save people.")
         }
     }
+    
+    func getDocumentsDirectory() -> URL  {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask) // Get the apps document directory
+        
+        return paths[0]
+    }
 }
 

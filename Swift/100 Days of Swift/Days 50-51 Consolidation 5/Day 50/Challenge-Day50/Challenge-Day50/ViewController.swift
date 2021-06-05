@@ -46,6 +46,7 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate, UI
             viewController.selectedImage = image.image
             viewController.selectedCaption = image.caption
             viewController.selectedName = image.name
+            save()
             navigationController?.pushViewController(viewController, animated: true)
         }
     }

@@ -13,7 +13,7 @@
 		4C83DEF4266C24E000CCBCA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C83DEF2266C24E000CCBCA5 /* Main.storyboard */; };
 		4C83DEF6266C24E300CCBCA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C83DEF5266C24E300CCBCA5 /* Assets.xcassets */; };
 		4C83DEF9266C24E300CCBCA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C83DEF7266C24E300CCBCA5 /* LaunchScreen.storyboard */; };
-		4C83DF01266C27C500CCBCA5 /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C83DF00266C27C500CCBCA5 /* Picture.swift */; };
+		4C83DF01266C27C500CCBCA5 /* Pictures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C83DF00266C27C500CCBCA5 /* Pictures.swift */; };
 		4C83DF03266C28E100CCBCA5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C83DF02266C28E100CCBCA5 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +26,7 @@
 		4C83DEF5266C24E300CCBCA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C83DEF8266C24E300CCBCA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C83DEFA266C24E300CCBCA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4C83DF00266C27C500CCBCA5 /* Picture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
+		4C83DF00266C27C500CCBCA5 /* Pictures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pictures.swift; sourceTree = "<group>"; };
 		4C83DF02266C28E100CCBCA5 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,7 +64,7 @@
 				4C83DEEE266C24E000CCBCA5 /* SceneDelegate.swift */,
 				4C83DEF0266C24E000CCBCA5 /* ViewController.swift */,
 				4C83DF02266C28E100CCBCA5 /* DetailViewController.swift */,
-				4C83DF00266C27C500CCBCA5 /* Picture.swift */,
+				4C83DF00266C27C500CCBCA5 /* Pictures.swift */,
 				4C83DEF2266C24E000CCBCA5 /* Main.storyboard */,
 				4C83DEF5266C24E300CCBCA5 /* Assets.xcassets */,
 				4C83DEF7266C24E300CCBCA5 /* LaunchScreen.storyboard */,
@@ -143,7 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C83DF01266C27C500CCBCA5 /* Picture.swift in Sources */,
+				4C83DF01266C27C500CCBCA5 /* Pictures.swift in Sources */,
 				4C83DEF1266C24E000CCBCA5 /* ViewController.swift in Sources */,
 				4C83DF03266C28E100CCBCA5 /* DetailViewController.swift in Sources */,
 				4C83DEED266C24E000CCBCA5 /* AppDelegate.swift in Sources */,

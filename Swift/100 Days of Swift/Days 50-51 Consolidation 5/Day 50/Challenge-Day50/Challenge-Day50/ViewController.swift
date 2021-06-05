@@ -35,7 +35,8 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate, UI
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Picture", for: indexPath)
-        
+        let image = pictures[indexPath.row]
+        cell.textLabel?.text = image.name
         return cell
     }
     

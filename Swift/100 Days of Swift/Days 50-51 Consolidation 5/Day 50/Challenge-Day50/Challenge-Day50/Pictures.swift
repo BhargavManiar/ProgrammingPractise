@@ -10,9 +10,11 @@ import UIKit
 class Pictures: NSObject, Codable {
     var name: String
     var image: String
+    var caption: String
     
-    init(name: String, image: String) {
+    init(name: String, image: String, caption: String) {
         self.name = name
         self.image = image
+        self.caption = caption
     }
 }

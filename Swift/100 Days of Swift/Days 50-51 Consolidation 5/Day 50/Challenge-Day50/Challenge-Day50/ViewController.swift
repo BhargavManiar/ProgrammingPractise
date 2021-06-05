@@ -41,11 +41,13 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate, UI
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let vc = storyboard?.instantiateViewController(identifier: "Detail") as? DetailViewController {
-//            vc.selectedImage = pictures[indexPath.row]
-//            vc.selectedImagePosition = indexPath.row + 1 // Get the current position
-//            vc.totalNumberOfImages = pictures.count      // Get the total number of images
-            navigationController?.pushViewController(vc, animated: true)
+        if let viewController = storyboard?.instantiateViewController(identifier: "Detail") as? DetailViewController {
+            let image = pictures[indexPath.row]
+            viewController.selectedImage = image.image
+            viewController.selectedCaption = image.caption
+            viewController.selectedImagePosition = indexPath.row + 1 // Get the current position
+            viewController.totalNumberOfImages = pictures.count      // Get the total number of images
+            navigationController?.pushViewController(viewController, animated: true)
         }
     }
     

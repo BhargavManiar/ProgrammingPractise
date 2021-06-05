@@ -80,6 +80,7 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate, UI
         present(picker, animated: true)
     }
 
+    // Data related functions
     func save() {
         let jsonEncoder = JSONEncoder()
         

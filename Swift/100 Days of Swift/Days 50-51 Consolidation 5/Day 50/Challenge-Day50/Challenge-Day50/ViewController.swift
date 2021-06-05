@@ -45,8 +45,7 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate, UI
             let image = pictures[indexPath.row]
             viewController.selectedImage = image.image
             viewController.selectedCaption = image.caption
-            viewController.selectedImagePosition = indexPath.row + 1 // Get the current position
-            viewController.totalNumberOfImages = pictures.count      // Get the total number of images
+            viewController.selectedName = image.name
             navigationController?.pushViewController(viewController, animated: true)
         }
     }

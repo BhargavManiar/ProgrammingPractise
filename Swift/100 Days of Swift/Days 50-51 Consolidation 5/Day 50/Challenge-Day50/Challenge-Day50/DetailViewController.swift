@@ -9,6 +9,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
     @IBOutlet var imageView: UIImageView!
+    @IBOutlet var textView: UITextView!
     var selectedImage: String?
     var selectedCaption: String?
     var selectedName: String?
@@ -23,6 +24,10 @@ class DetailViewController: UIViewController {
 
         if let imageToLoad = selectedImage {
             imageView.image = UIImage(named: imageToLoad)
+        }
+        
+        if let captionToLoad = selectedCaption {
+            textView.text = captionToLoad
         }
     }
     

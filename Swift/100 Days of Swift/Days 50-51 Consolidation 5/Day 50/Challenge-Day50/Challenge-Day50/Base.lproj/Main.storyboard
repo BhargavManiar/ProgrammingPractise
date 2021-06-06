@@ -54,21 +54,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rUx-Ai-9LL">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rUx-Ai-9LL">
+                                <rect key="frame" x="0.0" y="44" width="414" height="533"/>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5E7-Zu-TGQ">
+                                <rect key="frame" x="0.0" y="597" width="414" height="188"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="188" id="LKc-18-Mzt"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zOf-ae-xCz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zOf-ae-xCz" firstAttribute="bottom" secondItem="5E7-Zu-TGQ" secondAttribute="bottom" constant="77" id="4OL-OM-BBH"/>
+                            <constraint firstItem="rUx-Ai-9LL" firstAttribute="trailing" secondItem="5E7-Zu-TGQ" secondAttribute="trailing" id="FDV-Hs-dIk"/>
+                            <constraint firstItem="5E7-Zu-TGQ" firstAttribute="top" secondItem="rUx-Ai-9LL" secondAttribute="bottom" constant="20" id="TV1-xd-eMF"/>
+                            <constraint firstItem="rUx-Ai-9LL" firstAttribute="leading" secondItem="5E7-Zu-TGQ" secondAttribute="leading" id="aPr-Zc-mHG"/>
+                            <constraint firstItem="rUx-Ai-9LL" firstAttribute="leading" secondItem="zOf-ae-xCz" secondAttribute="leading" id="bWp-m5-gP4"/>
+                            <constraint firstItem="rUx-Ai-9LL" firstAttribute="top" secondItem="zOf-ae-xCz" secondAttribute="top" id="dEq-j3-SkE"/>
+                            <constraint firstItem="rUx-Ai-9LL" firstAttribute="centerX" secondItem="dNy-gK-cgE" secondAttribute="centerX" id="nLo-Hr-zPJ"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="rUx-Ai-9LL" id="tkI-lJ-bFG"/>
+                        <outlet property="textView" destination="5E7-Zu-TGQ" id="EoV-OW-8tj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9XJ-dk-CVN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1528" y="-23"/>
+            <point key="canvasLocation" x="1527.536231884058" y="-23.4375"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mkA-5N-x1b">
@@ -90,6 +109,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

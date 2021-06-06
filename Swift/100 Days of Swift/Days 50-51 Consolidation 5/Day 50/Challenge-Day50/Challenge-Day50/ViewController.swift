@@ -59,7 +59,7 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate, UI
             tableView.deleteRows(at: [indexPath], with: .fade)
             self.save()
         }
-        // Add cancel buttons for the below
+        
         let edit = UITableViewRowAction(style: .normal, title: "Name") { (action, indexPath) in
             let image = self.pictures[indexPath.row]
             let alertController = UIAlertController(title: "Enter name", message: nil, preferredStyle: .alert)
@@ -71,6 +71,7 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate, UI
                 tableView.reloadData()
             }
             alertController.addAction(submitItem)
+            alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
             self.present(alertController, animated: true)
         }
         
@@ -84,6 +85,7 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate, UI
                 self.save()
             }
             alertController.addAction(submitItem)
+            alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
             self.present(alertController, animated: true)
             
         }

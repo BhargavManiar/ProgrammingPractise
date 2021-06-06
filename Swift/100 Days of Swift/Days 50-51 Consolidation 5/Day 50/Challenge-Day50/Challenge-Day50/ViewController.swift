@@ -56,6 +56,7 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate, UI
         let delete = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
             self.pictures.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
+            self.save()
         }
 
         let edit = UITableViewRowAction(style: .normal, title: "Edit") { (action, indexPath) in
@@ -65,6 +66,7 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate, UI
             let submitItem = UIAlertAction(title: "Add", style: .default) {_ in
                 guard let itemAdded = alertController.textFields?[0].text else { return }
                 image.name = itemAdded
+                self.save()
                 tableView.reloadData()
             }
             

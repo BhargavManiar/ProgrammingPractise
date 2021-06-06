@@ -61,7 +61,7 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate, UI
 
         let edit = UITableViewRowAction(style: .normal, title: "Edit") { (action, indexPath) in
             let image = self.pictures[indexPath.row]
-            let alertController = UIAlertController(title: "Enter item", message: nil, preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Enter name", message: nil, preferredStyle: .alert)
             alertController.addTextField()
             let submitItem = UIAlertAction(title: "Add", style: .default) {_ in
                 guard let itemAdded = alertController.textFields?[0].text else { return }
@@ -69,14 +69,28 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate, UI
                 self.save()
                 tableView.reloadData()
             }
-            
             alertController.addAction(submitItem)
             self.present(alertController, animated: true)
         }
+        
+        let caption = UITableViewRowAction(style: .normal, title: "Caption") { (action, indexPath) in
+            let image = self.pictures[indexPath.row]
+            let alertController = UIAlertController(title: "Enter caption", message: nil, preferredStyle: .alert)
+            alertController.addTextField()
+            let submitItem = UIAlertAction(title: "Add", style: .default) {_ in
+                guard let itemAdded = alertController.textFields?[0].text else { return }
+                image.caption = itemAdded
+                self.save()
+            }
+            alertController.addAction(submitItem)
+            self.present(alertController, animated: true)
+            
+        }
 
         edit.backgroundColor = UIColor.blue
+        caption.backgroundColor = UIColor.green
 
-        return [delete, edit]
+        return [delete, edit, caption]
     }
     
     @objc func addPicture() {

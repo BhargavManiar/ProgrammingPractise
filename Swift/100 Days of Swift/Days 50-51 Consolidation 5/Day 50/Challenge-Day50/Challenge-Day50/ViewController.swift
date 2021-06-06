@@ -51,11 +51,30 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate, UI
         }
     }
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            pictures.remove(at: indexPath.row)
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        let delete = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
+            self.pictures.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
+
+        let edit = UITableViewRowAction(style: .normal, title: "Edit") { (action, indexPath) in
+            let image = self.pictures[indexPath.row]
+            let alertController = UIAlertController(title: "Enter item", message: nil, preferredStyle: .alert)
+            alertController.addTextField()
+            let submitItem = UIAlertAction(title: "Add", style: .default) {_ in
+                guard let itemAdded = alertController.textFields?[0].text else { return }
+                image.name = itemAdded
+                tableView.reloadData()
+            }
+            
+            alertController.addAction(submitItem)
+            self.present(alertController, animated: true)
+        }
+
+        edit.backgroundColor = UIColor.blue
+
+        return [delete, edit]
     }
     
     @objc func addPicture() {

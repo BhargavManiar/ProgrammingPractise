@@ -51,6 +51,13 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate, UI
         }
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            pictures.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    
     @objc func addPicture() {
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             let alertController = UIAlertController(title: "Source", message: nil, preferredStyle: .actionSheet) // The action sheet

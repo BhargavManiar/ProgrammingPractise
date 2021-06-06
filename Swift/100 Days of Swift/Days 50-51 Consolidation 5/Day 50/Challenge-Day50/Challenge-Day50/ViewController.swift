@@ -58,8 +58,8 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate, UI
             tableView.deleteRows(at: [indexPath], with: .fade)
             self.save()
         }
-
-        let edit = UITableViewRowAction(style: .normal, title: "Edit") { (action, indexPath) in
+        // Add cancel buttons for the below
+        let edit = UITableViewRowAction(style: .normal, title: "Name") { (action, indexPath) in
             let image = self.pictures[indexPath.row]
             let alertController = UIAlertController(title: "Enter name", message: nil, preferredStyle: .alert)
             alertController.addTextField()

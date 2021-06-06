@@ -43,10 +43,10 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate, UI
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let viewController = storyboard?.instantiateViewController(identifier: "Detail") as? DetailViewController {
             let image = pictures[indexPath.row]
-            viewController.selectedImage = image.image
+            viewController.selectedImage = getDocumentsDirectory().appendingPathComponent(image.image).path
             viewController.selectedCaption = image.caption
             viewController.selectedName = image.name
-            save()
+            //save()
             navigationController?.pushViewController(viewController, animated: true)
         }
     }
@@ -96,7 +96,7 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate, UI
         save()
         tableView.reloadData()
         
-        dismiss(animated: true)
+        dismiss(animated: true) // Add save after this
     }
 
     // Data related functions

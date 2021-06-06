@@ -2,7 +2,7 @@
 # Day 51
 
 ## Description
-This is a check mark for the first 50 days. 
+This is a check mark for the first 50 days. Day 51 does not invlove any programming but rather watching two talks that Paul has done.
 
 While you’re just learning it’s easy to miss just how interesting our community is, so today I would you like you to watch two talks I’ve given at conferences last year: dotSwift in Paris and NSSpain in Logroño.
 

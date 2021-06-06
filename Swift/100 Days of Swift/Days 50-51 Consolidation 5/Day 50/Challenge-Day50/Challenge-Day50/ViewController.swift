@@ -15,6 +15,7 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate, UI
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addPicture))
         
+        // Load data from UserDefaults
         let defaults = UserDefaults.standard
         
         if let savedPictures = defaults.object(forKey: "people") as? Data {
@@ -93,6 +94,7 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate, UI
         return [delete, edit, caption]
     }
     
+    // Picker functions
     @objc func addPicture() {
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             let alertController = UIAlertController(title: "Source", message: nil, preferredStyle: .actionSheet) // The action sheet

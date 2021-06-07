@@ -137,7 +137,7 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate, UI
             try? jpegData.write(to: imagePath)
         }
         
-        let picture = Pictures(name: "Unknown", image: imageName, caption: "Empty Caption")
+        let picture = Pictures(name: "Unknown", image: imageName, caption: "")
         pictures.append(picture)
         save()
         tableView.reloadData()

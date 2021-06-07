@@ -52,15 +52,14 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate, UI
         }
     }
     
-    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        
-        let delete = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteItem = UIContextualAction(style: .destructive, title: "Delete") {  (contextualAction, view, boolValue) in
             self.pictures.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             self.save()
         }
         
-        let edit = UITableViewRowAction(style: .normal, title: "Name") { (action, indexPath) in
+        let edit = UIContextualAction(style: .normal, title: "Name") { (UIContextualAction, view, boolValue) in
             let image = self.pictures[indexPath.row]
             let alertController = UIAlertController(title: "Enter name", message: nil, preferredStyle: .alert)
             alertController.addTextField()
@@ -75,7 +74,7 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate, UI
             self.present(alertController, animated: true)
         }
         
-        let caption = UITableViewRowAction(style: .normal, title: "Caption") { (action, indexPath) in
+        let caption = UIContextualAction(style: .normal, title: "Caption") { (UIContextualAction, view, boolValue) in
             let image = self.pictures[indexPath.row]
             let alertController = UIAlertController(title: "Enter caption", message: nil, preferredStyle: .alert)
             alertController.addTextField()
@@ -87,13 +86,14 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate, UI
             alertController.addAction(submitItem)
             alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
             self.present(alertController, animated: true)
-            
         }
-
-        edit.backgroundColor = UIColor.blue
-        caption.backgroundColor = UIColor.green
-
-        return [delete, edit, caption]
+        
+        edit.backgroundColor = UIColor.systemBlue
+        caption.backgroundColor = UIColor.systemGreen
+        
+        let swipeActions = UISwipeActionsConfiguration(actions: [deleteItem, edit, caption])
+        
+        return swipeActions
     }
     
     // Picker functions

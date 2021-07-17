@@ -59,6 +59,8 @@ class ViewController: UICollectionViewController {//UITableViewController {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
             vc.selectedImage = pictures[indexPath.row].image
                 navigationController?.pushViewController(vc, animated: true)
+            vc.selectedImagePosition = indexPath.row + 1 // Get the current position
+            vc.totalNumberOfImages = pictures.count      // Get the total number of images
         }
     }
     

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C286A5626A3097200C6995C /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C286A5526A3097200C6995C /* Picture.swift */; };
+		4C286A5826A309BD00C6995C /* PictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C286A5726A309BD00C6995C /* PictureCell.swift */; };
 		4CC00A1E264B1585005EA3B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC00A1D264B1585005EA3B0 /* AppDelegate.swift */; };
 		4CC00A20264B1585005EA3B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC00A1F264B1585005EA3B0 /* SceneDelegate.swift */; };
 		4CC00A22264B1585005EA3B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC00A21264B1585005EA3B0 /* ViewController.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C286A5526A3097200C6995C /* Picture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
+		4C286A5726A309BD00C6995C /* PictureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureCell.swift; sourceTree = "<group>"; };
 		4CC00A1A264B1585005EA3B0 /* Project1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CC00A1D264B1585005EA3B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CC00A1F264B1585005EA3B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +87,8 @@
 				4CC00A21264B1585005EA3B0 /* ViewController.swift */,
 				4CC00A46264BDD2B005EA3B0 /* DetailViewController.swift */,
 				4CC00A23264B1585005EA3B0 /* Main.storyboard */,
+				4C286A5526A3097200C6995C /* Picture.swift */,
+				4C286A5726A309BD00C6995C /* PictureCell.swift */,
 				4CC00A26264B1588005EA3B0 /* Assets.xcassets */,
 				4CC00A28264B1588005EA3B0 /* LaunchScreen.storyboard */,
 				4CC00A2B264B1588005EA3B0 /* Info.plist */,
@@ -189,6 +195,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CC00A22264B1585005EA3B0 /* ViewController.swift in Sources */,
+				4C286A5626A3097200C6995C /* Picture.swift in Sources */,
+				4C286A5826A309BD00C6995C /* PictureCell.swift in Sources */,
 				4CC00A1E264B1585005EA3B0 /* AppDelegate.swift in Sources */,
 				4CC00A20264B1585005EA3B0 /* SceneDelegate.swift in Sources */,
 				4CC00A47264BDD2B005EA3B0 /* DetailViewController.swift in Sources */,

@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UICollectionViewController {//UITableViewController {
     var pictures = [Picture]()
-    
+    var counterData = [String : Int]()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,9 +27,30 @@ class ViewController: UICollectionViewController {//UITableViewController {
             }
         }
         
+        // Load data
+        let defaults = UserDefaults.standard
+        
+        if let savedCounterData = defaults.object(forKey: "counterData") as? Data {
+            if let decodedCounterData = try?
+            NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(savedCounterData) as? [String : Int] {
+                counterData = decodedCounterData
+            }
+        } else { // If there is no data, create an empty dictionary
+            for item in items {
+                counterData[item] = 0
+            }
+        }
+        
         // performSelector(inBackground: #selector(loadImages), with: nil)
         // tableView.reloadData()
         collectionView.reloadData()
+    }
+    
+    func save() {
+        if let savedData = try? NSKeyedArchiver.archivedData(withRootObject: counterData, requiringSecureCoding: false) {
+            let defaults = UserDefaults.standard
+            defaults.set(savedData, forKey: "counterData")
+        }
     }
     
     func transformString(str: String) -> String {
@@ -57,8 +78,12 @@ class ViewController: UICollectionViewController {//UITableViewController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
+            let imageName = pictures[indexPath.row].image
+            counterData[imageName]? += 1 // Increment counter for the specific image
+            print("Image Name: \(imageName) Counter: \(counterData[imageName]!)") // Display data on the console
+            
             vc.selectedImage = pictures[indexPath.row].image
-                navigationController?.pushViewController(vc, animated: true)
+            navigationController?.pushViewController(vc, animated: true)
             vc.selectedImagePosition = indexPath.row + 1 // Get the current position
             vc.totalNumberOfImages = pictures.count      // Get the total number of images
         }

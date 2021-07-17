@@ -67,7 +67,7 @@ class ViewController: UICollectionViewController {//UITableViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Picture", for: indexPath) as! PictureCell
         
         cell.imageView.image = UIImage(named: pictures[indexPath.row].image)
-        cell.name?.text = transformString(str: pictures[indexPath.row].name)
+        cell.name?.text = transformString(str: pictures[indexPath.row].name) + " (\(counterData[pictures[indexPath.row].image]!))"
         cell.layer.borderColor = UIColor.lightGray.cgColor
         
         cell.layer.borderWidth = 2
@@ -78,10 +78,12 @@ class ViewController: UICollectionViewController {//UITableViewController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
+            
             let imageName = pictures[indexPath.row].image
             counterData[imageName]? += 1 // Increment counter for the specific image
-            print("Image Name: \(imageName) Counter: \(counterData[imageName]!)") // Display data on the console
+            //print("Image Name: \(imageName) Counter: \(counterData[imageName]!)") // Display data on the console
             save() //Save the counter data
+            collectionView.reloadData()
             
             vc.selectedImage = pictures[indexPath.row].image
             navigationController?.pushViewController(vc, animated: true)

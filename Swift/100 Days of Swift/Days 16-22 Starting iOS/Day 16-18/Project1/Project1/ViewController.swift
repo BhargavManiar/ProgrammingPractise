@@ -46,7 +46,7 @@ class ViewController: UICollectionViewController {//UITableViewController {
         collectionView.reloadData()
     }
     
-    func save() {
+    func save() { // Function to save data
         if let savedData = try? NSKeyedArchiver.archivedData(withRootObject: counterData, requiringSecureCoding: false) {
             let defaults = UserDefaults.standard
             defaults.set(savedData, forKey: "counterData")
@@ -81,6 +81,7 @@ class ViewController: UICollectionViewController {//UITableViewController {
             let imageName = pictures[indexPath.row].image
             counterData[imageName]? += 1 // Increment counter for the specific image
             print("Image Name: \(imageName) Counter: \(counterData[imageName]!)") // Display data on the console
+            save() //Save the counter data
             
             vc.selectedImage = pictures[indexPath.row].image
             navigationController?.pushViewController(vc, animated: true)

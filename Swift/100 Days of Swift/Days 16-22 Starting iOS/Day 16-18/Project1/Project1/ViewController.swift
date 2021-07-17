@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UICollectionViewController {//UITableViewController {
-    var pictures = [String]()
+    var pictures = [Picture]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,24 +16,69 @@ class ViewController: UICollectionViewController {//UITableViewController {
         title = "Storm Viewer"
         navigationController?.navigationBar.prefersLargeTitles = true
         
-        performSelector(inBackground: #selector(loadImages), with: nil)
+        let fm = FileManager.default
+        let path = Bundle.main.resourcePath!
+        let items = try! fm.contentsOfDirectory(atPath: path)
+
+        for item in items {
+            if item.hasPrefix("nssl"){
+                print("Loading \(item)")
+                let entry = Picture(name: item, image: item)
+                pictures.append(entry)
+            }
+        }
+        
+        // performSelector(inBackground: #selector(loadImages), with: nil)
         // tableView.reloadData()
         collectionView.reloadData()
     }
     
-    @objc func loadImages() {
-        let fm = FileManager.default
-        let path = Bundle.main.resourcePath!
-        let items = try! fm.contentsOfDirectory(atPath: path)
-        
-        for item in items {
-            if item.hasPrefix("nssl"){
-                pictures.append(item)
-            }
-        }
-        pictures.sort() // Sort pictures array
-        print(pictures)
+    func transformString(str: String) -> String {
+        return String(String(str.dropFirst(4)).dropLast(4))
     }
+    
+    // Collection view functions
+    
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return pictures.count
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Picture", for: indexPath) as! PictureCell
+        
+        print("Displaying Image \(pictures[indexPath.row].image)")
+        print("Displaying Text \(pictures[indexPath.row].name)")
+        
+        cell.imageView.image = UIImage(named: pictures[indexPath.row].image)
+        cell.name?.text = transformString(str: pictures[indexPath.row].name)
+        cell.layer.borderColor = UIColor.lightGray.cgColor
+        
+        cell.layer.borderWidth = 2
+        cell.layer.cornerRadius = 7
+        
+        return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
+            vc.selectedImage = pictures[indexPath.row].image
+                navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
+//    @objc func loadImages() {
+//        let fm = FileManager.default
+//        let path = Bundle.main.resourcePath!
+//        let items = try! fm.contentsOfDirectory(atPath: path)
+//
+//        for item in items {
+//            if item.hasPrefix("nssl"){
+//                pictures.append(item)
+//            }
+//        }
+//        pictures.sort() // Sort pictures array
+//        print(pictures)
+//    }
     
     /*
     // Table view functions

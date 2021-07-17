@@ -22,7 +22,6 @@ class ViewController: UICollectionViewController {//UITableViewController {
 
         for item in items {
             if item.hasPrefix("nssl"){
-                print("Loading \(item)")
                 let entry = Picture(name: item, image: item)
                 pictures.append(entry)
             }
@@ -45,9 +44,6 @@ class ViewController: UICollectionViewController {//UITableViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Picture", for: indexPath) as! PictureCell
-        
-        print("Displaying Image \(pictures[indexPath.row].image)")
-        print("Displaying Text \(pictures[indexPath.row].name)")
         
         cell.imageView.image = UIImage(named: pictures[indexPath.row].image)
         cell.name?.text = transformString(str: pictures[indexPath.row].name)

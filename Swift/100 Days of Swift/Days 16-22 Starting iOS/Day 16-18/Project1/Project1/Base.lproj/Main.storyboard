@@ -44,6 +44,10 @@
                                         </label>
                                     </subviews>
                                 </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="imageView" destination="GsN-za-mdC" id="U4s-Je-IaU"/>
+                                    <outlet property="name" destination="VlV-EF-YPl" id="qe5-h9-rkZ"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>

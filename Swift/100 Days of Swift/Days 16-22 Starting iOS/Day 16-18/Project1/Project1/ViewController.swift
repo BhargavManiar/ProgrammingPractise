@@ -64,21 +64,21 @@ class ViewController: UICollectionViewController {//UITableViewController {
         }
     }
     
-//    @objc func loadImages() {
-//        let fm = FileManager.default
-//        let path = Bundle.main.resourcePath!
-//        let items = try! fm.contentsOfDirectory(atPath: path)
-//
-//        for item in items {
-//            if item.hasPrefix("nssl"){
-//                pictures.append(item)
-//            }
-//        }
-//        pictures.sort() // Sort pictures array
-//        print(pictures)
-//    }
-    
     /*
+    @objc func loadImages() {
+        let fm = FileManager.default
+        let path = Bundle.main.resourcePath!
+        let items = try! fm.contentsOfDirectory(atPath: path)
+
+        for item in items {
+            if item.hasPrefix("nssl"){
+                pictures.append(item)
+            }
+        }
+        pictures.sort() // Sort pictures array
+        print(pictures)
+    }
+    
     // Table view functions
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

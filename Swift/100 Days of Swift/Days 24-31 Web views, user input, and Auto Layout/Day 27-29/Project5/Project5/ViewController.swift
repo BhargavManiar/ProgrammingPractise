@@ -15,7 +15,7 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(promptForAnswer))
-        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(startGame))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(refreshGame))
         
         if let startWordsURL = Bundle.main.url(forResource: "start", withExtension: "txt") {
             if let startWords = try? String(contentsOf: startWordsURL) {
@@ -46,6 +46,14 @@ class ViewController: UITableViewController {
     // Game functions
     
     @objc func startGame() {
+        // ! Get last word if saved
+        title = allWords.randomElement()
+        // ! Save the current word
+        usedWords.removeAll(keepingCapacity: true) // Remove previous guesses
+        tableView.reloadData()
+    }
+    
+    @objc func refreshGame() {
         title = allWords.randomElement()
         usedWords.removeAll(keepingCapacity: true) // Remove previous guesses
         tableView.reloadData()
@@ -75,7 +83,7 @@ class ViewController: UITableViewController {
                         if isReal(word: lowerAnswer) {
                             
                             usedWords.insert(answer, at: 0)
-                            
+                            // ! Save array of used words
                             let indexPath = IndexPath(row: 0, section: 0)
                             tableView.insertRows(at: [indexPath], with: .automatic)
                             

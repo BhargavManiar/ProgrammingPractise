@@ -127,7 +127,6 @@ class ViewController: UITableViewController {
         return misspelledRange.location == NSNotFound
     }
     
-    
     func isMinLength(word: String) -> Bool {
         if word.count < 3 {
             return false

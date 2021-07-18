@@ -90,7 +90,7 @@ class ViewController: UIViewController {
         if currentQuestion == 11 {
             var message = "Final Score: \(score)"
             if score > allTimeHighScore {
-                message = "Final Score: \(score). \n\n Well done, you beat the previous high score of \(allTimeHighScore)!"
+                message += "\n\n Well done, you beat the previous high score of \(allTimeHighScore)!"
                 allTimeHighScore = score
                 save()
             }

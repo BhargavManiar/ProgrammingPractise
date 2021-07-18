@@ -33,3 +33,5 @@ Once you’ve done those three, there’s a really subtle bug in our game and I�
 
 To trigger the bug, look for a three-letter word in your starting word, and enter it with an uppercase letter. Once it appears in the
 table, try entering it again all lowercase – you’ll see it gets entered. Can you figure out what causes this and how to fix it?
+
+Project 12 Challenge 3 requires editing this app.

@@ -8,8 +8,17 @@
 import UIKit
 
 class ViewController: UITableViewController {
-    var allWords = [String]()
-    var usedWords = [String]()
+    var allWords = [String]() {
+        didSet {
+            print("All Words: \(allWords)")
+        }
+    }
+    
+    var usedWords = [String]() {
+        didSet {
+            print("usedWords \(usedWords)")
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

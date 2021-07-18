@@ -37,6 +37,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         guard let image = info[.editedImage] as? UIImage else { return }
         dismiss(animated: true)
         currentImage = image
+        
+        let beginImage = CIImage(image: currentImage)
+        currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
+        applyProcessing()
     }
 
     @IBAction func changeFilter(_ sender: Any) {
@@ -48,8 +52,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func intensityChanged(_ sender: Any) {
-        
+        applyProcessing()
     }
-    
+ 
+    func applyProcessing() {
+        currentFilter.setValue(intensity.value, forKey: kCIInputIntensityKey)
+        
+        if let cgImage = context.createCGImage(currentFilter.outputImage!, from: currentFilter.outputImage!.extent) {
+            let processedImage = UIImage(cgImage: cgImage)
+            imageView.image = processedImage
+        }
+    }
 }
 

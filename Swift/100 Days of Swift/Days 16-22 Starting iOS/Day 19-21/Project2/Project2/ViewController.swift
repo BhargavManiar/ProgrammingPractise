@@ -88,8 +88,15 @@ class ViewController: UIViewController {
         currentQuestion += 1
         
         if currentQuestion == 11 {
+            var message = "Final Score: \(score)"
+            if score > allTimeHighScore {
+                message = "Final Score: \(score). \n\n Well done, you beat the previous high score of \(allTimeHighScore)!"
+                allTimeHighScore = score
+                save()
+            }
+            
             title = "End of Game"
-            let finalac = UIAlertController(title: title, message: "Final Score: \(score)", preferredStyle: .alert)
+            let finalac = UIAlertController(title: title, message: message, preferredStyle: .alert)
             finalac.addAction(UIAlertAction(title: "Play Again", style: .default, handler: askQuestion))
             present(finalac, animated: true)
             score = 0

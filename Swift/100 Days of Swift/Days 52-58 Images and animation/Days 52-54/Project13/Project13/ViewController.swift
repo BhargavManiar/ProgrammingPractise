@@ -5,6 +5,7 @@
 //  Created by Bhargav Maniar on 18/07/2021.
 //
 
+import CoreImage
 import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -12,11 +13,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet var intensity: UISlider!
     var currentImage: UIImage!
     
+    var context: CIContext! // Core image context used for rendering
+    var currentFilter: CIFilter! // Core image filter
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "Instafilter"
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(importPicture))
+        
+        context = CIContext()
+        currentFilter = CIFilter(name: "CISepiaTone")
     }
     
     @objc func importPicture() {

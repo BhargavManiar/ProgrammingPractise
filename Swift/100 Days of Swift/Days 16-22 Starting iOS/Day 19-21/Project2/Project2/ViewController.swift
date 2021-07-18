@@ -23,9 +23,19 @@ class ViewController: UIViewController {
     @IBOutlet var button3: UIButton!
     
     var countries = [String]()
-    var score = 0
+    var score = 0 {
+        didSet {
+            print("Score value: \(score)")
+        }
+    }
     var correctAnswer = 0
     var currentQuestion = 1
+    
+    private var allTimeHighScore = UserDefaults.standard.integer(forKey: "HighScore") {
+        didSet {
+            print("All time high score value: \(allTimeHighScore)")
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,6 +106,10 @@ class ViewController: UIViewController {
         let scoreac = UIAlertController(title: "Current Score:", message: "\(score)", preferredStyle: .alert)
         scoreac.addAction(UIAlertAction(title: "Okay", style: .default, handler: askQuestion))
         present(scoreac, animated: true)
+    }
+    
+    func save() {
+        UserDefaults.standard.set(self.score, forKey: "HighScore")
     }
 }
 

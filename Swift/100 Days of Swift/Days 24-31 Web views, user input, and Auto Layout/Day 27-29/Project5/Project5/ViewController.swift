@@ -8,11 +8,7 @@
 import UIKit
 
 class ViewController: UITableViewController {
-    var allWords = [String]() {
-        didSet {
-            print("All Words: \(allWords)")
-        }
-    }
+    var allWords = [String]()
     
     var usedWords = [String]() {
         didSet {

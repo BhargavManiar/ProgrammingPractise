@@ -23,3 +23,4 @@
 3. When someone chooses the wrong flag, tell them their mistake in your alert message - something like "Wrong! That's the flag of France", for example.
 
 Project 3 Challenge 2 requires editing this app.
+Project 12 Challenge 2 requires editing this app.

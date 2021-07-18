@@ -43,8 +43,23 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         applyProcessing()
     }
 
-    @IBAction func changeFilter(_ sender: Any) {
+    @IBAction func changeFilter(_ sender: UIButton) {
+        let ac = UIAlertController(title: "Choose filter", message: nil, preferredStyle: .actionSheet)
+        ac.addAction(UIAlertAction(title: "CIBumpDistortion", style: .default, handler: setFilter))
+        ac.addAction(UIAlertAction(title: "CIGaussianBlur", style: .default, handler: setFilter))
+        ac.addAction(UIAlertAction(title: "CIPixellate", style: .default, handler: setFilter))
+        ac.addAction(UIAlertAction(title: "CISepiaTone", style: .default, handler: setFilter))
+        ac.addAction(UIAlertAction(title: "CITwirlDistortion", style: .default, handler: setFilter))
+        ac.addAction(UIAlertAction(title: "CIUnsharpMask", style: .default, handler: setFilter))
+        ac.addAction(UIAlertAction(title: "CIVignette", style: .default, handler: setFilter))
+        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: setFilter))
         
+        if let popoverController = ac.popoverPresentationController {
+            popoverController.sourceView = sender
+            popoverController.sourceRect = sender.bounds
+        }
+        
+        present(ac, animated: true)
     }
     
     @IBAction func save(_ sender: Any) {

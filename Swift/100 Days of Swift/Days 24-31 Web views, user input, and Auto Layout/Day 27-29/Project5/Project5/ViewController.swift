@@ -46,10 +46,11 @@ class ViewController: UITableViewController {
     // Game functions
     
     @objc func startGame() {
-        // ! Get last word if saved
-        title = allWords.randomElement()
-        // ! Save the current word
+        let defaults = UserDefaults.standard
+        title = defaults.string(forKey: "MainWord") ?? allWords.randomElement() // Load saved word, else set a new title randomly
         usedWords.removeAll(keepingCapacity: true) // Remove previous guesses
+        usedWords = defaults.object(forKey: "WordsFound") as? [String] ?? [String]() // Load guessed words, else set an empty array
+        saveData()
         tableView.reloadData()
     }
     
@@ -57,6 +58,7 @@ class ViewController: UITableViewController {
         title = allWords.randomElement()
         usedWords.removeAll(keepingCapacity: true) // Remove previous guesses
         tableView.reloadData()
+        saveData()
     }
     
     @objc func promptForAnswer() {
@@ -83,7 +85,7 @@ class ViewController: UITableViewController {
                         if isReal(word: lowerAnswer) {
                             
                             usedWords.insert(answer, at: 0)
-                            // ! Save array of used words
+                            saveData()
                             let indexPath = IndexPath(row: 0, section: 0)
                             tableView.insertRows(at: [indexPath], with: .automatic)
                             
@@ -157,6 +159,15 @@ class ViewController: UITableViewController {
         let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "OK", style: .default))
         present(ac, animated: true)
+    }
+    
+    // UserDefaults Save
+    
+    func saveData() {
+        print("Save Data Function Called")
+        let defaults = UserDefaults.standard
+        defaults.set(title, forKey: "MainWord") // Save the current title word
+        defaults.set(usedWords, forKey: "WordsFound") // Save the guessed words
     }
 }
 

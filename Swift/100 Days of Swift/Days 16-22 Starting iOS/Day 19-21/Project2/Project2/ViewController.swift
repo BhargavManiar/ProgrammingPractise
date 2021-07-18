@@ -23,19 +23,10 @@ class ViewController: UIViewController {
     @IBOutlet var button3: UIButton!
     
     var countries = [String]()
-    var score = 0 {
-        didSet {
-            print("Score value: \(score)")
-        }
-    }
+    var score = 0
     var correctAnswer = 0
     var currentQuestion = 1
-    
-    private var allTimeHighScore = UserDefaults.standard.integer(forKey: "HighScore") {
-        didSet {
-            print("All time high score value: \(allTimeHighScore)")
-        }
-    }
+    private var allTimeHighScore = UserDefaults.standard.integer(forKey: "HighScore")
     
     override func viewDidLoad() {
         super.viewDidLoad()

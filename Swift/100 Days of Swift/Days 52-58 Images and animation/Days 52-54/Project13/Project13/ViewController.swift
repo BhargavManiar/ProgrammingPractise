@@ -69,6 +69,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBAction func intensityChanged(_ sender: Any) {
         applyProcessing()
     }
+    
+    func setFilter(action: UIAlertAction) {
+        print(action.title!)
+    }
  
     func applyProcessing() {
         guard let outputImage = currentFilter.outputImage else { return }

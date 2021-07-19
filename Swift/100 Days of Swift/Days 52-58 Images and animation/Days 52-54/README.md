@@ -16,6 +16,7 @@
 1. Wrap up
 
 ## Project 13 Challenges
+
 1. Try making the Save button show an error if there was no image in the image view.
 
 2. Make the Change Filter button change its title to show the name of the currently selected filter.

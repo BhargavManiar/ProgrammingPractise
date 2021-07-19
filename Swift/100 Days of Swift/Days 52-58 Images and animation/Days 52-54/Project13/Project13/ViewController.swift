@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var intensity: UISlider!
+    @IBOutlet var radius: UISlider!
+    @IBOutlet var scale: UISlider!
     @IBOutlet var changeFilterButton: UIButton!
     var currentImage: UIImage!
     
@@ -24,7 +26,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(importPicture))
         
         context = CIContext()
+        
+        // Initial filter
         currentFilter = CIFilter(name: "CISepiaTone")
+        changeFilterButton.setTitle("CISepiaTone", for: .normal)
+        intensity.isEnabled = true
+        radius.isEnabled = false
+        scale.isEnabled = false
     }
     
     @objc func importPicture() {
@@ -87,7 +95,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_ :didFinishSavingWithError:contextInfo:)), nil)
     }
     
+    // Sliders
+    
     @IBAction func intensityChanged(_ sender: Any) {
+        applyProcessing()
+    }
+    
+    @IBAction func radiusChange(_ sender: Any) {
+        applyProcessing()
+    }
+    
+    @IBAction func scale(_ sender: Any) {
         applyProcessing()
     }
     
@@ -103,6 +121,26 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let beginImage = CIImage(image: currentImage)
         currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
         
+        let inputKeys = currentFilter.inputKeys
+        
+        if inputKeys.contains(kCIInputIntensityKey) {
+            intensity.isEnabled = true
+        } else {
+            intensity.isEnabled = false
+        }
+        
+        if inputKeys.contains(kCIInputRadiusKey) {
+            radius.isEnabled = true
+        } else {
+            radius.isEnabled = false
+        }
+        
+        if inputKeys.contains(kCIInputScaleKey) {
+            scale.isEnabled = true
+        } else {
+            scale.isEnabled = false
+        }
+        
         applyProcessing()
     }
  
@@ -114,11 +152,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
         
         if inputKeys.contains(kCIInputRadiusKey) {
-            currentFilter.setValue(intensity.value * 200, forKey: kCIInputRadiusKey)
+            currentFilter.setValue(radius.value * 200, forKey: kCIInputRadiusKey)
         }
         
         if inputKeys.contains(kCIInputScaleKey) {
-            currentFilter.setValue(intensity.value * 10 , forKey: kCIInputScaleKey)
+            currentFilter.setValue(scale.value * 10 , forKey: kCIInputScaleKey)
         }
         
         if inputKeys.contains(kCIInputCenterKey) {

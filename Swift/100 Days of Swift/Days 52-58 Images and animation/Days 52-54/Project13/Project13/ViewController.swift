@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var intensity: UISlider!
+    @IBOutlet var changeFilterButton: UIButton!
     var currentImage: UIImage!
     
     var context: CIContext! // Core image context used for rendering
@@ -97,6 +98,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         guard let actionTitle = action.title else { return }
         
         currentFilter = CIFilter(name: actionTitle)
+        changeFilterButton.setTitle(actionTitle, for: .normal)
         
         let beginImage = CIImage(image: currentImage)
         currentFilter.setValue(beginImage, forKey: kCIInputImageKey)

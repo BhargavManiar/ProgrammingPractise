@@ -71,7 +71,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func setFilter(action: UIAlertAction) {
-        print(action.title!)
+        guard currentImage != nil else { return }
+        guard let actionTitle = action.title else { return }
+        
+        currentFilter = CIFilter(name: actionTitle)
+        
+        let beginImage = CIImage(image: currentImage)
+        currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
+        
+        applyProcessing()
     }
  
     func applyProcessing() {

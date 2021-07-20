@@ -86,6 +86,7 @@ class GameScene: SKScene {
             }
             
             let gameOver = SKSpriteNode(imageNamed: "gameOver")
+            run(SKAction.playSoundFileNamed("gameOver.caf", waitForCompletion: false))
             gameOver.position = CGPoint(x: 512, y: 384)
             gameOver.zPosition = 1
             addChild(gameOver)

@@ -30,6 +30,11 @@ class GameScene: SKScene {
         gameScore.horizontalAlignmentMode = .left
         gameScore.fontSize = 48
         addChild(gameScore)
+        
+        for i in 0..<5 { createSlot(at: CGPoint(x: 100 + (i * 170), y: 410)) }
+        for i in 0..<4 { createSlot(at: CGPoint(x: 100 + (i * 170), y: 410)) }
+        for i in 0..<5 { createSlot(at: CGPoint(x: 100 + (i * 170), y: 410)) }
+        for i in 0..<4 { createSlot(at: CGPoint(x: 100 + (i * 170), y: 410)) }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

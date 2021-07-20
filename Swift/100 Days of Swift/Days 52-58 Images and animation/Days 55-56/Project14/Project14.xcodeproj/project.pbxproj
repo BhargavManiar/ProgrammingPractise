@@ -16,6 +16,7 @@
 		4CB778FA26A6FDFA00126C76 /* whack.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4CB778F826A6FDFA00126C76 /* whack.caf */; };
 		4CB778FB26A6FDFA00126C76 /* whackBad.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4CB778F926A6FDFA00126C76 /* whackBad.caf */; };
 		4CB778FD26A6FFAF00126C76 /* WhackSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB778FC26A6FFAF00126C76 /* WhackSlot.swift */; };
+		4CB778FF26A76E5200126C76 /* gameOver.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4CB778FE26A76E5200126C76 /* gameOver.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		4CB778F826A6FDFA00126C76 /* whack.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = whack.caf; sourceTree = "<group>"; };
 		4CB778F926A6FDFA00126C76 /* whackBad.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = whackBad.caf; sourceTree = "<group>"; };
 		4CB778FC26A6FFAF00126C76 /* WhackSlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhackSlot.swift; sourceTree = "<group>"; };
+		4CB778FE26A76E5200126C76 /* gameOver.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gameOver.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				4CB778F226A6FD1C00126C76 /* Info.plist */,
 				4CB778F826A6FDFA00126C76 /* whack.caf */,
 				4CB778F926A6FDFA00126C76 /* whackBad.caf */,
+				4CB778FE26A76E5200126C76 /* gameOver.caf */,
 			);
 			path = Project14;
 			sourceTree = "<group>";
@@ -133,6 +136,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CB778FF26A76E5200126C76 /* gameOver.caf in Resources */,
 				4CB778FB26A6FDFA00126C76 /* whackBad.caf in Resources */,
 				4CB778EF26A6FD1900126C76 /* Main.storyboard in Resources */,
 				4CB778E626A6FD1900126C76 /* GameScene.sks in Resources */,

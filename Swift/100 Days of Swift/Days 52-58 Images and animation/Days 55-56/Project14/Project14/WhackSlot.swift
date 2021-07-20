@@ -47,6 +47,8 @@ class WhackSlot: SKNode {
             charNode.texture = SKTexture(imageNamed: "penguinEvil")
             charNode.name = "charFriend"
         }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + (hideTime * 3.5)) { [weak self] in self?.hide() }
     }
     
     func hide() {

@@ -91,6 +91,11 @@ class GameScene: SKScene {
             gameOver.position = CGPoint(x: 512, y: 384)
             gameOver.zPosition = 1
             addChild(gameOver)
+            
+            gameScore.position = CGPoint(x: 512, y: 300)
+            gameScore.zPosition = 1
+            gameScore.horizontalAlignmentMode = .center
+            gameScore.text = "Final Score: \(score)"
             return
         }
         

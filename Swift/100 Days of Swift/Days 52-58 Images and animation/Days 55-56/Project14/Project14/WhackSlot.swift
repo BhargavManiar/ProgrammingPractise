@@ -97,7 +97,7 @@ class WhackSlot: SKNode {
             mud.position = CGPoint(x: 0, y: 0)
             mud.zPosition = 1
             mud.numParticlesToEmit = 70
-            mud.particleBirthRate = 500
+            mud.particleBirthRate = 400
             mud.particleSize = CGSize(width: 30, height: 30)
             mud.particleColor = SKColor.brown
             mud.particleBlendMode = .replace

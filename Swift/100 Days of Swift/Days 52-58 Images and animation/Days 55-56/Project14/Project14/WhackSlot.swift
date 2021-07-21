@@ -53,7 +53,7 @@ class WhackSlot: SKNode {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + (hideTime * 3.5)) { [weak self] in self?.hide() }
         
-        // ! Show Mud Particle Effect
+        mudEffect(goingUp: true) // ! Show Mud Particle Effect
     }
     
     func hide() {
@@ -62,7 +62,7 @@ class WhackSlot: SKNode {
         charNode.run(SKAction.moveBy(x: 0, y: -80, duration: 0.05))
         isVisible = false
         
-        // ! Show Mud Particle Effect
+        mudEffect(goingUp: false) // ! Show Mud Particle Effect
     }
     
     func hit() {
@@ -74,6 +74,52 @@ class WhackSlot: SKNode {
         let sequenece = SKAction.sequence([delay, hide, notVisible])
         charNode.run(sequenece)
         
-        // ! Show Smoke Particle Effect
+        smokeEffect() // ! Show Smoke Particle Effect
+    }
+    
+    // Particle Effects
+    
+    func smokeEffect() {
+        if let smoke = SKEmitterNode(fileNamed: "SmokeParticleEffect") {
+            smoke.position = CGPoint(x: 0, y: 40)
+            smoke.zPosition = 1
+            smoke.numParticlesToEmit = 10
+            smoke.particleLifetime = 0.75
+            smoke.particleColor = SKColor.black
+            smoke.particleAlpha = 0.2
+            
+            playEffect(effect: smoke)
+        }
+    }
+    
+    func mudEffect(goingUp: Bool) {
+        if let mud = SKEmitterNode(fileNamed: "MudParticleEffect") {
+            mud.position = CGPoint(x: 0, y: 0)
+            mud.zPosition = 1
+            mud.numParticlesToEmit = 70
+            mud.particleBirthRate = 500
+            mud.particleSize = CGSize(width: 30, height: 30)
+            mud.particleColor = SKColor.brown
+            mud.particleBlendMode = .replace
+            
+            if goingUp {
+                mud.particleLifetime = 0.30
+                mud.particleSpeed = 1
+                mud.particleSpeedRange = 300
+            } else {
+                mud.particleLifetime = 0.10
+                mud.particleSpeed = 100
+                mud.particleSpeedRange = 0
+            }
+            
+            playEffect(effect: mud)
+        }
+    }
+    
+    func playEffect(effect: SKEmitterNode)  {
+        let action = SKAction.run { [weak self] in self?.addChild(effect) }
+        let duration = SKAction.wait(forDuration: 2)
+        let removal = SKAction.run { [weak self ] in self?.removeChildren(in: [effect]) }
+        run(SKAction.sequence([action, duration, removal]))
     }
 }

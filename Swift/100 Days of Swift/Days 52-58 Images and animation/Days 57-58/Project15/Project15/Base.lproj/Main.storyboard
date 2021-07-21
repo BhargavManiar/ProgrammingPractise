@@ -31,9 +31,6 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LkT-Dz-hnH" secondAttribute="bottom" id="kiA-PG-nVI"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="tapped" destination="W5Z-dg-efm" id="jR3-o5-WlD"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

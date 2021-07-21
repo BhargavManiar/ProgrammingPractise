@@ -53,7 +53,7 @@ class WhackSlot: SKNode {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + (hideTime * 3.5)) { [weak self] in self?.hide() }
         
-        mudEffect(goingUp: true) // ! Show Mud Particle Effect
+        mudEffect(goingUp: true)
     }
     
     func hide() {
@@ -62,7 +62,7 @@ class WhackSlot: SKNode {
         charNode.run(SKAction.moveBy(x: 0, y: -80, duration: 0.05))
         isVisible = false
         
-        mudEffect(goingUp: false) // ! Show Mud Particle Effect
+        mudEffect(goingUp: false)
     }
     
     func hit() {
@@ -74,7 +74,7 @@ class WhackSlot: SKNode {
         let sequenece = SKAction.sequence([delay, hide, notVisible])
         charNode.run(sequenece)
         
-        smokeEffect() // ! Show Smoke Particle Effect
+        smokeEffect()
     }
     
     // Particle Effects

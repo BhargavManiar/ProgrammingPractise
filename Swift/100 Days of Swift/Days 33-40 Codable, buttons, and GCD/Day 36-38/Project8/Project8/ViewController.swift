@@ -228,8 +228,14 @@ class ViewController: UIViewController {
                     }
                 }
             }
+            
+            self?.updateLabels(clueString: clueString, solutionString: solutionString, letterBits: letterBits)
         }
         
+        
+    }
+    
+    func updateLabels(clueString: String, solutionString: String, letterBits: [String]) {
         DispatchQueue.main.async { [weak self] in
             self?.cluesLabel.text = clueString.trimmingCharacters(in: .whitespacesAndNewlines)
             self?.answersLabel.text = solutionString.trimmingCharacters(in: .whitespacesAndNewlines)

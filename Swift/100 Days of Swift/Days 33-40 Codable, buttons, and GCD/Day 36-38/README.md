@@ -27,3 +27,4 @@ method so that if firstIndex(of:) failed to find the guess you show the alert.
 level – we can’t use a simple division remainder on the player’s score any more, because they might have lost some points.
 
 Project 9 Challenge 2 requires editing this app.
+Project 15 Challenge 1 requires editing this app. 

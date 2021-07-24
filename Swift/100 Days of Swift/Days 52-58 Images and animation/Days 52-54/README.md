@@ -22,3 +22,5 @@
 2. Make the Change Filter button change its title to show the name of the currently selected filter.
 
 3. Experiment with having more than one slider, to control each of the input keys you care about. For example, you might have one for radius and one for intensity.
+
+Project 15 Challenge 2 requires editing this app. 

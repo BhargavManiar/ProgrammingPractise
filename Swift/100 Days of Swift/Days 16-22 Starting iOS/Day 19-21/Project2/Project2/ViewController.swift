@@ -54,6 +54,10 @@ class ViewController: UIViewController {
         button2.setImage(UIImage(named: countries[1]), for: .normal)
         button3.setImage(UIImage(named: countries[2]), for: .normal)
         
+        button1.transform = .identity
+        button2.transform = .identity
+        button3.transform = .identity
+        
         if(countries[correctAnswer].count > 2) {
             title = "Q\(currentQuestion) " + countries[correctAnswer].capitalisingFirstLetter() + " - Score: \(score)"
         } else {
@@ -65,6 +69,10 @@ class ViewController: UIViewController {
     @IBAction func buttonTapped(_ sender: UIButton) {
         var title: String
         var correctionMessage: String
+        
+        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [], animations: {
+            sender.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
+        })
         
         if sender.tag == correctAnswer {
             title = "Correct"

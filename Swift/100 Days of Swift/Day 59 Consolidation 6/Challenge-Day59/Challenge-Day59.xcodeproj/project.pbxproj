@@ -14,6 +14,7 @@
 		4CC1E08126B1F9E400041E33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CC1E08026B1F9E400041E33 /* Assets.xcassets */; };
 		4CC1E08426B1F9E400041E33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CC1E08226B1F9E400041E33 /* LaunchScreen.storyboard */; };
 		4CC1E08C26B1FE6000041E33 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC1E08B26B1FE6000041E33 /* Country.swift */; };
+		4CC1E08E26B202D300041E33 /* Countries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC1E08D26B202D300041E33 /* Countries.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		4CC1E08326B1F9E400041E33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4CC1E08526B1F9E400041E33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CC1E08B26B1FE6000041E33 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		4CC1E08D26B202D300041E33 /* Countries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countries.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				4CC1E07926B1F9E200041E33 /* SceneDelegate.swift */,
 				4CC1E07B26B1F9E200041E33 /* ViewController.swift */,
 				4CC1E08B26B1FE6000041E33 /* Country.swift */,
+				4CC1E08D26B202D300041E33 /* Countries.swift */,
 				4CC1E07D26B1F9E200041E33 /* Main.storyboard */,
 				4CC1E08026B1F9E400041E33 /* Assets.xcassets */,
 				4CC1E08226B1F9E400041E33 /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 				4CC1E08C26B1FE6000041E33 /* Country.swift in Sources */,
 				4CC1E07C26B1F9E200041E33 /* ViewController.swift in Sources */,
 				4CC1E07826B1F9E200041E33 /* AppDelegate.swift in Sources */,
+				4CC1E08E26B202D300041E33 /* Countries.swift in Sources */,
 				4CC1E07A26B1F9E200041E33 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

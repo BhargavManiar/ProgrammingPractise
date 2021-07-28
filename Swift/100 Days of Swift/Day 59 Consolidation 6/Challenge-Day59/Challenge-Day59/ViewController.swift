@@ -8,7 +8,8 @@
 import UIKit
 
 class ViewController: UITableViewController {
-
+    var countries = [Country]()
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,7 +19,7 @@ class ViewController: UITableViewController {
     // Table View Functions
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return countries.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

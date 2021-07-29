@@ -14,6 +14,7 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
         
         title = "Countries"
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     // Table View Functions

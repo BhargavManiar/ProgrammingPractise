@@ -14,3 +14,5 @@ struct Country: Codable {
     var countrySize: Int                // E.g 1,000,000 m^2
     var countryPrimaryLanguage: String
 }
+
+// URL To Obtain JSON Data: https://restcountries.eu/rest/v2/all?fields=name;capital;region;currencies;population;alpha3Code

@@ -11,6 +11,7 @@ struct Country: Codable {
     var name: String
     var capital: String
     var population: Int          // E.g 100,000 people
+    var area: Double             // E.g km^2
     var region: String           // E.g Europe
     var currencies: [Currency]
 }

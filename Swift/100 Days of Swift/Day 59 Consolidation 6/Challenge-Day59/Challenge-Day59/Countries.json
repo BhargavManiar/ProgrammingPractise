@@ -11,7 +11,8 @@
     "alpha3Code": "AFG",
     "capital": "Kabul",
     "region": "Asia",
-    "population": 27657145
+    "population": 27657145,
+    "area": 652230
   },
   {
     "currencies": [
@@ -25,7 +26,8 @@
     "alpha3Code": "ALA",
     "capital": "Mariehamn",
     "region": "Europe",
-    "population": 28875
+    "population": 28875,
+    "area": 1580
   },
   {
     "currencies": [
@@ -39,7 +41,8 @@
     "alpha3Code": "ALB",
     "capital": "Tirana",
     "region": "Europe",
-    "population": 2886026
+    "population": 2886026,
+    "area": 28748
   },
   {
     "currencies": [
@@ -53,7 +56,8 @@
     "alpha3Code": "DZA",
     "capital": "Algiers",
     "region": "Africa",
-    "population": 40400000
+    "population": 40400000,
+    "area": 2381741
   },
   {
     "currencies": [
@@ -67,7 +71,8 @@
     "alpha3Code": "ASM",
     "capital": "Pago Pago",
     "region": "Oceania",
-    "population": 57100
+    "population": 57100,
+    "area": 199
   },
   {
     "currencies": [
@@ -81,7 +86,8 @@
     "alpha3Code": "AND",
     "capital": "Andorra la Vella",
     "region": "Europe",
-    "population": 78014
+    "population": 78014,
+    "area": 468
   },
   {
     "currencies": [
@@ -95,7 +101,8 @@
     "alpha3Code": "AGO",
     "capital": "Luanda",
     "region": "Africa",
-    "population": 25868000
+    "population": 25868000,
+    "area": 1246700
   },
   {
     "currencies": [
@@ -109,7 +116,8 @@
     "alpha3Code": "AIA",
     "capital": "The Valley",
     "region": "Americas",
-    "population": 13452
+    "population": 13452,
+    "area": 91
   },
   {
     "currencies": [
@@ -128,7 +136,8 @@
     "alpha3Code": "ATA",
     "capital": "",
     "region": "Polar",
-    "population": 1000
+    "population": 1000,
+    "area": 14000000
   },
   {
     "currencies": [
@@ -142,7 +151,8 @@
     "alpha3Code": "ATG",
     "capital": "Saint John's",
     "region": "Americas",
-    "population": 86295
+    "population": 86295,
+    "area": 442
   },
   {
     "currencies": [
@@ -156,7 +166,8 @@
     "alpha3Code": "ARG",
     "capital": "Buenos Aires",
     "region": "Americas",
-    "population": 43590400
+    "population": 43590400,
+    "area": 2780400
   },
   {
     "currencies": [
@@ -169,7 +180,8 @@
     "alpha3Code": "ARM",
     "capital": "Yerevan",
     "region": "Asia",
-    "population": 2994400
+    "population": 2994400,
+    "area": 29743
   },
   {
     "currencies": [
@@ -183,7 +195,8 @@
     "alpha3Code": "ABW",
     "capital": "Oranjestad",
     "region": "Americas",
-    "population": 107394
+    "population": 107394,
+    "area": 180
   },
   {
     "currencies": [
@@ -197,7 +210,8 @@
     "alpha3Code": "AUS",
     "capital": "Canberra",
     "region": "Oceania",
-    "population": 24117360
+    "population": 24117360,
+    "area": 7692024
   },
   {
     "currencies": [
@@ -211,7 +225,8 @@
     "alpha3Code": "AUT",
     "capital": "Vienna",
     "region": "Europe",
-    "population": 8725931
+    "population": 8725931,
+    "area": 83871
   },
   {
     "currencies": [
@@ -224,7 +239,8 @@
     "alpha3Code": "AZE",
     "capital": "Baku",
     "region": "Asia",
-    "population": 9730500
+    "population": 9730500,
+    "area": 86600
   },
   {
     "currencies": [
@@ -238,7 +254,8 @@
     "alpha3Code": "BHS",
     "capital": "Nassau",
     "region": "Americas",
-    "population": 378040
+    "population": 378040,
+    "area": 13943
   },
   {
     "currencies": [
@@ -252,7 +269,8 @@
     "alpha3Code": "BHR",
     "capital": "Manama",
     "region": "Asia",
-    "population": 1404900
+    "population": 1404900,
+    "area": 765
   },
   {
     "currencies": [
@@ -266,7 +284,8 @@
     "alpha3Code": "BGD",
     "capital": "Dhaka",
     "region": "Asia",
-    "population": 161006790
+    "population": 161006790,
+    "area": 147570
   },
   {
     "currencies": [
@@ -280,7 +299,8 @@
     "alpha3Code": "BRB",
     "capital": "Bridgetown",
     "region": "Americas",
-    "population": 285000
+    "population": 285000,
+    "area": 430
   },
   {
     "currencies": [
@@ -299,7 +319,8 @@
     "alpha3Code": "BLR",
     "capital": "Minsk",
     "region": "Europe",
-    "population": 9498700
+    "population": 9498700,
+    "area": 207600
   },
   {
     "currencies": [
@@ -313,7 +334,8 @@
     "alpha3Code": "BEL",
     "capital": "Brussels",
     "region": "Europe",
-    "population": 11319511
+    "population": 11319511,
+    "area": 30528
   },
   {
     "currencies": [
@@ -327,7 +349,8 @@
     "alpha3Code": "BLZ",
     "capital": "Belmopan",
     "region": "Americas",
-    "population": 370300
+    "population": 370300,
+    "area": 22966
   },
   {
     "currencies": [
@@ -341,7 +364,8 @@
     "alpha3Code": "BEN",
     "capital": "Porto-Novo",
     "region": "Africa",
-    "population": 10653654
+    "population": 10653654,
+    "area": 112622
   },
   {
     "currencies": [
@@ -355,7 +379,8 @@
     "alpha3Code": "BMU",
     "capital": "Hamilton",
     "region": "Americas",
-    "population": 61954
+    "population": 61954,
+    "area": 54
   },
   {
     "currencies": [
@@ -374,7 +399,8 @@
     "alpha3Code": "BTN",
     "capital": "Thimphu",
     "region": "Asia",
-    "population": 775620
+    "population": 775620,
+    "area": 38394
   },
   {
     "currencies": [
@@ -388,7 +414,8 @@
     "alpha3Code": "BOL",
     "capital": "Sucre",
     "region": "Americas",
-    "population": 10985059
+    "population": 10985059,
+    "area": 1098581
   },
   {
     "currencies": [
@@ -402,7 +429,8 @@
     "alpha3Code": "BES",
     "capital": "Kralendijk",
     "region": "Americas",
-    "population": 17408
+    "population": 17408,
+    "area": 294
   },
   {
     "currencies": [
@@ -415,7 +443,8 @@
     "alpha3Code": "BIH",
     "capital": "Sarajevo",
     "region": "Europe",
-    "population": 3531159
+    "population": 3531159,
+    "area": 51209
   },
   {
     "currencies": [
@@ -429,7 +458,8 @@
     "alpha3Code": "BWA",
     "capital": "Gaborone",
     "region": "Africa",
-    "population": 2141206
+    "population": 2141206,
+    "area": 582000
   },
   {
     "currencies": [
@@ -443,7 +473,8 @@
     "alpha3Code": "BVT",
     "capital": "",
     "region": "",
-    "population": 0
+    "population": 0,
+    "area": 49
   },
   {
     "currencies": [
@@ -457,7 +488,8 @@
     "alpha3Code": "BRA",
     "capital": "Brasília",
     "region": "Americas",
-    "population": 206135893
+    "population": 206135893,
+    "area": 8515767
   },
   {
     "currencies": [
@@ -471,7 +503,8 @@
     "alpha3Code": "IOT",
     "capital": "Diego Garcia",
     "region": "Africa",
-    "population": 3000
+    "population": 3000,
+    "area": 60
   },
   {
     "currencies": [
@@ -503,7 +536,8 @@
     "alpha3Code": "VGB",
     "capital": "Road Town",
     "region": "Americas",
-    "population": 28514
+    "population": 28514,
+    "area": 151
   },
   {
     "currencies": [
@@ -517,7 +551,8 @@
     "alpha3Code": "VIR",
     "capital": "Charlotte Amalie",
     "region": "Americas",
-    "population": 114743
+    "population": 114743,
+    "area": 346.36
   },
   {
     "currencies": [
@@ -536,7 +571,8 @@
     "alpha3Code": "BRN",
     "capital": "Bandar Seri Begawan",
     "region": "Asia",
-    "population": 411900
+    "population": 411900,
+    "area": 5765
   },
   {
     "currencies": [
@@ -550,7 +586,8 @@
     "alpha3Code": "BGR",
     "capital": "Sofia",
     "region": "Europe",
-    "population": 7153784
+    "population": 7153784,
+    "area": 110879
   },
   {
     "currencies": [
@@ -564,7 +601,8 @@
     "alpha3Code": "BFA",
     "capital": "Ouagadougou",
     "region": "Africa",
-    "population": 19034397
+    "population": 19034397,
+    "area": 272967
   },
   {
     "currencies": [
@@ -578,7 +616,8 @@
     "alpha3Code": "BDI",
     "capital": "Bujumbura",
     "region": "Africa",
-    "population": 10114505
+    "population": 10114505,
+    "area": 27834
   },
   {
     "currencies": [
@@ -597,7 +636,8 @@
     "alpha3Code": "KHM",
     "capital": "Phnom Penh",
     "region": "Asia",
-    "population": 15626444
+    "population": 15626444,
+    "area": 181035
   },
   {
     "currencies": [
@@ -611,7 +651,8 @@
     "alpha3Code": "CMR",
     "capital": "Yaoundé",
     "region": "Africa",
-    "population": 22709892
+    "population": 22709892,
+    "area": 475442
   },
   {
     "currencies": [
@@ -625,7 +666,8 @@
     "alpha3Code": "CAN",
     "capital": "Ottawa",
     "region": "Americas",
-    "population": 36155487
+    "population": 36155487,
+    "area": 9984670
   },
   {
     "currencies": [
@@ -639,7 +681,8 @@
     "alpha3Code": "CPV",
     "capital": "Praia",
     "region": "Africa",
-    "population": 531239
+    "population": 531239,
+    "area": 4033
   },
   {
     "currencies": [
@@ -653,7 +696,8 @@
     "alpha3Code": "CYM",
     "capital": "George Town",
     "region": "Americas",
-    "population": 58238
+    "population": 58238,
+    "area": 264
   },
   {
     "currencies": [
@@ -667,7 +711,8 @@
     "alpha3Code": "CAF",
     "capital": "Bangui",
     "region": "Africa",
-    "population": 4998000
+    "population": 4998000,
+    "area": 622984
   },
   {
     "currencies": [
@@ -681,7 +726,8 @@
     "alpha3Code": "TCD",
     "capital": "N'Djamena",
     "region": "Africa",
-    "population": 14497000
+    "population": 14497000,
+    "area": 1284000
   },
   {
     "currencies": [
@@ -695,7 +741,8 @@
     "alpha3Code": "CHL",
     "capital": "Santiago",
     "region": "Americas",
-    "population": 18191900
+    "population": 18191900,
+    "area": 756102
   },
   {
     "currencies": [
@@ -709,7 +756,8 @@
     "alpha3Code": "CHN",
     "capital": "Beijing",
     "region": "Asia",
-    "population": 1377422166
+    "population": 1377422166,
+    "area": 9640011
   },
   {
     "currencies": [
@@ -723,7 +771,8 @@
     "alpha3Code": "CXR",
     "capital": "Flying Fish Cove",
     "region": "Oceania",
-    "population": 2072
+    "population": 2072,
+    "area": 135
   },
   {
     "currencies": [
@@ -737,7 +786,8 @@
     "alpha3Code": "CCK",
     "capital": "West Island",
     "region": "Oceania",
-    "population": 550
+    "population": 550,
+    "area": 14
   },
   {
     "currencies": [
@@ -751,7 +801,8 @@
     "alpha3Code": "COL",
     "capital": "Bogotá",
     "region": "Americas",
-    "population": 48759958
+    "population": 48759958,
+    "area": 1141748
   },
   {
     "currencies": [
@@ -765,7 +816,8 @@
     "alpha3Code": "COM",
     "capital": "Moroni",
     "region": "Africa",
-    "population": 806153
+    "population": 806153,
+    "area": 1862
   },
   {
     "currencies": [
@@ -779,7 +831,8 @@
     "alpha3Code": "COG",
     "capital": "Brazzaville",
     "region": "Africa",
-    "population": 4741000
+    "population": 4741000,
+    "area": 342000
   },
   {
     "currencies": [
@@ -793,7 +846,8 @@
     "alpha3Code": "COD",
     "capital": "Kinshasa",
     "region": "Africa",
-    "population": 85026000
+    "population": 85026000,
+    "area": 2344858
   },
   {
     "currencies": [
@@ -812,7 +866,8 @@
     "alpha3Code": "COK",
     "capital": "Avarua",
     "region": "Oceania",
-    "population": 18100
+    "population": 18100,
+    "area": 236
   },
   {
     "currencies": [
@@ -826,7 +881,8 @@
     "alpha3Code": "CRI",
     "capital": "San José",
     "region": "Americas",
-    "population": 4890379
+    "population": 4890379,
+    "area": 51100
   },
   {
     "currencies": [
@@ -840,7 +896,8 @@
     "alpha3Code": "HRV",
     "capital": "Zagreb",
     "region": "Europe",
-    "population": 4190669
+    "population": 4190669,
+    "area": 56594
   },
   {
     "currencies": [
@@ -859,7 +916,8 @@
     "alpha3Code": "CUB",
     "capital": "Havana",
     "region": "Americas",
-    "population": 11239004
+    "population": 11239004,
+    "area": 109884
   },
   {
     "currencies": [
@@ -873,7 +931,8 @@
     "alpha3Code": "CUW",
     "capital": "Willemstad",
     "region": "Americas",
-    "population": 154843
+    "population": 154843,
+    "area": 444
   },
   {
     "currencies": [
@@ -887,7 +946,8 @@
     "alpha3Code": "CYP",
     "capital": "Nicosia",
     "region": "Europe",
-    "population": 847000
+    "population": 847000,
+    "area": 9251
   },
   {
     "currencies": [
@@ -901,7 +961,8 @@
     "alpha3Code": "CZE",
     "capital": "Prague",
     "region": "Europe",
-    "population": 10558524
+    "population": 10558524,
+    "area": 78865
   },
   {
     "currencies": [
@@ -915,7 +976,8 @@
     "alpha3Code": "DNK",
     "capital": "Copenhagen",
     "region": "Europe",
-    "population": 5717014
+    "population": 5717014,
+    "area": 43094
   },
   {
     "currencies": [
@@ -929,7 +991,8 @@
     "alpha3Code": "DJI",
     "capital": "Djibouti",
     "region": "Africa",
-    "population": 900000
+    "population": 900000,
+    "area": 23200
   },
   {
     "currencies": [
@@ -943,7 +1006,8 @@
     "alpha3Code": "DMA",
     "capital": "Roseau",
     "region": "Americas",
-    "population": 71293
+    "population": 71293,
+    "area": 751
   },
   {
     "currencies": [
@@ -957,7 +1021,8 @@
     "alpha3Code": "DOM",
     "capital": "Santo Domingo",
     "region": "Americas",
-    "population": 10075045
+    "population": 10075045,
+    "area": 48671
   },
   {
     "currencies": [
@@ -971,7 +1036,8 @@
     "alpha3Code": "ECU",
     "capital": "Quito",
     "region": "Americas",
-    "population": 16545799
+    "population": 16545799,
+    "area": 276841
   },
   {
     "currencies": [
@@ -985,7 +1051,8 @@
     "alpha3Code": "EGY",
     "capital": "Cairo",
     "region": "Africa",
-    "population": 91290000
+    "population": 91290000,
+    "area": 1002450
   },
   {
     "currencies": [
@@ -999,7 +1066,8 @@
     "alpha3Code": "SLV",
     "capital": "San Salvador",
     "region": "Americas",
-    "population": 6520675
+    "population": 6520675,
+    "area": 21041
   },
   {
     "currencies": [
@@ -1013,7 +1081,8 @@
     "alpha3Code": "GNQ",
     "capital": "Malabo",
     "region": "Africa",
-    "population": 1222442
+    "population": 1222442,
+    "area": 28051
   },
   {
     "currencies": [
@@ -1027,7 +1096,8 @@
     "alpha3Code": "ERI",
     "capital": "Asmara",
     "region": "Africa",
-    "population": 5352000
+    "population": 5352000,
+    "area": 117600
   },
   {
     "currencies": [
@@ -1041,7 +1111,8 @@
     "alpha3Code": "EST",
     "capital": "Tallinn",
     "region": "Europe",
-    "population": 1315944
+    "population": 1315944,
+    "area": 45227
   },
   {
     "currencies": [
@@ -1055,7 +1126,8 @@
     "alpha3Code": "ETH",
     "capital": "Addis Ababa",
     "region": "Africa",
-    "population": 92206005
+    "population": 92206005,
+    "area": 1104300
   },
   {
     "currencies": [
@@ -1069,7 +1141,8 @@
     "alpha3Code": "FLK",
     "capital": "Stanley",
     "region": "Americas",
-    "population": 2563
+    "population": 2563,
+    "area": 12173
   },
   {
     "currencies": [
@@ -1088,7 +1161,8 @@
     "alpha3Code": "FRO",
     "capital": "Tórshavn",
     "region": "Europe",
-    "population": 49376
+    "population": 49376,
+    "area": 1393
   },
   {
     "currencies": [
@@ -1102,7 +1176,8 @@
     "alpha3Code": "FJI",
     "capital": "Suva",
     "region": "Oceania",
-    "population": 867000
+    "population": 867000,
+    "area": 18272
   },
   {
     "currencies": [
@@ -1116,7 +1191,8 @@
     "alpha3Code": "FIN",
     "capital": "Helsinki",
     "region": "Europe",
-    "population": 5491817
+    "population": 5491817,
+    "area": 338424
   },
   {
     "currencies": [
@@ -1130,7 +1206,8 @@
     "alpha3Code": "FRA",
     "capital": "Paris",
     "region": "Europe",
-    "population": 66710000
+    "population": 66710000,
+    "area": 640679
   },
   {
     "currencies": [
@@ -1158,7 +1235,8 @@
     "alpha3Code": "PYF",
     "capital": "Papeetē",
     "region": "Oceania",
-    "population": 271800
+    "population": 271800,
+    "area": 4167
   },
   {
     "currencies": [
@@ -1172,7 +1250,8 @@
     "alpha3Code": "ATF",
     "capital": "Port-aux-Français",
     "region": "Africa",
-    "population": 140
+    "population": 140,
+    "area": 7747
   },
   {
     "currencies": [
@@ -1186,7 +1265,8 @@
     "alpha3Code": "GAB",
     "capital": "Libreville",
     "region": "Africa",
-    "population": 1802278
+    "population": 1802278,
+    "area": 267668
   },
   {
     "currencies": [
@@ -1200,7 +1280,8 @@
     "alpha3Code": "GMB",
     "capital": "Banjul",
     "region": "Africa",
-    "population": 1882450
+    "population": 1882450,
+    "area": 11295
   },
   {
     "currencies": [
@@ -1214,7 +1295,8 @@
     "alpha3Code": "GEO",
     "capital": "Tbilisi",
     "region": "Asia",
-    "population": 3720400
+    "population": 3720400,
+    "area": 69700
   },
   {
     "currencies": [
@@ -1228,7 +1310,8 @@
     "alpha3Code": "DEU",
     "capital": "Berlin",
     "region": "Europe",
-    "population": 81770900
+    "population": 81770900,
+    "area": 357114
   },
   {
     "currencies": [
@@ -1242,7 +1325,8 @@
     "alpha3Code": "GHA",
     "capital": "Accra",
     "region": "Africa",
-    "population": 27670174
+    "population": 27670174,
+    "area": 238533
   },
   {
     "currencies": [
@@ -1256,7 +1340,8 @@
     "alpha3Code": "GIB",
     "capital": "Gibraltar",
     "region": "Europe",
-    "population": 33140
+    "population": 33140,
+    "area": 6
   },
   {
     "currencies": [
@@ -1270,7 +1355,8 @@
     "alpha3Code": "GRC",
     "capital": "Athens",
     "region": "Europe",
-    "population": 10858018
+    "population": 10858018,
+    "area": 131990
   },
   {
     "currencies": [
@@ -1284,7 +1370,8 @@
     "alpha3Code": "GRL",
     "capital": "Nuuk",
     "region": "Americas",
-    "population": 55847
+    "population": 55847,
+    "area": 2166086
   },
   {
     "currencies": [
@@ -1298,7 +1385,8 @@
     "alpha3Code": "GRD",
     "capital": "St. George's",
     "region": "Americas",
-    "population": 103328
+    "population": 103328,
+    "area": 344
   },
   {
     "currencies": [
@@ -1326,7 +1414,8 @@
     "alpha3Code": "GUM",
     "capital": "Hagåtña",
     "region": "Oceania",
-    "population": 184200
+    "population": 184200,
+    "area": 549
   },
   {
     "currencies": [
@@ -1340,7 +1429,8 @@
     "alpha3Code": "GTM",
     "capital": "Guatemala City",
     "region": "Americas",
-    "population": 16176133
+    "population": 16176133,
+    "area": 108889
   },
   {
     "currencies": [
@@ -1359,7 +1449,8 @@
     "alpha3Code": "GGY",
     "capital": "St. Peter Port",
     "region": "Europe",
-    "population": 62999
+    "population": 62999,
+    "area": 78
   },
   {
     "currencies": [
@@ -1373,7 +1464,8 @@
     "alpha3Code": "GIN",
     "capital": "Conakry",
     "region": "Africa",
-    "population": 12947000
+    "population": 12947000,
+    "area": 245857
   },
   {
     "currencies": [
@@ -1387,7 +1479,8 @@
     "alpha3Code": "GNB",
     "capital": "Bissau",
     "region": "Africa",
-    "population": 1547777
+    "population": 1547777,
+    "area": 36125
   },
   {
     "currencies": [
@@ -1401,7 +1494,8 @@
     "alpha3Code": "GUY",
     "capital": "Georgetown",
     "region": "Americas",
-    "population": 746900
+    "population": 746900,
+    "area": 214969
   },
   {
     "currencies": [
@@ -1415,7 +1509,8 @@
     "alpha3Code": "HTI",
     "capital": "Port-au-Prince",
     "region": "Americas",
-    "population": 11078033
+    "population": 11078033,
+    "area": 27750
   },
   {
     "currencies": [
@@ -1429,7 +1524,8 @@
     "alpha3Code": "HMD",
     "capital": "",
     "region": "",
-    "population": 0
+    "population": 0,
+    "area": 412
   },
   {
     "currencies": [
@@ -1443,7 +1539,8 @@
     "alpha3Code": "VAT",
     "capital": "Rome",
     "region": "Europe",
-    "population": 451
+    "population": 451,
+    "area": 0.44
   },
   {
     "currencies": [
@@ -1457,7 +1554,8 @@
     "alpha3Code": "HND",
     "capital": "Tegucigalpa",
     "region": "Americas",
-    "population": 8576532
+    "population": 8576532,
+    "area": 112492
   },
   {
     "currencies": [
@@ -1471,7 +1569,8 @@
     "alpha3Code": "HKG",
     "capital": "City of Victoria",
     "region": "Asia",
-    "population": 7324300
+    "population": 7324300,
+    "area": 1104
   },
   {
     "currencies": [
@@ -1485,7 +1584,8 @@
     "alpha3Code": "HUN",
     "capital": "Budapest",
     "region": "Europe",
-    "population": 9823000
+    "population": 9823000,
+    "area": 93028
   },
   {
     "currencies": [
@@ -1499,7 +1599,8 @@
     "alpha3Code": "ISL",
     "capital": "Reykjavík",
     "region": "Europe",
-    "population": 334300
+    "population": 334300,
+    "area": 103000
   },
   {
     "currencies": [
@@ -1513,7 +1614,8 @@
     "alpha3Code": "IND",
     "capital": "New Delhi",
     "region": "Asia",
-    "population": 1295210000
+    "population": 1295210000,
+    "area": 3287590
   },
   {
     "currencies": [
@@ -1527,7 +1629,8 @@
     "alpha3Code": "IDN",
     "capital": "Jakarta",
     "region": "Asia",
-    "population": 258705000
+    "population": 258705000,
+    "area": 1904569
   },
   {
     "currencies": [
@@ -1541,7 +1644,8 @@
     "alpha3Code": "CIV",
     "capital": "Yamoussoukro",
     "region": "Africa",
-    "population": 22671331
+    "population": 22671331,
+    "area": 322463
   },
   {
     "currencies": [
@@ -1555,7 +1659,8 @@
     "alpha3Code": "IRN",
     "capital": "Tehran",
     "region": "Asia",
-    "population": 79369900
+    "population": 79369900,
+    "area": 1648195
   },
   {
     "currencies": [
@@ -1569,7 +1674,8 @@
     "alpha3Code": "IRQ",
     "capital": "Baghdad",
     "region": "Asia",
-    "population": 37883543
+    "population": 37883543,
+    "area": 438317
   },
   {
     "currencies": [
@@ -1583,7 +1689,8 @@
     "alpha3Code": "IRL",
     "capital": "Dublin",
     "region": "Europe",
-    "population": 6378000
+    "population": 6378000,
+    "area": 70273
   },
   {
     "currencies": [
@@ -1602,7 +1709,8 @@
     "alpha3Code": "IMN",
     "capital": "Douglas",
     "region": "Europe",
-    "population": 84497
+    "population": 84497,
+    "area": 572
   },
   {
     "currencies": [
@@ -1616,7 +1724,8 @@
     "alpha3Code": "ISR",
     "capital": "Jerusalem",
     "region": "Asia",
-    "population": 8527400
+    "population": 8527400,
+    "area": 20770
   },
   {
     "currencies": [
@@ -1630,7 +1739,8 @@
     "alpha3Code": "ITA",
     "capital": "Rome",
     "region": "Europe",
-    "population": 60665551
+    "population": 60665551,
+    "area": 301336
   },
   {
     "currencies": [
@@ -1644,7 +1754,8 @@
     "alpha3Code": "JAM",
     "capital": "Kingston",
     "region": "Americas",
-    "population": 2723246
+    "population": 2723246,
+    "area": 10991
   },
   {
     "currencies": [
@@ -1658,7 +1769,8 @@
     "alpha3Code": "JPN",
     "capital": "Tokyo",
     "region": "Asia",
-    "population": 126960000
+    "population": 126960000,
+    "area": 377930
   },
   {
     "currencies": [
@@ -1677,7 +1789,8 @@
     "alpha3Code": "JEY",
     "capital": "Saint Helier",
     "region": "Europe",
-    "population": 100800
+    "population": 100800,
+    "area": 116
   },
   {
     "currencies": [
@@ -1691,7 +1804,8 @@
     "alpha3Code": "JOR",
     "capital": "Amman",
     "region": "Asia",
-    "population": 9531712
+    "population": 9531712,
+    "area": 89342
   },
   {
     "currencies": [
@@ -1704,7 +1818,8 @@
     "alpha3Code": "KAZ",
     "capital": "Astana",
     "region": "Asia",
-    "population": 17753200
+    "population": 17753200,
+    "area": 2724900
   },
   {
     "currencies": [
@@ -1718,7 +1833,8 @@
     "alpha3Code": "KEN",
     "capital": "Nairobi",
     "region": "Africa",
-    "population": 47251000
+    "population": 47251000,
+    "area": 580367
   },
   {
     "currencies": [
@@ -1737,7 +1853,8 @@
     "alpha3Code": "KIR",
     "capital": "South Tarawa",
     "region": "Oceania",
-    "population": 113400
+    "population": 113400,
+    "area": 811
   },
   {
     "currencies": [
@@ -1751,7 +1868,8 @@
     "alpha3Code": "KWT",
     "capital": "Kuwait City",
     "region": "Asia",
-    "population": 4183658
+    "population": 4183658,
+    "area": 17818
   },
   {
     "currencies": [
@@ -1765,7 +1883,8 @@
     "alpha3Code": "KGZ",
     "capital": "Bishkek",
     "region": "Asia",
-    "population": 6047800
+    "population": 6047800,
+    "area": 199951
   },
   {
     "currencies": [
@@ -1779,7 +1898,8 @@
     "alpha3Code": "LAO",
     "capital": "Vientiane",
     "region": "Asia",
-    "population": 6492400
+    "population": 6492400,
+    "area": 236800
   },
   {
     "currencies": [
@@ -1793,7 +1913,8 @@
     "alpha3Code": "LVA",
     "capital": "Riga",
     "region": "Europe",
-    "population": 1961600
+    "population": 1961600,
+    "area": 64559
   },
   {
     "currencies": [
@@ -1807,7 +1928,8 @@
     "alpha3Code": "LBN",
     "capital": "Beirut",
     "region": "Asia",
-    "population": 5988000
+    "population": 5988000,
+    "area": 10452
   },
   {
     "currencies": [
@@ -1826,7 +1948,8 @@
     "alpha3Code": "LSO",
     "capital": "Maseru",
     "region": "Africa",
-    "population": 1894194
+    "population": 1894194,
+    "area": 30355
   },
   {
     "currencies": [
@@ -1840,7 +1963,8 @@
     "alpha3Code": "LBR",
     "capital": "Monrovia",
     "region": "Africa",
-    "population": 4615000
+    "population": 4615000,
+    "area": 111369
   },
   {
     "currencies": [
@@ -1854,7 +1978,8 @@
     "alpha3Code": "LBY",
     "capital": "Tripoli",
     "region": "Africa",
-    "population": 6385000
+    "population": 6385000,
+    "area": 1759540
   },
   {
     "currencies": [
@@ -1868,7 +1993,8 @@
     "alpha3Code": "LIE",
     "capital": "Vaduz",
     "region": "Europe",
-    "population": 37623
+    "population": 37623,
+    "area": 160
   },
   {
     "currencies": [
@@ -1882,7 +2008,8 @@
     "alpha3Code": "LTU",
     "capital": "Vilnius",
     "region": "Europe",
-    "population": 2872294
+    "population": 2872294,
+    "area": 65300
   },
   {
     "currencies": [
@@ -1896,7 +2023,8 @@
     "alpha3Code": "LUX",
     "capital": "Luxembourg",
     "region": "Europe",
-    "population": 576200
+    "population": 576200,
+    "area": 2586
   },
   {
     "currencies": [
@@ -1910,7 +2038,8 @@
     "alpha3Code": "MAC",
     "capital": "",
     "region": "Asia",
-    "population": 649100
+    "population": 649100,
+    "area": 30
   },
   {
     "currencies": [
@@ -1924,7 +2053,8 @@
     "alpha3Code": "MKD",
     "capital": "Skopje",
     "region": "Europe",
-    "population": 2058539
+    "population": 2058539,
+    "area": 25713
   },
   {
     "currencies": [
@@ -1938,7 +2068,8 @@
     "alpha3Code": "MDG",
     "capital": "Antananarivo",
     "region": "Africa",
-    "population": 22434363
+    "population": 22434363,
+    "area": 587041
   },
   {
     "currencies": [
@@ -1952,7 +2083,8 @@
     "alpha3Code": "MWI",
     "capital": "Lilongwe",
     "region": "Africa",
-    "population": 16832910
+    "population": 16832910,
+    "area": 118484
   },
   {
     "currencies": [
@@ -1966,7 +2098,8 @@
     "alpha3Code": "MYS",
     "capital": "Kuala Lumpur",
     "region": "Asia",
-    "population": 31405416
+    "population": 31405416,
+    "area": 330803
   },
   {
     "currencies": [
@@ -1980,7 +2113,8 @@
     "alpha3Code": "MDV",
     "capital": "Malé",
     "region": "Asia",
-    "population": 344023
+    "population": 344023,
+    "area": 300
   },
   {
     "currencies": [
@@ -1994,7 +2128,8 @@
     "alpha3Code": "MLI",
     "capital": "Bamako",
     "region": "Africa",
-    "population": 18135000
+    "population": 18135000,
+    "area": 1240192
   },
   {
     "currencies": [
@@ -2008,7 +2143,8 @@
     "alpha3Code": "MLT",
     "capital": "Valletta",
     "region": "Europe",
-    "population": 425384
+    "population": 425384,
+    "area": 316
   },
   {
     "currencies": [
@@ -2022,7 +2158,8 @@
     "alpha3Code": "MHL",
     "capital": "Majuro",
     "region": "Oceania",
-    "population": 54880
+    "population": 54880,
+    "area": 181
   },
   {
     "currencies": [
@@ -2050,7 +2187,8 @@
     "alpha3Code": "MRT",
     "capital": "Nouakchott",
     "region": "Africa",
-    "population": 3718678
+    "population": 3718678,
+    "area": 1030700
   },
   {
     "currencies": [
@@ -2064,7 +2202,8 @@
     "alpha3Code": "MUS",
     "capital": "Port Louis",
     "region": "Africa",
-    "population": 1262879
+    "population": 1262879,
+    "area": 2040
   },
   {
     "currencies": [
@@ -2092,7 +2231,8 @@
     "alpha3Code": "MEX",
     "capital": "Mexico City",
     "region": "Americas",
-    "population": 122273473
+    "population": 122273473,
+    "area": 1964375
   },
   {
     "currencies": [
@@ -2110,7 +2250,8 @@
     "alpha3Code": "FSM",
     "capital": "Palikir",
     "region": "Oceania",
-    "population": 102800
+    "population": 102800,
+    "area": 702
   },
   {
     "currencies": [
@@ -2124,7 +2265,8 @@
     "alpha3Code": "MDA",
     "capital": "Chișinău",
     "region": "Europe",
-    "population": 3553100
+    "population": 3553100,
+    "area": 33846
   },
   {
     "currencies": [
@@ -2138,7 +2280,8 @@
     "alpha3Code": "MCO",
     "capital": "Monaco",
     "region": "Europe",
-    "population": 38400
+    "population": 38400,
+    "area": 2.02
   },
   {
     "currencies": [
@@ -2152,7 +2295,8 @@
     "alpha3Code": "MNG",
     "capital": "Ulan Bator",
     "region": "Asia",
-    "population": 3093100
+    "population": 3093100,
+    "area": 1564110
   },
   {
     "currencies": [
@@ -2166,7 +2310,8 @@
     "alpha3Code": "MNE",
     "capital": "Podgorica",
     "region": "Europe",
-    "population": 621810
+    "population": 621810,
+    "area": 13812
   },
   {
     "currencies": [
@@ -2180,7 +2325,8 @@
     "alpha3Code": "MSR",
     "capital": "Plymouth",
     "region": "Americas",
-    "population": 4922
+    "population": 4922,
+    "area": 102
   },
   {
     "currencies": [
@@ -2194,7 +2340,8 @@
     "alpha3Code": "MAR",
     "capital": "Rabat",
     "region": "Africa",
-    "population": 33337529
+    "population": 33337529,
+    "area": 446550
   },
   {
     "currencies": [
@@ -2208,7 +2355,8 @@
     "alpha3Code": "MOZ",
     "capital": "Maputo",
     "region": "Africa",
-    "population": 26423700
+    "population": 26423700,
+    "area": 801590
   },
   {
     "currencies": [
@@ -2222,7 +2370,8 @@
     "alpha3Code": "MMR",
     "capital": "Naypyidaw",
     "region": "Asia",
-    "population": 51419420
+    "population": 51419420,
+    "area": 676578
   },
   {
     "currencies": [
@@ -2241,7 +2390,8 @@
     "alpha3Code": "NAM",
     "capital": "Windhoek",
     "region": "Africa",
-    "population": 2324388
+    "population": 2324388,
+    "area": 825615
   },
   {
     "currencies": [
@@ -2259,7 +2409,8 @@
     "alpha3Code": "NRU",
     "capital": "Yaren",
     "region": "Oceania",
-    "population": 10084
+    "population": 10084,
+    "area": 21
   },
   {
     "currencies": [
@@ -2273,7 +2424,8 @@
     "alpha3Code": "NPL",
     "capital": "Kathmandu",
     "region": "Asia",
-    "population": 28431500
+    "population": 28431500,
+    "area": 147181
   },
   {
     "currencies": [
@@ -2287,7 +2439,8 @@
     "alpha3Code": "NLD",
     "capital": "Amsterdam",
     "region": "Europe",
-    "population": 17019800
+    "population": 17019800,
+    "area": 41850
   },
   {
     "currencies": [
@@ -2301,7 +2454,8 @@
     "alpha3Code": "NCL",
     "capital": "Nouméa",
     "region": "Oceania",
-    "population": 268767
+    "population": 268767,
+    "area": 18575
   },
   {
     "currencies": [
@@ -2315,7 +2469,8 @@
     "alpha3Code": "NZL",
     "capital": "Wellington",
     "region": "Oceania",
-    "population": 4697854
+    "population": 4697854,
+    "area": 270467
   },
   {
     "currencies": [
@@ -2329,7 +2484,8 @@
     "alpha3Code": "NIC",
     "capital": "Managua",
     "region": "Americas",
-    "population": 6262703
+    "population": 6262703,
+    "area": 130373
   },
   {
     "currencies": [
@@ -2343,7 +2499,8 @@
     "alpha3Code": "NER",
     "capital": "Niamey",
     "region": "Africa",
-    "population": 20715000
+    "population": 20715000,
+    "area": 1267000
   },
   {
     "currencies": [
@@ -2357,7 +2514,8 @@
     "alpha3Code": "NGA",
     "capital": "Abuja",
     "region": "Africa",
-    "population": 186988000
+    "population": 186988000,
+    "area": 923768
   },
   {
     "currencies": [
@@ -2376,7 +2534,8 @@
     "alpha3Code": "NIU",
     "capital": "Alofi",
     "region": "Oceania",
-    "population": 1470
+    "population": 1470,
+    "area": 260
   },
   {
     "currencies": [
@@ -2390,7 +2549,8 @@
     "alpha3Code": "NFK",
     "capital": "Kingston",
     "region": "Oceania",
-    "population": 2302
+    "population": 2302,
+    "area": 36
   },
   {
     "currencies": [
@@ -2404,7 +2564,8 @@
     "alpha3Code": "PRK",
     "capital": "Pyongyang",
     "region": "Asia",
-    "population": 25281000
+    "population": 25281000,
+    "area": 120538
   },
   {
     "currencies": [
@@ -2418,7 +2579,8 @@
     "alpha3Code": "MNP",
     "capital": "Saipan",
     "region": "Oceania",
-    "population": 56940
+    "population": 56940,
+    "area": 464
   },
   {
     "currencies": [
@@ -2432,7 +2594,8 @@
     "alpha3Code": "NOR",
     "capital": "Oslo",
     "region": "Europe",
-    "population": 5223256
+    "population": 5223256,
+    "area": 323802
   },
   {
     "currencies": [
@@ -2446,7 +2609,8 @@
     "alpha3Code": "OMN",
     "capital": "Muscat",
     "region": "Asia",
-    "population": 4420133
+    "population": 4420133,
+    "area": 309500
   },
   {
     "currencies": [
@@ -2460,7 +2624,8 @@
     "alpha3Code": "PAK",
     "capital": "Islamabad",
     "region": "Asia",
-    "population": 194125062
+    "population": 194125062,
+    "area": 881912
   },
   {
     "currencies": [
@@ -2479,7 +2644,8 @@
     "alpha3Code": "PLW",
     "capital": "Ngerulmud",
     "region": "Oceania",
-    "population": 17950
+    "population": 17950,
+    "area": 459
   },
   {
     "currencies": [
@@ -2512,7 +2678,8 @@
     "alpha3Code": "PAN",
     "capital": "Panama City",
     "region": "Americas",
-    "population": 3814672
+    "population": 3814672,
+    "area": 75417
   },
   {
     "currencies": [
@@ -2526,7 +2693,8 @@
     "alpha3Code": "PNG",
     "capital": "Port Moresby",
     "region": "Oceania",
-    "population": 8083700
+    "population": 8083700,
+    "area": 462840
   },
   {
     "currencies": [
@@ -2540,7 +2708,8 @@
     "alpha3Code": "PRY",
     "capital": "Asunción",
     "region": "Americas",
-    "population": 6854536
+    "population": 6854536,
+    "area": 406752
   },
   {
     "currencies": [
@@ -2554,7 +2723,8 @@
     "alpha3Code": "PER",
     "capital": "Lima",
     "region": "Americas",
-    "population": 31488700
+    "population": 31488700,
+    "area": 1285216
   },
   {
     "currencies": [
@@ -2568,7 +2738,8 @@
     "alpha3Code": "PHL",
     "capital": "Manila",
     "region": "Asia",
-    "population": 103279800
+    "population": 103279800,
+    "area": 342353
   },
   {
     "currencies": [
@@ -2586,7 +2757,8 @@
     "alpha3Code": "PCN",
     "capital": "Adamstown",
     "region": "Oceania",
-    "population": 56
+    "population": 56,
+    "area": 47
   },
   {
     "currencies": [
@@ -2600,7 +2772,8 @@
     "alpha3Code": "POL",
     "capital": "Warsaw",
     "region": "Europe",
-    "population": 38437239
+    "population": 38437239,
+    "area": 312679
   },
   {
     "currencies": [
@@ -2614,7 +2787,8 @@
     "alpha3Code": "PRT",
     "capital": "Lisbon",
     "region": "Europe",
-    "population": 10374822
+    "population": 10374822,
+    "area": 92090
   },
   {
     "currencies": [
@@ -2628,7 +2802,8 @@
     "alpha3Code": "PRI",
     "capital": "San Juan",
     "region": "Americas",
-    "population": 3474182
+    "population": 3474182,
+    "area": 8870
   },
   {
     "currencies": [
@@ -2642,7 +2817,8 @@
     "alpha3Code": "QAT",
     "capital": "Doha",
     "region": "Asia",
-    "population": 2587564
+    "population": 2587564,
+    "area": 11586
   },
   {
     "currencies": [
@@ -2656,7 +2832,8 @@
     "alpha3Code": "KOS",
     "capital": "Pristina",
     "region": "Europe",
-    "population": 1733842
+    "population": 1733842,
+    "area": 10908
   },
   {
     "currencies": [
@@ -2684,7 +2861,8 @@
     "alpha3Code": "ROU",
     "capital": "Bucharest",
     "region": "Europe",
-    "population": 19861408
+    "population": 19861408,
+    "area": 238391
   },
   {
     "currencies": [
@@ -2698,7 +2876,8 @@
     "alpha3Code": "RUS",
     "capital": "Moscow",
     "region": "Europe",
-    "population": 146599183
+    "population": 146599183,
+    "area": 17124442
   },
   {
     "currencies": [
@@ -2712,7 +2891,8 @@
     "alpha3Code": "RWA",
     "capital": "Kigali",
     "region": "Africa",
-    "population": 11553188
+    "population": 11553188,
+    "area": 26338
   },
   {
     "currencies": [
@@ -2726,7 +2906,8 @@
     "alpha3Code": "BLM",
     "capital": "Gustavia",
     "region": "Americas",
-    "population": 9417
+    "population": 9417,
+    "area": 21
   },
   {
     "currencies": [
@@ -2754,7 +2935,8 @@
     "alpha3Code": "KNA",
     "capital": "Basseterre",
     "region": "Americas",
-    "population": 46204
+    "population": 46204,
+    "area": 261
   },
   {
     "currencies": [
@@ -2768,7 +2950,8 @@
     "alpha3Code": "LCA",
     "capital": "Castries",
     "region": "Americas",
-    "population": 186000
+    "population": 186000,
+    "area": 616
   },
   {
     "currencies": [
@@ -2782,7 +2965,8 @@
     "alpha3Code": "MAF",
     "capital": "Marigot",
     "region": "Americas",
-    "population": 36979
+    "population": 36979,
+    "area": 53
   },
   {
     "currencies": [
@@ -2796,7 +2980,8 @@
     "alpha3Code": "SPM",
     "capital": "Saint-Pierre",
     "region": "Americas",
-    "population": 6069
+    "population": 6069,
+    "area": 242
   },
   {
     "currencies": [
@@ -2810,7 +2995,8 @@
     "alpha3Code": "VCT",
     "capital": "Kingstown",
     "region": "Americas",
-    "population": 109991
+    "population": 109991,
+    "area": 389
   },
   {
     "currencies": [
@@ -2824,7 +3010,8 @@
     "alpha3Code": "WSM",
     "capital": "Apia",
     "region": "Oceania",
-    "population": 194899
+    "population": 194899,
+    "area": 2842
   },
   {
     "currencies": [
@@ -2838,7 +3025,8 @@
     "alpha3Code": "SMR",
     "capital": "City of San Marino",
     "region": "Europe",
-    "population": 33005
+    "population": 33005,
+    "area": 61
   },
   {
     "currencies": [
@@ -2852,7 +3040,8 @@
     "alpha3Code": "STP",
     "capital": "São Tomé",
     "region": "Africa",
-    "population": 187356
+    "population": 187356,
+    "area": 964
   },
   {
     "currencies": [
@@ -2866,7 +3055,8 @@
     "alpha3Code": "SAU",
     "capital": "Riyadh",
     "region": "Asia",
-    "population": 32248200
+    "population": 32248200,
+    "area": 2149690
   },
   {
     "currencies": [
@@ -2880,7 +3070,8 @@
     "alpha3Code": "SEN",
     "capital": "Dakar",
     "region": "Africa",
-    "population": 14799859
+    "population": 14799859,
+    "area": 196722
   },
   {
     "currencies": [
@@ -2894,7 +3085,8 @@
     "alpha3Code": "SRB",
     "capital": "Belgrade",
     "region": "Europe",
-    "population": 7076372
+    "population": 7076372,
+    "area": 88361
   },
   {
     "currencies": [
@@ -2908,7 +3100,8 @@
     "alpha3Code": "SYC",
     "capital": "Victoria",
     "region": "Africa",
-    "population": 91400
+    "population": 91400,
+    "area": 452
   },
   {
     "currencies": [
@@ -2922,7 +3115,8 @@
     "alpha3Code": "SLE",
     "capital": "Freetown",
     "region": "Africa",
-    "population": 7075641
+    "population": 7075641,
+    "area": 71740
   },
   {
     "currencies": [
@@ -2941,7 +3135,8 @@
     "alpha3Code": "SGP",
     "capital": "Singapore",
     "region": "Asia",
-    "population": 5535000
+    "population": 5535000,
+    "area": 710
   },
   {
     "currencies": [
@@ -2955,7 +3150,8 @@
     "alpha3Code": "SXM",
     "capital": "Philipsburg",
     "region": "Americas",
-    "population": 38247
+    "population": 38247,
+    "area": 34
   },
   {
     "currencies": [
@@ -2969,7 +3165,8 @@
     "alpha3Code": "SVK",
     "capital": "Bratislava",
     "region": "Europe",
-    "population": 5426252
+    "population": 5426252,
+    "area": 49037
   },
   {
     "currencies": [
@@ -2983,7 +3180,8 @@
     "alpha3Code": "SVN",
     "capital": "Ljubljana",
     "region": "Europe",
-    "population": 2064188
+    "population": 2064188,
+    "area": 20273
   },
   {
     "currencies": [
@@ -2997,7 +3195,8 @@
     "alpha3Code": "SLB",
     "capital": "Honiara",
     "region": "Oceania",
-    "population": 642000
+    "population": 642000,
+    "area": 28896
   },
   {
     "currencies": [
@@ -3011,7 +3210,8 @@
     "alpha3Code": "SOM",
     "capital": "Mogadishu",
     "region": "Africa",
-    "population": 11079000
+    "population": 11079000,
+    "area": 637657
   },
   {
     "currencies": [
@@ -3025,7 +3225,8 @@
     "alpha3Code": "ZAF",
     "capital": "Pretoria",
     "region": "Africa",
-    "population": 55653654
+    "population": 55653654,
+    "area": 1221037
   },
   {
     "currencies": [
@@ -3057,7 +3258,8 @@
     "alpha3Code": "KOR",
     "capital": "Seoul",
     "region": "Asia",
-    "population": 50801405
+    "population": 50801405,
+    "area": 100210
   },
   {
     "currencies": [
@@ -3071,7 +3273,8 @@
     "alpha3Code": "SSD",
     "capital": "Juba",
     "region": "Africa",
-    "population": 12131000
+    "population": 12131000,
+    "area": 619745
   },
   {
     "currencies": [
@@ -3085,7 +3288,8 @@
     "alpha3Code": "ESP",
     "capital": "Madrid",
     "region": "Europe",
-    "population": 46438422
+    "population": 46438422,
+    "area": 505992
   },
   {
     "currencies": [
@@ -3099,7 +3303,8 @@
     "alpha3Code": "LKA",
     "capital": "Colombo",
     "region": "Asia",
-    "population": 20966000
+    "population": 20966000,
+    "area": 65610
   },
   {
     "currencies": [
@@ -3113,7 +3318,8 @@
     "alpha3Code": "SDN",
     "capital": "Khartoum",
     "region": "Africa",
-    "population": 39598700
+    "population": 39598700,
+    "area": 1886068
   },
   {
     "currencies": [
@@ -3127,7 +3333,8 @@
     "alpha3Code": "SUR",
     "capital": "Paramaribo",
     "region": "Americas",
-    "population": 541638
+    "population": 541638,
+    "area": 163820
   },
   {
     "currencies": [
@@ -3155,7 +3362,8 @@
     "alpha3Code": "SWZ",
     "capital": "Lobamba",
     "region": "Africa",
-    "population": 1132657
+    "population": 1132657,
+    "area": 17364
   },
   {
     "currencies": [
@@ -3169,7 +3377,8 @@
     "alpha3Code": "SWE",
     "capital": "Stockholm",
     "region": "Europe",
-    "population": 9894888
+    "population": 9894888,
+    "area": 450295
   },
   {
     "currencies": [
@@ -3183,7 +3392,8 @@
     "alpha3Code": "CHE",
     "capital": "Bern",
     "region": "Europe",
-    "population": 8341600
+    "population": 8341600,
+    "area": 41284
   },
   {
     "currencies": [
@@ -3197,7 +3407,8 @@
     "alpha3Code": "SYR",
     "capital": "Damascus",
     "region": "Asia",
-    "population": 18564000
+    "population": 18564000,
+    "area": 185180
   },
   {
     "currencies": [
@@ -3211,7 +3422,8 @@
     "alpha3Code": "TWN",
     "capital": "Taipei",
     "region": "Asia",
-    "population": 23503349
+    "population": 23503349,
+    "area": 36193
   },
   {
     "currencies": [
@@ -3225,7 +3437,8 @@
     "alpha3Code": "TJK",
     "capital": "Dushanbe",
     "region": "Asia",
-    "population": 8593600
+    "population": 8593600,
+    "area": 143100
   },
   {
     "currencies": [
@@ -3239,7 +3452,8 @@
     "alpha3Code": "TZA",
     "capital": "Dodoma",
     "region": "Africa",
-    "population": 55155000
+    "population": 55155000,
+    "area": 945087
   },
   {
     "currencies": [
@@ -3253,7 +3467,8 @@
     "alpha3Code": "THA",
     "capital": "Bangkok",
     "region": "Asia",
-    "population": 65327652
+    "population": 65327652,
+    "area": 513120
   },
   {
     "currencies": [
@@ -3268,7 +3483,8 @@
     "alpha3Code": "TLS",
     "capital": "Dili",
     "region": "Asia",
-    "population": 1167242
+    "population": 1167242,
+    "area": 14874
   },
   {
     "currencies": [
@@ -3282,7 +3498,8 @@
     "alpha3Code": "TGO",
     "capital": "Lomé",
     "region": "Africa",
-    "population": 7143000
+    "population": 7143000,
+    "area": 56785
   },
   {
     "currencies": [
@@ -3296,7 +3513,8 @@
     "alpha3Code": "TKL",
     "capital": "Fakaofo",
     "region": "Oceania",
-    "population": 1411
+    "population": 1411,
+    "area": 12
   },
   {
     "currencies": [
@@ -3310,7 +3528,8 @@
     "alpha3Code": "TON",
     "capital": "Nuku'alofa",
     "region": "Oceania",
-    "population": 103252
+    "population": 103252,
+    "area": 747
   },
   {
     "currencies": [
@@ -3324,7 +3543,8 @@
     "alpha3Code": "TTO",
     "capital": "Port of Spain",
     "region": "Americas",
-    "population": 1349667
+    "population": 1349667,
+    "area": 5130
   },
   {
     "currencies": [
@@ -3338,7 +3558,8 @@
     "alpha3Code": "TUN",
     "capital": "Tunis",
     "region": "Africa",
-    "population": 11154400
+    "population": 11154400,
+    "area": 163610
   },
   {
     "currencies": [
@@ -3351,7 +3572,8 @@
     "alpha3Code": "TUR",
     "capital": "Ankara",
     "region": "Asia",
-    "population": 78741053
+    "population": 78741053,
+    "area": 783562
   },
   {
     "currencies": [
@@ -3365,7 +3587,8 @@
     "alpha3Code": "TKM",
     "capital": "Ashgabat",
     "region": "Asia",
-    "population": 4751120
+    "population": 4751120,
+    "area": 488100
   },
   {
     "currencies": [
@@ -3379,7 +3602,8 @@
     "alpha3Code": "TCA",
     "capital": "Cockburn Town",
     "region": "Americas",
-    "population": 31458
+    "population": 31458,
+    "area": 948
   },
   {
     "currencies": [
@@ -3398,7 +3622,8 @@
     "alpha3Code": "TUV",
     "capital": "Funafuti",
     "region": "Oceania",
-    "population": 10640
+    "population": 10640,
+    "area": 26
   },
   {
     "currencies": [
@@ -3412,7 +3637,8 @@
     "alpha3Code": "UGA",
     "capital": "Kampala",
     "region": "Africa",
-    "population": 33860700
+    "population": 33860700,
+    "area": 241550
   },
   {
     "currencies": [
@@ -3426,7 +3652,8 @@
     "alpha3Code": "UKR",
     "capital": "Kiev",
     "region": "Europe",
-    "population": 42692393
+    "population": 42692393,
+    "area": 603700
   },
   {
     "currencies": [
@@ -3440,7 +3667,8 @@
     "alpha3Code": "ARE",
     "capital": "Abu Dhabi",
     "region": "Asia",
-    "population": 9856000
+    "population": 9856000,
+    "area": 83600
   },
   {
     "currencies": [
@@ -3454,7 +3682,8 @@
     "alpha3Code": "GBR",
     "capital": "London",
     "region": "Europe",
-    "population": 65110000
+    "population": 65110000,
+    "area": 242900
   },
   {
     "currencies": [
@@ -3468,7 +3697,8 @@
     "alpha3Code": "USA",
     "capital": "Washington, D.C.",
     "region": "Americas",
-    "population": 323947000
+    "population": 323947000,
+    "area": 9629091
   },
   {
     "currencies": [
@@ -3482,7 +3712,8 @@
     "alpha3Code": "URY",
     "capital": "Montevideo",
     "region": "Americas",
-    "population": 3480222
+    "population": 3480222,
+    "area": 181034
   },
   {
     "currencies": [
@@ -3495,7 +3726,8 @@
     "alpha3Code": "UZB",
     "capital": "Tashkent",
     "region": "Asia",
-    "population": 31576400
+    "population": 31576400,
+    "area": 447400
   },
   {
     "currencies": [
@@ -3509,7 +3741,8 @@
     "alpha3Code": "VUT",
     "capital": "Port Vila",
     "region": "Oceania",
-    "population": 277500
+    "population": 277500,
+    "area": 12189
   },
   {
     "currencies": [
@@ -3523,7 +3756,8 @@
     "alpha3Code": "VEN",
     "capital": "Caracas",
     "region": "Americas",
-    "population": 31028700
+    "population": 31028700,
+    "area": 916445
   },
   {
     "currencies": [
@@ -3537,7 +3771,8 @@
     "alpha3Code": "VNM",
     "capital": "Hanoi",
     "region": "Asia",
-    "population": 92700000
+    "population": 92700000,
+    "area": 331212
   },
   {
     "currencies": [
@@ -3551,7 +3786,8 @@
     "alpha3Code": "WLF",
     "capital": "Mata-Utu",
     "region": "Oceania",
-    "population": 11750
+    "population": 11750,
+    "area": 142
   },
   {
     "currencies": [
@@ -3570,7 +3806,8 @@
     "alpha3Code": "ESH",
     "capital": "El Aaiún",
     "region": "Africa",
-    "population": 510713
+    "population": 510713,
+    "area": 266000
   },
   {
     "currencies": [
@@ -3584,7 +3821,8 @@
     "alpha3Code": "YEM",
     "capital": "Sana'a",
     "region": "Asia",
-    "population": 27478000
+    "population": 27478000,
+    "area": 527968
   },
   {
     "currencies": [
@@ -3598,7 +3836,8 @@
     "alpha3Code": "ZMB",
     "capital": "Lusaka",
     "region": "Africa",
-    "population": 15933883
+    "population": 15933883,
+    "area": 752612
   },
   {
     "currencies": [
@@ -3650,6 +3889,7 @@
     "alpha3Code": "ZWE",
     "capital": "Harare",
     "region": "Africa",
-    "population": 14240168
+    "population": 14240168,
+    "area": 390757
   }
 ]

@@ -15,6 +15,8 @@ class ViewController: UITableViewController {
         
         title = "Countries"
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        performSelector(inBackground: #selector(loadJSON), with: nil)
     }
     
     // Error Alert

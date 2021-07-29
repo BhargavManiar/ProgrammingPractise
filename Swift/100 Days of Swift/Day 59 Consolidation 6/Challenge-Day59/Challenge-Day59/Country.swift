@@ -20,4 +20,4 @@ struct Currency: Codable {
     let code, name, symbol: String?
 }
 
-// URL To Obtain JSON Data: https://restcountries.eu/rest/v2/all?fields=name;capital;region;currencies;population;alpha3Code
+// URL To Obtain JSON Data: https://restcountries.eu/rest/v2/all?fields=name;capital;region;currencies;population;area;alpha3Code

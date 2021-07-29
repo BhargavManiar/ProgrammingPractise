@@ -17,6 +17,39 @@ class ViewController: UITableViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     
+    // Error Alert
+    
+    @objc func showError() {
+        let alertController = UIAlertController(title: "Loading Error", message: "There was a problem loading the data", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alertController, animated: true)
+    }
+    
+    // JSON Related Functions
+    
+    @objc func loadJSON() {
+        if let path = Bundle.main.path(forResource: "Countries", ofType: "json") {
+            if let data = try? Data(contentsOf: URL(fileURLWithPath: path)) {
+                parse(json: data)
+                return
+            }
+        }
+    }
+    
+    @objc func parse(json: Data) {
+        let decoder = JSONDecoder()
+        
+        if let jsonCountries = try? decoder.decode(Countries.self, from: json) {
+            countries = jsonCountries.data
+            
+            DispatchQueue.main.async { [weak self] in
+                self?.tableView.reloadData()
+            }
+        } else {
+            performSelector(onMainThread: #selector(showError), with: nil, waitUntilDone: false)
+        }
+    }
+    
     // Table View Functions
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

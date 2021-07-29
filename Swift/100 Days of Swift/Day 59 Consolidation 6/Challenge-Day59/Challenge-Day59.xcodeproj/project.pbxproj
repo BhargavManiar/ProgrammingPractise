@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C4B924E26B3372000C4C2DE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4B924D26B3372000C4C2DE /* DetailViewController.swift */; };
 		4CC1E07826B1F9E200041E33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC1E07726B1F9E200041E33 /* AppDelegate.swift */; };
 		4CC1E07A26B1F9E200041E33 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC1E07926B1F9E200041E33 /* SceneDelegate.swift */; };
 		4CC1E07C26B1F9E200041E33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC1E07B26B1F9E200041E33 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C4B924D26B3372000C4C2DE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		4CC1E07426B1F9E200041E33 /* Challenge-Day59.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Challenge-Day59.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CC1E07726B1F9E200041E33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CC1E07926B1F9E200041E33 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				4CC1E07726B1F9E200041E33 /* AppDelegate.swift */,
 				4CC1E07926B1F9E200041E33 /* SceneDelegate.swift */,
 				4CC1E07B26B1F9E200041E33 /* ViewController.swift */,
+				4C4B924D26B3372000C4C2DE /* DetailViewController.swift */,
 				4CC1E08B26B1FE6000041E33 /* Country.swift */,
 				4CC1E08D26B202D300041E33 /* Countries.swift */,
 				4CC1E07D26B1F9E200041E33 /* Main.storyboard */,
@@ -146,6 +149,7 @@
 				4CC1E08C26B1FE6000041E33 /* Country.swift in Sources */,
 				4CC1E07C26B1F9E200041E33 /* ViewController.swift in Sources */,
 				4CC1E07826B1F9E200041E33 /* AppDelegate.swift in Sources */,
+				4C4B924E26B3372000C4C2DE /* DetailViewController.swift in Sources */,
 				4CC1E08E26B202D300041E33 /* Countries.swift in Sources */,
 				4CC1E07A26B1F9E200041E33 /* SceneDelegate.swift in Sources */,
 			);

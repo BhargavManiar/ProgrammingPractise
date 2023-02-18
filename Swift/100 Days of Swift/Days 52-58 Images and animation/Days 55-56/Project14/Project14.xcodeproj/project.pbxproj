@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4C7ADDC626A8B24000F4CD84 /* SmokeParticleEffect.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4C7ADDC526A8B24000F4CD84 /* SmokeParticleEffect.sks */; };
 		4C7ADDC826A8B25400F4CD84 /* MudParticleEffect.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4C7ADDC726A8B25400F4CD84 /* MudParticleEffect.sks */; };
+		4C88031229A0F45000C06B97 /* Recorded Game Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 4C88031129A0F45000C06B97 /* Recorded Game Sounds */; };
 		4CB778E426A6FD1900126C76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB778E326A6FD1900126C76 /* AppDelegate.swift */; };
 		4CB778E626A6FD1900126C76 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4CB778E526A6FD1900126C76 /* GameScene.sks */; };
 		4CB778EA26A6FD1900126C76 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB778E926A6FD1900126C76 /* GameScene.swift */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		4C7ADDC526A8B24000F4CD84 /* SmokeParticleEffect.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SmokeParticleEffect.sks; sourceTree = "<group>"; };
 		4C7ADDC726A8B25400F4CD84 /* MudParticleEffect.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MudParticleEffect.sks; sourceTree = "<group>"; };
+		4C88031129A0F45000C06B97 /* Recorded Game Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Recorded Game Sounds"; sourceTree = "<group>"; };
 		4CB778E026A6FD1900126C76 /* Project14.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project14.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CB778E326A6FD1900126C76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CB778E526A6FD1900126C76 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				4C7ADDC726A8B25400F4CD84 /* MudParticleEffect.sks */,
 				4CB778ED26A6FD1900126C76 /* Main.storyboard */,
 				4CB778F026A6FD1C00126C76 /* Assets.xcassets */,
+				4C88031129A0F45000C06B97 /* Recorded Game Sounds */,
 				4CB778F226A6FD1C00126C76 /* Info.plist */,
 				4CB778F826A6FDFA00126C76 /* whack.caf */,
 				4CB778F926A6FDFA00126C76 /* whackBad.caf */,
@@ -147,6 +150,7 @@
 				4C7ADDC626A8B24000F4CD84 /* SmokeParticleEffect.sks in Resources */,
 				4C7ADDC826A8B25400F4CD84 /* MudParticleEffect.sks in Resources */,
 				4CB778EF26A6FD1900126C76 /* Main.storyboard in Resources */,
+				4C88031229A0F45000C06B97 /* Recorded Game Sounds in Resources */,
 				4CB778E626A6FD1900126C76 /* GameScene.sks in Resources */,
 				4CB778F126A6FD1C00126C76 /* Assets.xcassets in Resources */,
 				4CB778FA26A6FDFA00126C76 /* whack.caf in Resources */,
